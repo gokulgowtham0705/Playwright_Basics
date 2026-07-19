@@ -22,7 +22,7 @@ test('Table', async ({ page }) => {
 
   await page.getByText('Book Store Application').click()
 
-  await  page.locator("//span[@class='text' and contains(text(), 'Book Store')]").first().click();
+  await page.locator("//span[@class='text' and contains(text(), 'Book Store')]").first().click();
  
 const targetRow = page.locator('table tr', {  
 has: page.locator('td').filter({ hasText: /^Learning/ })
@@ -60,7 +60,7 @@ test('CheckBox', async ({ page }) => {
   await page.getByText('Elements').click();
   await page.getByText('Check Box').click();
 
-  await page.locator("//span[@aria-label='Select Home']").check();
+  await page.getByLabel('Select Home').check();
 
   await page.locator(".rc-tree-switcher_close").click();
   await expect(page.getByLabel('Select Desktop')).toBeChecked();
@@ -68,5 +68,34 @@ test('CheckBox', async ({ page }) => {
   const actualResult = await page.locator("//div[@id='result']").textContent();
   const ExpectedResult = 'You have selected :homedesktopdocumentsdownloadsnotescommandsworkspaceofficewordFileexcelFilereactangularveupublicprivateclassifiedgeneral';
   await expect(actualResult).toBe(ExpectedResult);
-  
+
+})
+
+test('Webtables', async ({ page }) => {
+  await page.goto('https://demoqa.com/');  
+  await page.getByText('Elements').click();
+  await page.getByText('Web Tables').click();
+    
+  await page.getByRole('button', { name: 'Add' }).click();
+  await page.getByPlaceholder('First Name').fill('Gokul');
+  await page.getByPlaceholder('Last Name').fill('Doe');
+  await page.getByPlaceholder('name@example.com').fill('john@example.com');
+
+  await page.getByPlaceholder('Age').fill('30');
+  await page.getByPlaceholder('Salary').fill('50000');
+  await page.getByPlaceholder('Department').fill('Engineering');
+  await page.getByRole('button', { name: 'Submit' }).click();
+
+  await expect(page.locator('table tbody tr', { hasText: 'Gokul' })).toBeVisible();
+
+  await page.getByPlaceholder('Type to search').fill('Cierra');
+
+  await expect(page.locator('table tbody tr', { hasText: 'Cierra' })).toBeVisible();
+
+    await page.getByRole('button', { name: 'Add' }).click();
+    await page.locator('#submit').click();
+
+    const isValid = await page.locator('#firstName').evaluate((el: HTMLInputElement) => el.checkValidity());
+    expect(isValid).toBe(false);
+
 })
