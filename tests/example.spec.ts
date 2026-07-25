@@ -99,3 +99,128 @@ test('Webtables', async ({ page }) => {
     expect(isValid).toBe(false);
 
 })
+
+
+test('Button', async ({ page }) => {
+
+  await page.goto('https://demoqa.com/');
+  await page.getByText('Elements').click();
+  await page.getByText('Buttons').click();
+  
+  await page.getByRole('button', { name: 'Double Click Me' }).dblclick();
+  const expectedMessage = 'You have done a double click';
+  const actualMessage = await page.locator("#doubleClickMessage").textContent();
+  expect(actualMessage).toBe(expectedMessage);
+
+  await page.getByRole('button', { name: 'Right Click Me' }).click({ button: 'right' });
+  const expectedMessage1 = 'You have done a right click';
+  const actualMessage1 = await page.locator("#rightClickMessage").textContent();
+  expect(actualMessage1).toBe(expectedMessage1);
+
+  
+  await page.getByRole('button', { name: 'Click Me' , exact: true}).click();
+  const expectedMessage2 = 'You have done a dynamic click';
+  const actualMessage2 = await page.locator("#dynamicClickMessage").textContent();
+  expect(actualMessage2).toBe(expectedMessage2);
+  
+  
+
+})
+
+
+test('Links', async ({ page, context }) => {
+
+   await page.goto('https://demoqa.com/');
+   await page.getByText('Elements').click();
+   await page.getByRole('link', { name: 'Links', exact: true }).click();
+  
+     const [newPage] = await Promise.all([
+    context.waitForEvent('page'),
+    page.getByRole('link', { name: 'Home' , exact: true }).click(),
+  ]);
+
+  await newPage.waitForLoadState();
+  await expect(newPage).toHaveURL('https://demoqa.com/');
+
+  const [newPage1] = await Promise.all([
+    context.waitForEvent('page'),
+    page.locator('#dynamicLink').click(),
+  ]);
+ 
+  await newPage1.waitForLoadState();
+  await expect(newPage1).toHaveURL('https://demoqa.com/');
+  
+})
+
+test('APICall', async ({ page, request }) => {
+   await page.goto('https://demoqa.com/');
+   await page.getByText('Elements').click();
+   await page.getByRole('link', { name: 'Links', exact: true }).click();
+
+
+   const [response] = await Promise.all([
+    page.waitForResponse('**/created'),
+    page.getByText('Created', { exact: true }).click()
+  ]);
+
+  console.log('Status:', response.status());
+  console.log('URL:', response.url());
+  expect(response.status()).toBe(201)
+
+  const [response2] = await Promise.all([
+    page.waitForResponse('**/no-content'),
+    page.getByText('No Content', { exact: true }).click()
+  ]);
+
+  console.log('Status:', response2.status());
+  console.log('URL:', response2.url());
+  expect(response2.status()).toBe(204);
+
+  const [response3] = await Promise.all([
+    page.waitForResponse('**/moved'),
+    page.getByText('Moved', { exact: true }).click()
+  ]);
+
+  console.log('Status:', response3.status());
+  console.log('URL:', response3.url());
+  expect(response3.status()).toBe(301);
+
+
+  const [response4]  = await Promise.all([
+    page.waitForResponse('**/bad-request'),
+    page.getByText('Bad Request', { exact: true }).click()
+  ]);
+
+  console.log('Status:', response4.status());
+  console.log('URL:', response4.url());
+  expect(response4.status()).toBe(400);
+
+  const [response5] = await Promise.all([
+    page.waitForResponse('**/unauthorized'),
+    page.getByText('Unauthorized', { exact: true }).click()
+  ]);
+
+  console.log('Status:', response5.status());
+  console.log('URL:', response5.url());
+  expect(response5.status()).toBe(401);     
+
+  const [response6] =  await Promise.all([
+    page.waitForResponse('**/forbidden'),
+    page.getByText('Forbidden', { exact: true }).click()
+  ]);
+
+  console.log('Status:', response6.status());
+  console.log('URL:', response6.url());
+  expect(response6.status()).toBe(403);  
+
+   const [response7] =  await Promise.all([
+    page.waitForResponse('**/invalid-url'),
+    page.getByText('Not Found', { exact: true }).click()
+  ]);
+
+  console.log('Status:', response7.status());
+  console.log('URL:', response7.url());
+  expect(response7.status()).toBe(404);  
+
+
+});
