@@ -246,6 +246,23 @@ test('Upload and Download', async ({ page }) => {
     console.log('Downloaded file:', download.suggestedFilename());
     expect(download.suggestedFilename()).toBe('sampleFile.jpeg');
 
-   await page.locator('#uploadFile').setInputFiles('tests/testdata/sampleFile.jpeg');
+   await page.locator('#uploadFile').setInputFiles("C:\\Users\\GOKUL GOWTHAM\\Downloads\\sampleFile.jpeg");
   
+
+  const uploadedText = page.locator('#uploadedFilePath');
+  await expect(uploadedText).toBeVisible();
+  await expect(uploadedText).toContainText('sampleFile.jpeg');
 })
+
+test('Dynamic Properties', async ({ page }) => { 
+   await page.goto('https://demoqa.com/');
+   await page.getByText('Elements').click();
+   await page.getByRole('link', { name: 'Dynamic Properties', exact: true }).click();
+
+   const button = page.locator('#enableAfter');
+   await expect(button).toBeEnabled({timeout: 10000});
+   await button.click();
+
+}
+)
+
