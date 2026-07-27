@@ -224,3 +224,28 @@ test('APICall', async ({ page, request }) => {
 
 
 });
+
+test('Broken Links', async ({ page }) => {
+  await page.goto('https://demoqa.com/');
+  await page.getByText('Elements').click();
+  await page.getByRole('link', { name: 'Broken Links - Images', exact: true }).click();
+  
+  
+})
+
+
+test('Upload and Download', async ({ page }) => {
+    await page.goto('https://demoqa.com/');
+    await page.getByText('Elements').click();
+    await page.getByRole('link', { name: 'Upload and Download', exact: true }).click();
+
+    const [download] = await Promise.all([
+      page.waitForEvent('download'),
+      page.getByRole('button', { name: 'Download' }).click()
+    ]);
+    console.log('Downloaded file:', download.suggestedFilename());
+    expect(download.suggestedFilename()).toBe('sampleFile.jpeg');
+
+   await page.locator('#uploadFile').setInputFiles('tests/testdata/sampleFile.jpeg');
+  
+})
