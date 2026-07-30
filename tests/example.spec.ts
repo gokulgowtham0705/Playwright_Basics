@@ -11,6 +11,7 @@ test('Alerts, windowhandles', async ({ page }) => {
   page.on('dialog', async dialog => {
     console.log(`Dialog message: ${dialog.message()}`);
     await dialog.accept();
+
   });
 
   await page.locator('xpath=//button[@id="alertButton"]').click();
@@ -42,6 +43,7 @@ test('Text Box', async ({ page }) => {
 
   await page.goto('https://demoqa.com/');  
   await page.getByText('Elements').click();
+  await page.getByRole('link', { name: 'Text Box' }).click()
   await page.getByPlaceholder('Full Name').fill('John Doe');
   await page.getByPlaceholder('name@example.com').fill('john@example.com');
   await page.getByPlaceholder('Current Address').fill('123 Main St');
@@ -266,48 +268,47 @@ test('Dynamic Properties', async ({ page }) => {
 }
 )
 
-test ('Practice Form', async ({ page }) => {
-   await page.goto('https://demoqa.com/');
-   await page.getByText('Forms').click();
-   await page.getByRole('link', { name: 'Practice Form', exact: true }).click();
+test('Practice Form', async ({ page }) => {
+  await page.goto('https://demoqa.com/automation-practice-form');
 
-  await page.getByRole('textbox', { name: 'First Name' }).fill('John');
-  await page.getByRole('textbox', { name: 'Last Name' }).fill('Doe');
-  await page.getByRole('textbox', { name: 'name@example.com' }).fill('john.doe@example.com');
-  
-  await page.getByRole('radio', { name: 'Male', exact: true }).check();
-  await page.getByRole('textbox', { name: 'Mobile' }).fill('1234567890');
-  await page.locator("#dateOfBirthInput").fill('01 Jan 1990');
-  //await page.locator("#subjectsInput").fill('Maths');
- 
+  // Basic fields
+  await page.locator('#firstName').fill('John');
+  await page.locator('#lastName').fill('Doe');
+  await page.locator('#userEmail').fill('john.doe@example.com');
+  await page.locator('#gender-radio-1').click(); // Male by id
+  await page.locator('#userNumber').fill('1234567890');
+  await page.locator('#dateOfBirthInput').fill('01 Jan 1990');
 
-
+  // Hobbies
   await page.getByLabel('Sports').check();
   await page.getByLabel('Reading').check();
 
+  // Upload picture
   await page.locator('#uploadPicture').setInputFiles('C:\\Users\\GOKUL GOWTHAM\\Downloads\\sampleFile.jpeg');
-  await page.getByRole('textbox', { name: 'Current Address' }).fill('123 Main St, Anytown, USA');   
-  
 
+  // Current address
+  await page.getByRole('textbox', { name: 'Current Address' }).fill('123 Main St, Anytown, USA');
+
+  // Subjects (type + Enter) and wait for token
   await page.locator('#subjectsContainer').click();
-  await page.getByText('Maths', { exact: true }).click();
- // await page.keyboard.press('Enter');
+  await page.locator('#subjectsInput').fill('Maths');
+  await page.locator('#react-select-2-option-0').click();
+  await expect(page.locator('.subjects-auto-complete__multi-value__label', { hasText: 'Maths' })).toBeVisible({ timeout: 5000 });
 
+
+  // State - open and click exact option, then assert selection
   await page.locator('#state').click();
-  await page.locator('#state').type('M');
-  await page.getByText('NCR', { exact: true }).click();
+  await page.locator('#react-select-3-option-0').click(); 
+  await expect(page.locator('#state')).toContainText('NCR', { timeout: 5000 });
 
+  // City - open and click exact option, then assert selection
   await page.locator('#city').click();
-  await page.getByText('Delhi', { exact: true }).click();
+  await page.locator('#react-select-4-option-0').click(); // Delhi
+  await expect(page.locator('#city')).toContainText('Delhi', { timeout: 5000 });
 
+  // Submit and verify modal
   await page.getByRole('button', { name: 'Submit' }).click();
-
-  const modalTitle = page.locator('#example-modal-sizes-title-lg');
-  await expect(modalTitle).toHaveText('Thanks for submitting the form');
-  await expect(modalTitle).toBeVisible();
+  await page.locator('#example-modal-sizes-title-lg').waitFor({ state: 'visible' })
+  await expect(page.locator('#example-modal-sizes-title-lg')).toHaveText('Thanks for submitting the form', { timeout: 5000 });
   await page.screenshot({ path: 'tests/screenshots/Formatdetails.png' });
-  
-
-})
-
-
+});
