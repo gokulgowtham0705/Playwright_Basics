@@ -1,0 +1,203 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: FormTest.spec.ts >> Form Test
+- Location: tests\FormTest.spec.ts:4:5
+
+# Error details
+
+```
+Error: ENOENT: no such file or directory, stat 'C:\Users\GOKUL GOWTHAM\Playwright\screenshots\book-details.png'
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - link [ref=e4] [cursor=pointer]:
+      - /url: https://demoqa.com
+  - generic [ref=e8]:
+    - generic [ref=e11]:
+      - generic [ref=e12]: Elements
+      - generic [ref=e24]:
+        - generic [ref=e25] [cursor=pointer]: Forms
+        - list [ref=e38]:
+          - listitem [ref=e39] [cursor=pointer]:
+            - link "Practice Form" [ref=e40]:
+              - /url: /automation-practice-form
+      - generic [ref=e43]: Alerts, Frame & Windows
+      - generic [ref=e55]: Widgets
+      - generic [ref=e68]: Interactions
+      - generic [ref=e80]: Book Store Application
+    - generic [ref=e93]:
+      - heading "Practice Form" [level=1] [ref=e94]
+      - heading "Student Registration Form" [level=5] [ref=e95]
+      - generic [ref=e96]:
+        - generic [ref=e97]:
+          - generic [ref=e98]: Name
+          - textbox "First Name" [ref=e101]: Gokul
+          - textbox "Last Name" [ref=e103]: Gowtham
+        - generic [ref=e104]:
+          - generic [ref=e105]: Email
+          - textbox "name@example.com" [ref=e108]: gokul.gowtham@gmail.com
+        - generic [ref=e109]:
+          - generic [ref=e110]: Gender
+          - generic [ref=e111]:
+            - generic [ref=e112]:
+              - radio "Male" [checked] [ref=e113]
+              - generic [ref=e114]: Male
+            - generic [ref=e115]:
+              - radio "Female" [ref=e116]
+              - generic [ref=e117]: Female
+            - generic [ref=e118]:
+              - radio "Other" [ref=e119]
+              - generic [ref=e120]: Other
+        - generic [ref=e121]:
+          - generic [ref=e122]: Mobile(10 Digits)
+          - textbox "Mobile Number" [ref=e125]: "3423232324"
+        - generic [ref=e126]:
+          - generic [ref=e127]: Date of Birth
+          - textbox [ref=e132]: 01 Jan 1990
+        - generic [ref=e133]:
+          - generic [ref=e134]: Subjects
+          - generic [ref=e137]:
+            - log [ref=e139]
+            - generic [ref=e141]:
+              - generic [ref=e142]:
+                - generic [ref=e143]: Maths
+                - button "Remove Maths" [ref=e144] [cursor=pointer]
+              - combobox [ref=e148]
+        - generic [ref=e154]:
+          - generic [ref=e155]: Hobbies
+          - generic [ref=e157]:
+            - generic [ref=e158]:
+              - checkbox "Sports" [checked] [ref=e159]
+              - generic [ref=e160]: Sports
+            - generic [ref=e161]:
+              - checkbox "Reading" [ref=e162]
+              - generic [ref=e163]: Reading
+            - generic [ref=e164]:
+              - checkbox "Music" [ref=e165]
+              - generic [ref=e166]: Music
+        - generic [ref=e167]:
+          - generic [ref=e168]: Picture
+          - button "Choose File" [ref=e171] [cursor=pointer]
+        - generic [ref=e172]:
+          - generic [ref=e173]: Current Address
+          - textbox "Current Address" [ref=e176]
+        - generic [ref=e177]:
+          - generic [ref=e178]: State and City
+          - generic [ref=e181]:
+            - log [ref=e183]
+            - generic [ref=e185]:
+              - generic [ref=e186]: NCR
+              - combobox [ref=e188]
+          - generic [ref=e195]:
+            - log [ref=e197]: option Delhi, selected.
+            - generic [ref=e199]:
+              - generic [ref=e200]: Delhi
+              - combobox [active] [ref=e202]
+        - button "Submit" [ref=e210] [cursor=pointer]
+  - contentinfo [ref=e217]:
+    - generic [ref=e218]: © 2013-2026 TOOLSQA.COM | ALL RIGHTS RESERVED.
+```
+
+# Test source
+
+```ts
+  1  | import { expect, Page , Locator } from "@playwright/test";
+  2  | export default class FormPage {
+  3  |     readonly firstNamefield: Locator;
+  4  |     readonly lastNamefield: Locator;
+  5  |     readonly emailfield: Locator;
+  6  |     readonly malegendericon: Locator;
+  7  | 
+  8  |     constructor(public page: Page) {
+  9  |         this.firstNamefield = page.locator('#firstName');
+  10 |         this.lastNamefield = page.locator('#lastName');
+  11 |         this.emailfield = page.locator('#userEmail');
+  12 |         this.malegendericon = page.locator('#gender-radio-1');
+  13 |     }
+  14 |     
+  15 | 
+  16 |     async enterfirstname(firstname: string) {
+  17 |         await this.firstNamefield.fill(firstname);
+  18 |     }
+  19 | 
+  20 |     async enterlastname(lastname: string) {
+  21 |         await this.lastNamefield.fill(lastname);
+  22 |     }
+  23 | 
+  24 |     async enteremail(email: string) {
+  25 |         await this.emailfield.fill(email);
+  26 |     }
+  27 | 
+  28 |     async clickMalegender() {
+  29 |         await this.malegendericon.click();
+  30 |     }
+  31 | 
+  32 |     async enterMobile(mobile: string) {
+  33 |         await this.page.locator('#userNumber').fill(mobile);
+  34 |     }
+  35 |     
+  36 |     async enterDateofBirth(date: string) {
+  37 |         await this.page.locator('#dateOfBirthInput').fill(date);
+  38 |     }
+  39 | 
+  40 |     async selectHobbies(hobby: string) {
+  41 |         await this.page.getByLabel(`${hobby}`).click();
+  42 |     }
+  43 | 
+  44 |     async uploadPicture(filePath: string) {
+> 45 |         await this.page.locator('#uploadPicture').setInputFiles(filePath);
+     |         ^ Error: ENOENT: no such file or directory, stat 'C:\Users\GOKUL GOWTHAM\Playwright\screenshots\book-details.png'
+  46 |     }
+  47 | 
+  48 |     async enterAddress(address: string) {
+  49 |         await this.page.locator('#currentAddress').fill(address);
+  50 |     }
+  51 | 
+  52 |     async addsubjects(subjectName: string){
+  53 |         await this.page.locator('#subjectsContainer').click();
+  54 |         await this.page.locator('#subjectsInput').fill(`${subjectName}`);
+  55 |    const option = this.page.locator('.subjects-auto-complete__menu').locator('.subjects-auto-complete__option', {
+  56 |       hasText: subjectName,
+  57 |     });
+  58 |     
+  59 |     await option.click();
+  60 |     
+  61 | }
+  62 | 
+  63 |     async selectState(stateName: string){
+  64 |         await this.page.locator('#state').click();
+  65 |         
+  66 |         await this.page.getByRole('listbox').getByRole('option', {name: stateName}).click();
+  67 | 
+  68 |     }
+  69 |     
+  70 |     async selectCity(cityName: string){
+  71 |         await this.page.locator('#city').click();
+  72 |         await this.page.getByRole('listbox').getByRole('option', {name: cityName}).click();
+  73 |     }
+  74 |     
+  75 |    
+  76 |     async clickSubmit() {
+  77 | 
+  78 |       const navigationPromise = this.page.waitForNavigation({waitUntil : "networkidle"});
+  79 |         await Promise.all ([ 
+  80 |             this.page.waitForResponse,
+  81 |             this.page.locator('#submit').click(),
+  82 |           
+  83 |        ])
+  84 |           
+  85 |     }
+  86 | 
+  87 | 
+  88 | }
+```

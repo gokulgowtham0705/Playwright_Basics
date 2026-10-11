@@ -1,0 +1,804 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: QoutesLoad.spec.ts >> Form Test
+- Location: tests\QoutesLoad.spec.ts:4:5
+
+# Error details
+
+```
+Error: locator.click: Error: strict mode violation: locator('span.flow-link-text') resolved to 2 elements:
+    1) <span class="flow-link-text">Don't know your car number?</span> aka getByText('Don\'t know your car number?')
+    2) <span class="flow-link-text">Bought a new car?</span> aka getByText('Bought a new car?')
+
+Call log:
+  - waiting for locator('span.flow-link-text')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "Coverfox.com" [ref=e6]
+      - navigation [ref=e7]:
+        - generic [ref=e8] [cursor=pointer]: Retail Insurance
+        - generic [ref=e12] [cursor=pointer]: Business Insurance
+        - generic [ref=e16] [cursor=pointer]: Resources
+        - link "Claims" [ref=e20] [cursor=pointer]:
+          - /url: /submit-claim-request/
+      - link "Login" [ref=e22] [cursor=pointer]:
+        - /url: /user-login/
+  - generic [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - heading "Bharat's Largest Insurance Distribution Platform" [level=1] [ref=e27]
+        - generic [ref=e28]: RETAIL Insurance
+        - generic [ref=e30]:
+          - generic [ref=e35]:
+            - text: REGISTRATION NUMBER
+            - generic [ref=e36]:
+              - generic [ref=e37]:
+                - generic [ref=e39]:
+                  - generic: Enter Car Number (MH02BX0377 or 21BH1234A)
+                  - textbox "Enter Car Number (MH02BX0377 or 21BH1234A)" [ref=e40]
+                - button "View Quotes" [ref=e41] [cursor=pointer]
+              - generic [ref=e42]:
+                - generic [ref=e43] [cursor=pointer]: Don't know Car number?
+                - generic [ref=e44] [cursor=pointer]: Bought a New Car?
+          - generic [ref=e45]: Renew here
+      - link "Cover AI COVER AI" [ref=e48] [cursor=pointer]:
+        - /url: https://ai.coverfox.com/
+        - img "Cover AI" [ref=e50]
+        - generic [ref=e51]: COVER AI
+    - generic [ref=e52]:
+      - generic [ref=e53]: Business Insurance
+      - generic [ref=e54]:
+        - link "GMC" [ref=e55] [cursor=pointer]:
+          - /url: /business-insurance/group-health-insurance-policy/
+        - link "Group PA" [ref=e59] [cursor=pointer]:
+          - /url: /business-insurance/group-personal-accident-insurance/
+        - link "Group Credit Life" [ref=e63] [cursor=pointer]:
+          - /url: /business-insurance/group-credit-life-insurance/
+        - link "Group Term Life" [ref=e67] [cursor=pointer]:
+          - /url: /business-insurance/group-term-life-insurance/
+        - link "Fire & Burglary" [ref=e71] [cursor=pointer]:
+          - /url: /business-insurance/fire-insurance/
+        - link "Workmen Comp" [ref=e75] [cursor=pointer]:
+          - /url: /business-insurance/workmens-compensation-policy/
+        - link "Card Protect" [ref=e79] [cursor=pointer]:
+          - /url: /business-insurance/card-protection-plan/
+        - link "Contractors' All Risk" [ref=e83] [cursor=pointer]:
+          - /url: /business-insurance/contractors-all-risk-policy/
+        - link "View More" [ref=e87] [cursor=pointer]:
+          - /url: /enterprise/
+  - generic [ref=e92]:
+    - paragraph
+    - generic [ref=e95]:
+      - generic [ref=e96]:
+        - heading "Our Insurance Partners" [level=2] [ref=e97]
+        - paragraph [ref=e98]: Trusted by India’s leading insurance providers
+      - generic [ref=e99]:
+        - img "Bajaj Allianz" [ref=e101]
+        - img "HDFC ERGO" [ref=e103]
+        - img "ICICI Lombard" [ref=e105]
+        - img "TATA AIG" [ref=e107]
+        - img "Digit" [ref=e109]
+        - img "SBI General" [ref=e111]
+        - img "Star Health" [ref=e113]
+        - img "Care Health" [ref=e115]
+        - img "New India Assurance" [ref=e117]
+        - img "Oriental Insurance" [ref=e119]
+        - img "Kotak" [ref=e121]
+        - img "Niva Bupa" [ref=e123]
+    - generic [ref=e126]:
+      - generic [ref=e127]:
+        - generic [ref=e128]: Meet Your AI Insurance Assistant
+        - heading "Introducing Cover AI" [level=2] [ref=e129]:
+          - text: Introducing
+          - generic [ref=e130]: Cover AI
+        - link "Ask Cover AI" [ref=e131] [cursor=pointer]:
+          - /url: https://ai.coverfox.com/
+        - list [ref=e132]:
+          - listitem [ref=e133]:
+            - generic [ref=e136]: Get Quotes
+          - listitem [ref=e137]:
+            - generic [ref=e140]: Ask Anything
+          - listitem [ref=e141]:
+            - generic [ref=e144]: Scan Policy PDF
+          - listitem [ref=e145]:
+            - generic [ref=e148]: Policy Rating
+          - listitem [ref=e149]:
+            - generic [ref=e152]: Insurance Vault
+      - img "Cover AI app screens" [ref=e154]
+    - generic [ref=e157]:
+      - heading "Creating meaningful impact across Bharat" [level=2] [ref=e159]
+      - generic [ref=e160]:
+        - generic [ref=e161]:
+          - generic [ref=e162] [cursor=pointer]:
+            - paragraph [ref=e163]: 10 Million
+            - paragraph [ref=e164]: Households Covered
+          - generic [ref=e165] [cursor=pointer]:
+            - paragraph [ref=e166]: 90%
+            - paragraph [ref=e167]: of Indian PIN Codes Covered
+          - generic [ref=e168] [cursor=pointer]:
+            - paragraph [ref=e169]: 70%
+            - paragraph [ref=e170]: of Policyholders are Women
+          - generic [ref=e171] [cursor=pointer]:
+            - paragraph [ref=e172]: 65%
+            - paragraph [ref=e173]: From Underserved Groups
+        - paragraph [ref=e180]: Expanding access to protectionacross Bharat
+      - generic [ref=e181]:
+        - generic [ref=e182]:
+          - generic [ref=e183]:
+            - text: "37"
+            - generic [ref=e184]: +
+          - paragraph [ref=e185]: Insurer Partnerships
+        - generic [ref=e186]:
+          - generic [ref=e187]:
+            - text: "40"
+            - generic [ref=e188]: +
+          - paragraph [ref=e189]: Lender Integrations
+    - generic [ref=e192]:
+      - generic [ref=e193]:
+        - heading "Insurance Plans for Every Need" [level=2] [ref=e194]
+        - paragraph [ref=e195]: Compare motor and health protection plans from IRDAI-approved insurers with seamless renewals and claims support.
+      - generic [ref=e196]:
+        - link "Save upto 85% Car Insurance Starting at ₹2,094/ yr Explore Plan Car Insurance" [ref=e197] [cursor=pointer]:
+          - /url: /car-insurance/
+          - generic [ref=e198]:
+            - generic [ref=e199]: Save upto 85%
+            - generic [ref=e200]:
+              - heading "Car Insurance" [level=3] [ref=e201]
+              - paragraph [ref=e202]: Starting at ₹2,094/ yr
+            - generic [ref=e203]: Explore Plan
+          - img "Car Insurance" [ref=e207]
+        - link "Save upto 85% Bike Insurance Starting at ₹457/ yr Explore Plan Bike Insurance" [ref=e208] [cursor=pointer]:
+          - /url: /bike-insurance/
+          - generic [ref=e209]:
+            - generic [ref=e210]: Save upto 85%
+            - generic [ref=e211]:
+              - heading "Bike Insurance" [level=3] [ref=e212]
+              - paragraph [ref=e213]: Starting at ₹457/ yr
+            - generic [ref=e214]: Explore Plan
+          - img "Bike Insurance" [ref=e218]
+        - link "Save upto 0% GST Health Insurance Starting at ₹250/ Month Explore Plan Health Insurance" [ref=e219] [cursor=pointer]:
+          - /url: /health-insurance/
+          - generic [ref=e220]:
+            - generic [ref=e221]: Save upto 0% GST
+            - generic [ref=e222]:
+              - heading "Health Insurance" [level=3] [ref=e223]
+              - paragraph [ref=e224]: Starting at ₹250/ Month
+            - generic [ref=e225]: Explore Plan
+          - img "Health Insurance" [ref=e229]
+    - generic [ref=e233]:
+      - generic [ref=e234]:
+        - heading [level=2] [ref=e235]:
+          - generic [ref=e236]: Embedded Protection
+          - text: for Businesses
+        - paragraph [ref=e237]: Customised insurance solutions designed to help lenders, NBFCs, fintechs, and financial institutions protect borrowers, employees, and business operations across different industries
+        - link "Partner With Us" [ref=e238] [cursor=pointer]:
+          - /url: "#reach-out"
+      - generic [ref=e240]:
+        - heading "Credit Protection" [level=3] [ref=e241]
+        - paragraph [ref=e243]: Insurance solutions designed to protect outstanding loan liabilities and support borrower risk management across the lending journey.
+      - generic [ref=e245]:
+        - heading "Micro Insurance Products" [level=3] [ref=e246]
+        - paragraph [ref=e248]: Affordable and accessible insurance solutions designed to provide essential financial protection for underserved individuals, small businesses, and low-income communities against everyday risks and uncertainties.
+      - generic [ref=e250]:
+        - heading "Employee Benefits Insurance" [level=3] [ref=e251]
+        - paragraph [ref=e253]: Employee and borrower-focused insurance offerings, including health, life, and accident coverage for the workforce and financial protection.
+      - generic [ref=e255]:
+        - heading "Liability Insurance" [level=3] [ref=e256]
+        - paragraph [ref=e258]: Coverage designed to help lending businesses manage operational, professional, cyber, and management-related liability risks.
+      - generic [ref=e260]:
+        - heading "Property and Transit Insurance" [level=3] [ref=e261]
+        - paragraph [ref=e263]: Insurance solutions that protect business assets, inventory, and goods in transit against risks such as fire, theft, accidental damage, and logistical disruptions.
+    - generic [ref=e266]:
+      - generic [ref=e267]:
+        - heading "Industries We Serve" [level=2] [ref=e268]
+        - paragraph [ref=e269]: Delivering end-to-end insurance solutions tailored to diverse industries & many more to come!
+      - generic [ref=e271]:
+        - generic [ref=e273]:
+          - generic [ref=e274]: NBFCs
+          - generic [ref=e278]: EV Manufacturers & Distributors
+          - generic [ref=e282]: MFIs
+          - generic [ref=e286]: E-commerce Platforms
+          - generic [ref=e290]: NBFCs
+          - generic [ref=e294]: EV Manufacturers & Distributors
+          - generic [ref=e298]: MFIs
+          - generic [ref=e302]: E-commerce Platforms
+          - generic [ref=e306]: NBFCs
+          - generic [ref=e310]: EV Manufacturers & Distributors
+          - generic [ref=e314]: MFIs
+          - generic [ref=e318]: E-commerce Platforms
+          - generic [ref=e322]: NBFCs
+          - generic [ref=e326]: EV Manufacturers & Distributors
+          - generic [ref=e330]: MFIs
+          - generic [ref=e334]: E-commerce Platforms
+        - generic [ref=e339]:
+          - generic [ref=e340]: Retail & FMCG Distribution Networks
+          - generic [ref=e344]: Insurance Brokers
+          - generic [ref=e348]: Agri-aggregators & Agri-tech Platforms
+          - generic [ref=e352]: Gig Economy Platforms
+          - generic [ref=e356]: Retail & FMCG Distribution Networks
+          - generic [ref=e360]: Insurance Brokers
+          - generic [ref=e364]: Agri-aggregators & Agri-tech Platforms
+          - generic [ref=e368]: Gig Economy Platforms
+          - generic [ref=e372]: Retail & FMCG Distribution Networks
+          - generic [ref=e376]: Insurance Brokers
+          - generic [ref=e380]: Agri-aggregators & Agri-tech Platforms
+          - generic [ref=e384]: Gig Economy Platforms
+          - generic [ref=e388]: Retail & FMCG Distribution Networks
+          - generic [ref=e392]: Insurance Brokers
+          - generic [ref=e396]: Agri-aggregators & Agri-tech Platforms
+          - generic [ref=e400]: Gig Economy Platforms
+        - generic [ref=e405]:
+          - generic [ref=e406]: Digital Consumer Businesses
+          - generic [ref=e410]: Digital Lenders
+          - generic [ref=e414]: Fintech Platforms
+          - generic [ref=e418]: Banking Correspondents
+          - generic [ref=e422]: Digital Consumer Businesses
+          - generic [ref=e426]: Digital Lenders
+          - generic [ref=e430]: Fintech Platforms
+          - generic [ref=e434]: Banking Correspondents
+          - generic [ref=e438]: Digital Consumer Businesses
+          - generic [ref=e442]: Digital Lenders
+          - generic [ref=e446]: Fintech Platforms
+          - generic [ref=e450]: Banking Correspondents
+          - generic [ref=e454]: Digital Consumer Businesses
+          - generic [ref=e458]: Digital Lenders
+          - generic [ref=e462]: Fintech Platforms
+          - generic [ref=e466]: Banking Correspondents
+    - generic [ref=e471]:
+      - generic [ref=e474]:
+        - paragraph [ref=e478]: Expanding insurance reach across underserved and emerging customer segments
+        - paragraph [ref=e482]: Supporting lenders, NBFCs, and fintechs with embedded insurance capabilities
+        - paragraph [ref=e486]: Building scalable distribution partnerships across digital and offline ecosystems
+        - paragraph [ref=e490]: Simplifying insurance adoption within lending and financial product journeys
+        - paragraph [ref=e494]: Enabling broader borrower and workforce protection through group and credit-linked solutions
+        - paragraph [ref=e498]: Expanding insurance reach across underserved and emerging customer segments
+      - generic [ref=e500]:
+        - heading "Our Mission" [level=2] [ref=e501]
+        - paragraph [ref=e502]: To make insurance accessible, available and affordable within India's lending ecosystem and support our vision to reach 100 million households by 2030.
+    - generic [ref=e504]:
+      - heading "Our Mission Partners" [level=2] [ref=e505]
+      - generic [ref=e507]:
+        - generic [ref=e508]:
+          - img "Aerem"
+        - generic [ref=e509]:
+          - img "Avanti Finance"
+        - generic [ref=e510]:
+          - img "Bharuwa Finance"
+        - generic [ref=e511]:
+          - img "Capital Trust"
+        - generic [ref=e512]:
+          - img "CDOT"
+        - generic [ref=e513]:
+          - img "cKers Finance"
+        - generic [ref=e514]:
+          - img "CredRight"
+        - generic [ref=e515]:
+          - img "EZ Capital"
+        - generic [ref=e516]:
+          - img "ICPL"
+        - generic [ref=e517]:
+          - img "IFL"
+        - generic [ref=e518]:
+          - img "Indifi"
+        - generic [ref=e519]:
+          - img "Kaabil Finance"
+        - generic [ref=e520]:
+          - img "Kinara Capital"
+        - generic [ref=e521]:
+          - img "Kissandhan"
+        - generic [ref=e522]:
+          - img "Kredit"
+        - generic [ref=e523]:
+          - img "Mani Bhavnam"
+        - generic [ref=e524]:
+          - img "Mufin"
+        - generic [ref=e525]:
+          - img "Nipun"
+        - generic [ref=e526]:
+          - img "Optimo"
+        - generic [ref=e527]:
+          - img "Oxyzo"
+        - generic [ref=e528]:
+          - img "PayNearby"
+        - generic [ref=e529]:
+          - img "Propelld"
+        - generic [ref=e530]:
+          - img "Refyne"
+        - generic [ref=e531]:
+          - img "RiseWise"
+        - generic [ref=e532]:
+          - img "Sampada"
+        - generic [ref=e533]:
+          - img "Samvedna"
+        - generic [ref=e534]:
+          - img "Sankash"
+        - generic [ref=e535]:
+          - img "Satin Finserve"
+        - generic [ref=e536]:
+          - img "Shubham"
+        - generic [ref=e537]:
+          - img "Solar Hero"
+        - generic [ref=e538]:
+          - img "Spandana"
+        - generic [ref=e539]:
+          - img "Sugmya Finance"
+        - generic [ref=e540]:
+          - img "Surjit"
+        - generic [ref=e541]:
+          - img "Udd Chalo"
+        - generic [ref=e542]:
+          - img "Yatra"
+        - generic [ref=e543]:
+          - img "Aerem"
+        - generic [ref=e544]:
+          - img "Avanti Finance"
+        - generic [ref=e545]:
+          - img "Bharuwa Finance"
+        - generic [ref=e546]:
+          - img "Capital Trust"
+        - generic [ref=e547]:
+          - img "CDOT"
+        - generic [ref=e548]:
+          - img "cKers Finance"
+        - generic [ref=e549]:
+          - img "CredRight"
+        - generic [ref=e550]:
+          - img "EZ Capital"
+        - generic [ref=e551]:
+          - img "ICPL"
+        - generic [ref=e552]:
+          - img "IFL"
+        - generic [ref=e553]:
+          - img "Indifi"
+        - generic [ref=e554]:
+          - img "Kaabil Finance"
+        - generic [ref=e555]:
+          - img "Kinara Capital"
+        - generic [ref=e556]:
+          - img "Kissandhan"
+        - generic [ref=e557]:
+          - img "Kredit"
+        - generic [ref=e558]:
+          - img "Mani Bhavnam"
+        - generic [ref=e559]:
+          - img "Mufin"
+        - generic [ref=e560]:
+          - img "Nipun"
+        - generic [ref=e561]:
+          - img "Optimo"
+        - generic [ref=e562]:
+          - img "Oxyzo"
+        - generic [ref=e563]:
+          - img "PayNearby"
+        - generic [ref=e564]:
+          - img "Propelld"
+        - generic [ref=e565]:
+          - img "Refyne"
+        - generic [ref=e566]:
+          - img "RiseWise"
+        - generic [ref=e567]:
+          - img "Sampada"
+        - generic [ref=e568]:
+          - img "Samvedna"
+        - generic [ref=e569]:
+          - img "Sankash"
+        - generic [ref=e570]:
+          - img "Satin Finserve"
+        - generic [ref=e571]:
+          - img "Shubham"
+        - generic [ref=e572]:
+          - img "Solar Hero"
+        - generic [ref=e573]:
+          - img "Spandana"
+        - generic [ref=e574]:
+          - img "Sugmya Finance"
+        - generic [ref=e575]:
+          - img "Surjit"
+        - generic [ref=e576]:
+          - img "Udd Chalo"
+        - generic [ref=e577]:
+          - img "Yatra"
+        - generic [ref=e578]:
+          - img "Aerem"
+        - generic [ref=e579]:
+          - img "Avanti Finance"
+        - generic [ref=e580]:
+          - img "Bharuwa Finance"
+        - generic [ref=e581]:
+          - img "Capital Trust"
+        - generic [ref=e582]:
+          - img "CDOT"
+        - generic [ref=e583]:
+          - img "cKers Finance"
+        - generic [ref=e584]:
+          - img "CredRight"
+        - generic [ref=e585]:
+          - img "EZ Capital"
+        - generic [ref=e586]:
+          - img "ICPL"
+        - generic [ref=e587]:
+          - img "IFL"
+        - generic [ref=e588]:
+          - img "Indifi"
+        - generic [ref=e589]:
+          - img "Kaabil Finance"
+        - generic [ref=e590]:
+          - img "Kinara Capital"
+        - generic [ref=e591]:
+          - img "Kissandhan"
+        - generic [ref=e592]:
+          - img "Kredit"
+        - generic [ref=e593]:
+          - img "Mani Bhavnam"
+        - generic [ref=e594]:
+          - img "Mufin"
+        - generic [ref=e595]:
+          - img "Nipun"
+        - generic [ref=e596]:
+          - img "Optimo"
+        - generic [ref=e597]:
+          - img "Oxyzo"
+        - generic [ref=e598]:
+          - img "PayNearby"
+        - generic [ref=e599]:
+          - img "Propelld"
+        - generic [ref=e600]:
+          - img "Refyne"
+        - generic [ref=e601]:
+          - img "RiseWise"
+        - generic [ref=e602]:
+          - img "Sampada"
+        - generic [ref=e603]:
+          - img "Samvedna"
+        - generic [ref=e604]:
+          - img "Sankash"
+        - generic [ref=e605]:
+          - img "Satin Finserve"
+        - generic [ref=e606]:
+          - img "Shubham"
+        - generic [ref=e607]:
+          - img "Solar Hero"
+        - generic [ref=e608]:
+          - img "Spandana"
+        - generic [ref=e609]:
+          - img "Sugmya Finance"
+        - generic [ref=e610]:
+          - img "Surjit"
+        - generic [ref=e611]:
+          - img "Udd Chalo"
+        - generic [ref=e612]:
+          - img "Yatra"
+        - generic [ref=e613]:
+          - img "Aerem"
+        - generic [ref=e614]:
+          - img "Avanti Finance"
+        - generic [ref=e615]:
+          - img "Bharuwa Finance"
+        - generic [ref=e616]:
+          - img "Capital Trust"
+        - generic [ref=e617]:
+          - img "CDOT"
+        - generic [ref=e618]:
+          - img "cKers Finance"
+        - generic [ref=e619]:
+          - img "CredRight"
+        - generic [ref=e620]:
+          - img "EZ Capital"
+        - generic [ref=e621]:
+          - img "ICPL"
+        - generic [ref=e622]:
+          - img "IFL"
+        - generic [ref=e623]:
+          - img "Indifi"
+        - generic [ref=e624]:
+          - img "Kaabil Finance"
+        - generic [ref=e625]:
+          - img "Kinara Capital"
+        - generic [ref=e626]:
+          - img "Kissandhan"
+        - generic [ref=e627]:
+          - img "Kredit"
+        - generic [ref=e628]:
+          - img "Mani Bhavnam"
+        - generic [ref=e629]:
+          - img "Mufin"
+        - generic [ref=e630]:
+          - img "Nipun"
+        - generic [ref=e631]:
+          - img "Optimo"
+        - generic [ref=e632]:
+          - img "Oxyzo"
+        - generic [ref=e633]:
+          - img "PayNearby"
+        - generic [ref=e634]:
+          - img "Propelld"
+        - generic [ref=e635]:
+          - img "Refyne"
+        - generic [ref=e636]:
+          - img "RiseWise"
+        - generic [ref=e637]:
+          - img "Sampada"
+        - generic [ref=e638]:
+          - img "Samvedna"
+        - generic [ref=e639]:
+          - img "Sankash"
+        - generic [ref=e640]:
+          - img "Satin Finserve"
+        - generic [ref=e641]:
+          - img "Shubham"
+        - generic [ref=e642]:
+          - img "Solar Hero"
+        - generic [ref=e643]:
+          - img "Spandana"
+        - generic [ref=e644]:
+          - img "Sugmya Finance"
+        - generic [ref=e645]:
+          - img "Surjit"
+        - generic [ref=e646]:
+          - img "Udd Chalo"
+        - generic [ref=e647]:
+          - img "Yatra"
+    - generic [ref=e652]:
+      - generic [ref=e653]:
+        - heading "Insurance for Bharat" [level=2] [ref=e654]
+        - paragraph [ref=e655]: From everyday protection to embedded insurance distribution, Coverfox is making Insurance accessible, available and affordable across India.
+      - generic [ref=e656]:
+        - heading "Reach Out to Us" [level=3] [ref=e657]
+        - generic [ref=e658]:
+          - generic [ref=e659]:
+            - generic [ref=e660]: Full Name*
+            - textbox "Full Name*" [ref=e661]:
+              - /placeholder: Enter Name
+          - generic [ref=e662]:
+            - generic [ref=e663]:
+              - generic [ref=e664]: E-mail*
+              - textbox "E-mail*" [ref=e665]:
+                - /placeholder: Christine28@hotmail.com
+            - generic [ref=e666]:
+              - generic [ref=e667]: Mobile No*
+              - textbox "Mobile No*" [ref=e668]:
+                - /placeholder: 98989 89898
+          - generic [ref=e669]:
+            - generic [ref=e670]: Reason for reaching out
+            - textbox "Reason for reaching out" [ref=e671]:
+              - /placeholder: Description
+          - generic [ref=e673] [cursor=pointer]:
+            - checkbox "I agree to Coverfox Privacy Policy" [ref=e674]
+            - generic [ref=e675]:
+              - text: I agree to
+              - link "Coverfox Privacy" [ref=e676]:
+                - /url: /privacy-policy/
+              - text: Policy
+          - button "Submit" [disabled] [ref=e677]
+    - generic [ref=e680]:
+      - img "IRDAI" [ref=e681]
+      - generic [ref=e682]:
+        - generic [ref=e683]: Licensed By IRDAI
+        - generic [ref=e684]: Trust & Transparency at our core
+      - generic [ref=e685]:
+        - generic [ref=e686]: Broker Code
+        - generic [ref=e687]: IRDA/ DB 556/13
+      - generic [ref=e688]:
+        - generic [ref=e689]: CIN
+        - generic [ref=e690]: U66000MH2013PTC243810
+  - contentinfo [ref=e691]:
+    - generic [ref=e692]:
+      - generic [ref=e693]:
+        - list [ref=e695]:
+          - listitem [ref=e696]:
+            - text: Secure
+            - generic [ref=e697]:
+              - link "DMCA.com Protection Status" [ref=e698] [cursor=pointer]:
+                - /url: //www.dmca.com/Protection/Status.aspx?ID=9acaadbe-78db-46ef-babe-3b0bba57bf80
+              - generic "Godaddy Verified and Secured" [ref=e700]
+          - listitem [ref=e701]:
+            - text: Licensed By
+            - link "Insurance Regulatory and Development Authority" [ref=e703] [cursor=pointer]:
+              - /url: https://www.coverfox.com/irda-license/
+          - listitem [ref=e705]:
+            - text: Payment Options
+            - generic [ref=e706]:
+              - generic "VISA" [ref=e707]
+              - generic "Master Card" [ref=e708]
+              - generic "American Express" [ref=e709]
+              - generic "Net Banking" [ref=e710]
+              - generic "Card on delivery" [ref=e711]
+              - generic "Bharat QR" [ref=e712]
+              - generic "Paytm" [ref=e713]
+        - generic [ref=e714]:
+          - generic [ref=e715]:
+            - generic [ref=e716] [cursor=pointer]: +
+            - generic [ref=e718]:
+              - generic [ref=e720]:
+                - link "General Insurance" [ref=e723] [cursor=pointer]:
+                  - /url: https://www.coverfox.com/general-insurance/
+                - list [ref=e725]:
+                  - listitem [ref=e726]:
+                    - link "Car Insurance" [ref=e727] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/car-insurance/
+                  - listitem [ref=e728]:
+                    - link "Bike Insurance" [ref=e729] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/two-wheeler-insurance/
+                  - listitem [ref=e730]:
+                    - link "Motor Insurance" [ref=e731] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/motor-insurance/
+                  - listitem [ref=e732]:
+                    - link "Car Insurance Premium Calculator" [ref=e733] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/car-insurance/car-insurance-premium-calculator/
+              - generic [ref=e735]:
+                - link "Health Insurance" [ref=e738] [cursor=pointer]:
+                  - /url: https://www.coverfox.com/health-insurance/
+                - list [ref=e740]:
+                  - listitem [ref=e741]:
+                    - link "Family Health Insurance" [ref=e742] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/health-insurance/family-health-insurance-plan/
+                  - listitem [ref=e743]:
+                    - link "Senior Citizens Insurance" [ref=e744] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/health-insurance/senior-citizens-health-insurance/
+                  - listitem [ref=e745]:
+                    - link "Group Insurance" [ref=e746] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/health-insurance/group-health-insurance-policy/
+                  - listitem [ref=e747]:
+                    - link "Corona Rakshak Policy" [ref=e748] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/health-insurance/corona-rakshak-policy/
+                  - listitem [ref=e749]:
+                    - link "Corona Kavach Policy" [ref=e750] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/health-insurance/corona-kavach-policy/
+                  - listitem [ref=e751]:
+                    - link "Super Topup Plan" [ref=e752] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/health-plan/super-topup
+              - generic [ref=e754]:
+                - link "LIFE INSURANCE" [ref=e757] [cursor=pointer]:
+                  - /url: https://www.coverfox.com/life-insurance/
+                - list [ref=e759]:
+                  - listitem [ref=e760]:
+                    - link "Term Insurance" [ref=e761] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/term-insurance/
+                  - listitem [ref=e762]:
+                    - link "ULIP" [ref=e763] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/life-insurance/ulip-plans/
+                  - listitem [ref=e764]:
+                    - link "e-Term Plan" [ref=e765] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/term-insurance/#eterm-plan
+                  - listitem [ref=e766]:
+                    - link "1 Cr Term Insurance" [ref=e767] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/term-insurance/articles/1-crore-term-insurance/
+              - generic [ref=e769]:
+                - generic [ref=e770]: Insurance in Hindi
+                - list [ref=e773]:
+                  - listitem [ref=e774]:
+                    - link "कार इन्शुरन्स" [ref=e775] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/car-insurance/hindi/
+                  - listitem [ref=e776]:
+                    - link "टू व्हीलर इंश्योरेंस" [ref=e777] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/two-wheeler-insurance/hindi/
+                  - listitem [ref=e778]:
+                    - link "टर्म इंश्योरेंस" [ref=e779] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/term-insurance/hindi/
+                  - listitem [ref=e780]:
+                    - link "हेल्थ इंश्योरेंस" [ref=e781] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/health-insurance/hindi/
+                  - listitem [ref=e782]:
+                    - link "मेडिक्लेम पॉलिसी" [ref=e783] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/health-insurance/hindi/mediclaim-policy/
+              - generic [ref=e785]:
+                - generic [ref=e786]: Other Links
+                - list [ref=e789]:
+                  - listitem [ref=e790]:
+                    - link "Learn About Insurance" [ref=e791] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/learn/
+                  - listitem [ref=e792]:
+                    - link "Network Hospitals" [ref=e793] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/health-insurance/network-hospitals/
+                  - listitem [ref=e794]:
+                    - link "Cashless Garages" [ref=e795] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/car-insurance/cashless-garages/
+                  - listitem [ref=e796]:
+                    - link "Get Android App" [ref=e797] [cursor=pointer]:
+                      - /url: https://play.google.com/store/apps/details?id=com.coverfox.app
+                  - listitem [ref=e798]:
+                    - link "Get iOS App" [ref=e799] [cursor=pointer]:
+                      - /url: https://apps.apple.com/in/app/coverfox-insurance/id1616646614
+          - list [ref=e805]:
+            - listitem [ref=e806]:
+              - link "Learn" [ref=e807] [cursor=pointer]:
+                - /url: /learn/
+            - listitem [ref=e808]:
+              - link "About Us" [ref=e809] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=e810]:
+              - link "Contact Us" [ref=e811] [cursor=pointer]:
+                - /url: /contact/
+            - listitem [ref=e812]:
+              - link "Careers" [ref=e813] [cursor=pointer]:
+                - /url: /careers/
+            - listitem [ref=e814]:
+              - link "Sitemap" [ref=e815] [cursor=pointer]:
+                - /url: /sitemap/
+            - listitem [ref=e816]:
+              - link "FAQs" [ref=e817] [cursor=pointer]:
+                - /url: /faqs/
+        - generic [ref=e819]:
+          - link [ref=e820] [cursor=pointer]:
+            - /url: https://www.facebook.com/Coverfox.Insurance/
+          - link [ref=e822] [cursor=pointer]:
+            - /url: https://twitter.com/coverfox
+          - link [ref=e824] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/coverfox-insurance
+          - link [ref=e826] [cursor=pointer]:
+            - /url: https://www.youtube.com/channel/UCdRU43Vg0L5O3JytODpFATQ/feed/
+          - link [ref=e828] [cursor=pointer]:
+            - /url: https://www.instagram.com/coverfox_insurance/
+          - link [ref=e830] [cursor=pointer]:
+            - /url: https://github.com/Coverfox
+      - generic [ref=e833]:
+        - generic [ref=e834]:
+          - paragraph [ref=e835]:
+            - generic [ref=e836]: "Coverfox Insurance Broking Pvt. Ltd. :"
+            - text: C Wing, 5098-5110 (Middle Lift), 5th Floor, Oberoi Garden Estate, Chandivali Farm Road, Chandivali, Andheri East, Mumbai, Maharashtra - 400072
+          - paragraph [ref=e837]:
+            - text: Licence No.
+            - link "478" [ref=e838] [cursor=pointer]:
+              - /url: https://www.coverfox.com/irda-license/
+            - text: ", IRDA Direct Broker Code:"
+            - link "IRDA/ DB 556/ 13" [ref=e840] [cursor=pointer]:
+              - /url: https://www.coverfox.com/irda-license/
+            - text: ","
+            - generic [ref=e842]:
+              - text: "Valid till:"
+              - generic [ref=e843]: 26/12/2028
+              - text: ","
+            - generic [ref=e844]:
+              - text: "CIN:"
+              - generic [ref=e845]: U66000MH2013PTC243810
+        - list [ref=e847]:
+          - listitem [ref=e848]:
+            - link "Shipping & Delivery Policy" [ref=e849] [cursor=pointer]:
+              - /url: /shipping-and-delivering/
+          - listitem [ref=e850]:
+            - link "Privacy Policy" [ref=e851] [cursor=pointer]:
+              - /url: /privacy-policy/
+          - listitem [ref=e852]:
+            - link "Legal Policies" [ref=e853] [cursor=pointer]:
+              - /url: /legal-policies/
+          - listitem [ref=e854]:
+            - link "Cancellation & Refund" [ref=e855] [cursor=pointer]:
+              - /url: /cancellation-and-refund-policy/
+          - listitem [ref=e856]:
+            - link "Terms & Conditions" [ref=e857] [cursor=pointer]:
+              - /url: /terms-and-conditions/
+        - generic [ref=e858]: Copyright © 2026 Coverfox.com. All Rights Reserved
+```
+
+# Test source
+
+```ts
+  1  | import { test, Page } from "@playwright/test";
+  2  | import FormPage from "../pages/FormPage";
+  3  | 
+  4  | test('Form Test', async ({ page , context }) => {
+  5  |   await page.goto('https://www.coverfox.com');
+  6  |   const clickhere = page.locator('span.flow-link-text'); 
+> 7  |   await clickhere.click();    
+     |                   ^ Error: locator.click: Error: strict mode violation: locator('span.flow-link-text') resolved to 2 elements:
+  8  |  
+  9  | 
+  10 |   
+  11 | 
+  12 | });
+```

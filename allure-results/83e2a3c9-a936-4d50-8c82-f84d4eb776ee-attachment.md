@@ -1,0 +1,1092 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: QoutesLoad.spec.ts >> Form Test
+- Location: tests\QoutesLoad.spec.ts:4:5
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible() failed
+
+Locator: getByText('What is your car\'s brand?', { exact: true })
+Expected: visible
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+  - Expect "toBeVisible" with timeout 5000ms
+  - waiting for getByText('What is your car\'s brand?', { exact: true })
+
+```
+
+```yaml
+- banner:
+  - link "Coverfox.com":
+    - /url: /
+    - img "Coverfox.com"
+  - list:
+    - listitem:
+      - link "Contact us":
+        - /url: /contact/
+    - listitem:
+      - link " Login":
+        - /url: /user-login/
+  - list:
+    - listitem:
+      - text: Retail Insurance
+      - list:
+        - listitem:
+          - text: Car
+          - list:
+            - listitem:
+              - link "Car Insurance":
+                - /url: /car-insurance/
+            - listitem:
+              - link "Electric Car Insurance":
+                - /url: /car-insurance/electric-car-insurance/
+            - listitem:
+              - link "Used Car Insurance":
+                - /url: /car-insurance/used/
+            - listitem:
+              - link "Third Party Car Insurance":
+                - /url: /car-insurance/third-party-car-insurance/
+            - listitem:
+              - link "Comprehensive Car Insurance":
+                - /url: /car-insurance/comprehensive-car-insurance/
+            - listitem:
+              - link "Cashless Garages":
+                - /url: /car-insurance/cashless-garages/
+            - listitem:
+              - link "Car Insurance Calculator":
+                - /url: /car-insurance/car-insurance-premium-calculator/
+            - listitem:
+              - link "Short Term Car Insurance":
+                - /url: /car-insurance/short-term-car-insurance/
+            - listitem:
+              - link "Car Insurance Companies":
+                - /url: /car-insurance/companies/
+        - listitem:
+          - text: Bike
+          - list:
+            - listitem:
+              - link "Bike Insurance":
+                - /url: /two-wheeler-insurance/
+            - listitem:
+              - link "Electric Bike Insurance":
+                - /url: /two-wheeler-insurance/electric-bike-insurance/
+            - listitem:
+              - link "Third Party Bike Insurance":
+                - /url: /two-wheeler-insurance/third-party-two-wheeler-insurance/
+            - listitem:
+              - link "Comprehensive Bike Insurance":
+                - /url: /two-wheeler-insurance/comprehensive/
+            - listitem:
+              - link "Multiyear Bike Insurance":
+                - /url: /two-wheeler-insurance/multiyear-bike-insurance/
+            - listitem:
+              - link "Bike Insurance Calculator":
+                - /url: /two-wheeler-insurance/two-wheeler-insurance-premium-calculator/
+            - listitem:
+              - link "Bike Insurance IDV Calculator":
+                - /url: /two-wheeler-insurance/idv-calculator-in-bike-insurance/
+            - listitem:
+              - link "Bike Insurance Companies":
+                - /url: /two-wheeler-insurance/companies/
+        - listitem:
+          - text: Health
+          - list:
+            - listitem:
+              - link "Health Insurance":
+                - /url: /health-insurance/
+            - listitem:
+              - link "Mediclaim Policy":
+                - /url: /health-insurance/mediclaim-policy/
+            - listitem:
+              - link "Individual Health Insurance Plans":
+                - /url: /health-insurance/individual-health-insurance/
+            - listitem:
+              - link "Critical Illness Insurance":
+                - /url: /health-insurance/critical-illness-insurance/
+            - listitem:
+              - link "Senior Citizen Health Insurance":
+                - /url: /health-insurance/senior-citizens-health-insurance/
+            - listitem:
+              - link "Health Insurance Companies":
+                - /url: /health-insurance/companies/
+            - listitem:
+              - link "Network Hospitals":
+                - /url: /health-insurance/network-hospitals/
+        - listitem:
+          - text: Term
+          - list:
+            - listitem:
+              - link "Term Insurance":
+                - /url: /term-insurance/
+            - listitem:
+              - link "1 Crore Term Insurance":
+                - /url: /term-insurance/articles/1-crore-term-insurance/
+            - listitem:
+              - link "Compare Term Insurance":
+                - /url: /term-insurance/term-insurance-comparison/
+            - listitem:
+              - link "Buy Term Insurance":
+                - /url: /term-insurance/buy-term-insurance/
+            - listitem:
+              - link "Term Insurance Calculator":
+                - /url: /term-insurance/term-insurance-calculator/
+            - listitem:
+              - link "Term Insurance Companies":
+                - /url: /term-insurance/term-insurance-companies/
+            - listitem:
+              - link "Term Insurance Renewals":
+                - /url: /life-insurance-renewals/
+            - listitem:
+              - link "Life Insurance":
+                - /url: /life-insurance/
+            - listitem:
+              - link "Life Insurance Plans":
+                - /url: /life-insurance-plans/
+            - listitem:
+              - link "Life Insurance Calculator":
+                - /url: /life-insurance/life-insurance-calculator/
+    - listitem:
+      - text: Business Insurance
+      - list:
+        - listitem:
+          - text: Property & Transit Insurance
+          - list:
+            - listitem:
+              - link "Workmen Compensation Insurance":
+                - /url: https://www.coverfox.com/business-insurance/workmens-compensation-policy/
+            - listitem:
+              - link "Fire Insurance":
+                - /url: https://www.coverfox.com/business-insurance/fire-insurance/
+            - listitem:
+              - link "Shop Owner Insurance":
+                - /url: https://www.coverfox.com/business-insurance/shop-insurance-policy/
+            - listitem:
+              - link "Marine Insurance":
+                - /url: https://www.coverfox.com/business-insurance/marine-insurance/
+        - listitem:
+          - text: Engineering Insurance
+          - list:
+            - listitem:
+              - link "Contractor's Plant & Machinery Insurance":
+                - /url: https://www.coverfox.com/business-insurance/contractors-plant-machinary-insurance/
+            - listitem:
+              - link "Contractor's All Risk Insurance":
+                - /url: https://www.coverfox.com/business-insurance/contractors-all-risk-policy/
+            - listitem:
+              - link "Erection All Risk Insurance":
+                - /url: https://www.coverfox.com/business-insurance/erection-all-risk-insurance/
+        - listitem:
+          - text: Business Liability Insurance
+          - list:
+            - listitem:
+              - link "Cyber Insurance":
+                - /url: https://www.coverfox.com/business-insurance/cyber-insurance/
+            - listitem:
+              - link "Commercial General Liability Insurance":
+                - /url: https://www.coverfox.com/business-insurance/commercial-general-liability-insurance/
+            - listitem:
+              - link "Professional Indemnity for Companies":
+                - /url: https://www.coverfox.com/business-insurance/professional-indemnity-insurance/
+            - listitem:
+              - link "Directors & Officers Liability Insurance":
+                - /url: https://www.coverfox.com/business-insurance/directors-and-officers-liability-insurance/
+        - listitem:
+          - text: Employee Benefits
+          - list:
+            - listitem:
+              - link "Group Credit Life Insurance":
+                - /url: https://www.coverfox.com/business-insurance/group-credit-life-insurance/
+            - listitem:
+              - link "Group Personal Accident Insurance":
+                - /url: https://www.coverfox.com/business-insurance/group-personal-accident-insurance/
+            - listitem:
+              - link "Group Term Life Insurance":
+                - /url: https://www.coverfox.com/business-insurance/group-term-life-insurance/
+            - listitem:
+              - link "Group Travel Insurance":
+                - /url: https://www.coverfox.com/business-insurance/group-travel-insurance/
+            - listitem:
+              - link "Group Medical Coverage":
+                - /url: https://www.coverfox.com/business-insurance/group-health-insurance-policy/
+        - listitem:
+          - text: Digital Payment Protection Plans
+          - list:
+            - listitem:
+              - link "UPI Protect":
+                - /url: https://www.coverfox.com/business-insurance/upi-fraud-insurance/
+            - listitem:
+              - link "Card Protect":
+                - /url: https://www.coverfox.com/business-insurance/card-protection-plan/
+    - listitem:
+      - text: Resources
+      - list:
+        - listitem:
+          - link "About us":
+            - /url: /about/
+        - listitem:
+          - link "Contact us":
+            - /url: /contact/
+        - listitem:
+          - link "Blog":
+            - /url: /articles/
+    - listitem:
+      - link "Claims":
+        - /url: /submit-claim-request/
+  - navigation:
+    - text: 
+    - list:
+      - listitem: Retail Insurance
+      - listitem
+      - listitem:
+        - text: Car
+        - list:
+          - listitem:
+            - link "Car Insurance":
+              - /url: /car-insurance/
+          - listitem:
+            - link "Electric Car Insurance":
+              - /url: /car-insurance/electric-car-insurance/
+          - listitem:
+            - link "Used Car Insurance":
+              - /url: /car-insurance/used/
+          - listitem:
+            - link "Third Party Car Insurance":
+              - /url: /car-insurance/third-party-car-insurance/
+          - listitem:
+            - link "Comprehensive Car Insurance":
+              - /url: /car-insurance/comprehensive-car-insurance/
+          - listitem:
+            - link "Cashless Garages":
+              - /url: /car-insurance/cashless-garages/
+          - listitem:
+            - link "Car Insurance Calculator":
+              - /url: /car-insurance/car-insurance-premium-calculator/
+          - listitem:
+            - link "Short Term Car Insurance":
+              - /url: /car-insurance/short-term-car-insurance/
+          - listitem:
+            - link "Car Insurance Companies":
+              - /url: /car-insurance/companies/
+      - listitem:
+        - text: Bike
+        - list:
+          - listitem:
+            - link "Bike Insurance":
+              - /url: /two-wheeler-insurance/
+          - listitem:
+            - link "Electric Bike Insurance":
+              - /url: /two-wheeler-insurance/electric-bike-insurance/
+          - listitem:
+            - link "Third Party Bike Insurance":
+              - /url: /two-wheeler-insurance/third-party-two-wheeler-insurance/
+          - listitem:
+            - link "Comprehensive Bike Insurance":
+              - /url: /two-wheeler-insurance/comprehensive/
+          - listitem:
+            - link "Multiyear Bike Insurance":
+              - /url: /two-wheeler-insurance/multiyear-bike-insurance/
+          - listitem:
+            - link "Bike Insurance Calculator":
+              - /url: /two-wheeler-insurance/two-wheeler-insurance-premium-calculator/
+          - listitem:
+            - link "Bike Insurance IDV Calculator":
+              - /url: /two-wheeler-insurance/idv-calculator-in-bike-insurance/
+          - listitem:
+            - link "Bike Insurance Companies":
+              - /url: /two-wheeler-insurance/companies/
+      - listitem:
+        - text: Health
+        - list:
+          - listitem:
+            - link "Health Insurance":
+              - /url: /health-insurance/
+          - listitem:
+            - link "Mediclaim Policy":
+              - /url: /health-insurance/mediclaim-policy/
+          - listitem:
+            - link "Individual Health Insurance Plans":
+              - /url: /health-insurance/individual-health-insurance/
+          - listitem:
+            - link "Critical Illness Insurance":
+              - /url: /health-insurance/critical-illness-insurance/
+          - listitem:
+            - link "Senior Citizen Health Insurance":
+              - /url: /health-insurance/senior-citizens-health-insurance/
+          - listitem:
+            - link "Health Insurance Companies":
+              - /url: /health-insurance/companies/
+          - listitem:
+            - link "Network Hospitals":
+              - /url: /health-insurance/network-hospitals/
+      - listitem:
+        - text: Term
+        - list:
+          - listitem:
+            - link "Term Insurance":
+              - /url: /term-insurance/
+          - listitem:
+            - link "1 Crore Term Insurance":
+              - /url: /term-insurance/articles/1-crore-term-insurance/
+          - listitem:
+            - link "Compare Term Insurance":
+              - /url: /term-insurance/term-insurance-comparison/
+          - listitem:
+            - link "Buy Term Insurance":
+              - /url: /term-insurance/buy-term-insurance/
+          - listitem:
+            - link "Term Insurance Calculator":
+              - /url: /term-insurance/term-insurance-calculator/
+          - listitem:
+            - link "Term Insurance Companies":
+              - /url: /term-insurance/term-insurance-companies/
+          - listitem:
+            - link "Term Insurance Renewals":
+              - /url: /life-insurance-renewals/
+          - listitem:
+            - link "Life Insurance":
+              - /url: /life-insurance/
+          - listitem:
+            - link "Life Insurance Plans":
+              - /url: /life-insurance-plans/
+          - listitem:
+            - link "Life Insurance Calculator":
+              - /url: /life-insurance/life-insurance-calculator/
+      - listitem: Business Insurance
+      - listitem
+      - listitem:
+        - text: Property & Transit Insurance
+        - list:
+          - listitem:
+            - link "Workmen Compensation Insurance":
+              - /url: https://www.coverfox.com/business-insurance/workmens-compensation-policy/
+          - listitem:
+            - link "Fire Insurance":
+              - /url: https://www.coverfox.com/business-insurance/fire-insurance/
+          - listitem:
+            - link "Shop Owner Insurance":
+              - /url: https://www.coverfox.com/business-insurance/shop-insurance-policy/
+          - listitem:
+            - link "Marine Insurance":
+              - /url: https://www.coverfox.com/business-insurance/marine-insurance/
+      - listitem:
+        - text: Engineering Insurance
+        - list:
+          - listitem:
+            - link "Contractor's Plant & Machinery Insurance":
+              - /url: https://www.coverfox.com/business-insurance/contractors-plant-machinary-insurance/
+          - listitem:
+            - link "Contractor's All Risk Insurance":
+              - /url: https://www.coverfox.com/business-insurance/contractors-all-risk-policy/
+          - listitem:
+            - link "Erection All Risk Insurance":
+              - /url: https://www.coverfox.com/business-insurance/erection-all-risk-insurance/
+      - listitem:
+        - text: Business Liability Insurance
+        - list:
+          - listitem:
+            - link "Cyber Insurance":
+              - /url: https://www.coverfox.com/business-insurance/cyber-insurance/
+          - listitem:
+            - link "Commercial General Liability Insurance":
+              - /url: https://www.coverfox.com/business-insurance/commercial-general-liability-insurance/
+          - listitem:
+            - link "Professional Indemnity for Companies":
+              - /url: https://www.coverfox.com/business-insurance/professional-indemnity-insurance/
+          - listitem:
+            - link "Directors & Officers Liability Insurance":
+              - /url: https://www.coverfox.com/business-insurance/directors-and-officers-liability-insurance/
+      - listitem:
+        - text: Employee Benefits
+        - list:
+          - listitem:
+            - link "Group Credit Life Insurance":
+              - /url: https://www.coverfox.com/business-insurance/group-credit-life-insurance/
+          - listitem:
+            - link "Group Personal Accident Insurance":
+              - /url: https://www.coverfox.com/business-insurance/group-personal-accident-insurance/
+          - listitem:
+            - link "Group Term Life Insurance":
+              - /url: https://www.coverfox.com/business-insurance/group-term-life-insurance/
+          - listitem:
+            - link "Group Travel Insurance":
+              - /url: https://www.coverfox.com/business-insurance/group-travel-insurance/
+          - listitem:
+            - link "Group Medical Coverage":
+              - /url: https://www.coverfox.com/business-insurance/group-health-insurance-policy/
+      - listitem:
+        - text: Digital Payment Protection Plans
+        - list:
+          - listitem:
+            - link "UPI Protect":
+              - /url: https://www.coverfox.com/business-insurance/upi-fraud-insurance/
+          - listitem:
+            - link "Card Protect":
+              - /url: https://www.coverfox.com/business-insurance/card-protection-plan/
+      - listitem: Resources
+      - listitem
+      - listitem:
+        - link "About us":
+          - /url: /about/
+      - listitem:
+        - link "Contact us":
+          - /url: /contact/
+      - listitem:
+        - link "Blog":
+          - /url: /articles/
+      - listitem
+      - listitem:
+        - link "Claims":
+          - /url: /submit-claim-request/
+- text: Car Insurance Prices Starting at ₹2,094/Year** Get Upto 85%* Discount On Car Insurance.  Brand  Car Fuel & Variant  Registration What is your car’s brand? TOP BRANDS
+- img "Ford"
+- text: Ford
+- img "Honda"
+- text: Honda
+- img "Hyundai"
+- text: Hyundai
+- img "Mahindra"
+- text: Mahindra
+- img "Maruti"
+- text: Maruti
+- img "Mercedes-Benz"
+- text: Mercedes-Benz
+- img "Nissan"
+- text: Nissan
+- img "Renault"
+- text: Renault
+- img "Skoda"
+- text: Skoda
+- img "Tata"
+- text: Tata
+- img "Toyota"
+- text: Toyota
+- img "Volkswagen"
+- text: Volkswagen See All 51 Brands Enter Car Number (MH02BX0377 or 21BH1234A)
+- textbox "Enter Car Number (MH02BX0377 or 21BH1234A)"
+- button "View Quotes"
+- text: Don't know your car number?Click here Bought a new car?Click here Already bought from Coverfox? Renew here in 2 steps Save upto ₹ 50,000/- on your new car. Buy insurance from Coverfox 10000+ Cashless Garages Never worry about payments 4.7/5
+- img "star"
+- img "star"
+- img "star"
+- img "star"
+- img "half star"
+- text: 4.6/5
+- img "star"
+- img "star"
+- img "star"
+- img "star"
+- img "half star"
+- text: Highest rated insurance website
+- link "Coverfox":
+  - /url: /
+  - img "Coverfox": 
+- img "icon"
+- link "Car Insurance":
+  - /url: /car-insurance/
+- button "Toggle Hindi / English translation": 🌐 हिंदी में पढ़ें
+- region "What is Car Insurance?":
+  - heading "What is Car Insurance?" [level=1]
+  - paragraph: Car insurance provides financial protection against damage to your car and third-party liabilities arising from accidents and other covered events. Depending on the policy you choose, it can cover your own vehicle, third-party liabilities, theft, fire, natural calamities and more (as per policy terms). You can compare car insurance plans from multiple insurers on Coverfox and choose coverage based on your car, budget and needs.
+  - button "Buy Car Insurance Online"
+- region "Why Do You Need Car Insurance?":
+  - heading "Why Do You Need Car Insurance?" [level=2]
+  - paragraph: "In India, driving a car without valid four wheeler insurance is illegal and carries financial risk. Here’s why car insurance is important:"
+  - heading "Legal Requirement" [level=3]
+  - paragraph:
+    - text: Third-party car insurance is mandatory under the
+    - link "Motor Vehicles Act, 1988":
+      - /url: https://www.indiacode.nic.in/bitstream/123456789/9460/1/a1988-59.pdf
+    - text: . Driving without it can lead to fines or other penalties.
+  - heading "Financial Protection" [level=3]
+  - paragraph: Car accident repair costs are high, and a car insurance policy ensures this cost is covered (as per policy terms).
+  - heading "Third-party Liability Cover" [level=3]
+  - paragraph: Liability arising from damage caused to another person or their property by your vehicle falls on you. Insurance ensures this liability is taken up with the insurer as per policy limits.
+  - heading "Peace of Mind" [level=3]
+  - paragraph: If you have car insurance, you can drive on the road stress-free, knowing that you are financially covered from fire, theft, accidents, natural disasters and man-made hazards as per policy terms.
+  - button "Previous"
+  - tablist "Slide pages":
+    - button "Go to page 1"
+    - button "Go to page 2"
+  - button "Next"
+- region "Types of Car Insurance":
+  - heading "Types of Car Insurance" [level=2]
+  - list:
+    - listitem:
+      - heading "Third-Party Car Insurance" [level=3]
+      - paragraph:
+        - text: In
+        - link "third-party car insurance":
+          - /url: https://www.coverfox.com/car-insurance/third-party-car-insurance/
+        - text: ", liability that arises from an accident towards another person or property is covered. Injury, death or property damage caused by the insured four-wheeler owner is compensated by the insurer as per legal limits."
+      - paragraph:
+        - text: It is the minimum required cover to drive legally in India. All four-wheeler insurance policies must have it. Although it does not pay for repairs for damages caused to your own vehicle. Claims made under third-party insurance are often settled by the
+        - link "Motor Accident Claims Tribunal (MACT)":
+          - /url: https://mumact.dcourts.gov.in/
+        - text: through a legal process.
+      - button "Get Quote"
+    - listitem:
+      - heading "Standalone Own Damage Car Insurance" [level=3]
+      - paragraph: Own damage cover is for covering damages caused to your own vehicle. These damages may include damage, fire, theft, natural disaster or manmade hazards, depending on the policy. It does not include third-party liability and is bought separately by those who are looking for coverage for their own vehicle.
+      - paragraph:
+        - text: You can buy
+        - link "Own Damage Car Insurance":
+          - /url: https://www.coverfox.com/car-insurance/standalone-own-damage-car-insurance/
+        - text: "only if you already have a third-party insurance policy, to stay legally compliant. One important note: Own damage cover on its own does not meet the legal requirement for third-party liability."
+      - button "Get Quote"
+    - listitem:
+      - heading "Comprehensive Car Insurance" [level=3]
+      - paragraph: Comprehensive car insurance is a mix of own damage cover and third-party liability in a single policy. In this, damage done to the insured vehicle from insured events and also damage caused to third-party, both are covered as per policy terms.
+      - paragraph:
+        - text: It can be further customised with add-ons like zero depreciation, engine protection, return to invoice, etc.
+        - link "Comprehensive car insurance":
+          - /url: https://www.coverfox.com/car-insurance/comprehensive-car-insurance/
+        - text: may be suitable for new car owners looking for both third-party liability and own-damage protection.
+      - button "Get Quote"
+- region "What Does Car Insurance Cover?":
+  - heading "What Does Car Insurance Cover?" [level=2]
+  - heading "What Is Covered Under Car Insurance?" [level=3]
+  - list:
+    - listitem:
+      - button "Accidental damage" [expanded]
+      - paragraph: Repair costs from collisions, overturning, or self-inflicted accidents.
+    - listitem:
+      - button "Theft"
+      - paragraph: Total loss of the vehicle due to theft, subject to police reporting and claim conditions.
+    - listitem:
+      - button "Fire"
+      - paragraph: Damage caused by fire, explosion, or self-ignition.
+    - listitem:
+      - button "Natural calamities"
+      - paragraph: Losses from floods, cyclones, earthquakes, landslides, and similar events.
+    - listitem:
+      - button "Man-made events"
+      - paragraph: Damage from riots, strikes, malicious acts, or terrorism, where covered.
+    - listitem:
+      - button "Third-party injury or death"
+      - paragraph: Compensation for injury or death caused to another person.
+    - listitem:
+      - button "Third-party property damage"
+      - paragraph: Compensation for damage caused to another person's property.
+  - heading "What Is Not Covered Under Car Insurance?" [level=3]
+  - list:
+    - listitem:
+      - button "Wear and tear" [expanded]
+      - paragraph: Regular ageing of tyres, parts, and paint isn't a claimable loss.
+    - listitem:
+      - button "Mechanical or electrical breakdown"
+      - paragraph: Failures unrelated to an insured event, such as a worn-out clutch, are excluded.
+    - listitem:
+      - button "Depreciation"
+      - paragraph:
+        - text: Claim payouts reduce parts' value by age unless
+        - link "zero dep car insurance":
+          - /url: https://www.coverfox.com/car-insurance/add-ons/zero-depreciation/
+        - text: applies.
+    - listitem:
+      - button "Driving without a valid licence"
+      - paragraph: Claims are rejected if the driver wasn't legally licensed at the time of the incident.
+    - listitem:
+      - button "Driving under influence"
+      - paragraph: Accidents caused while under the influence of alcohol or drugs void the claim.
+    - listitem:
+      - button "Unauthorised use"
+      - paragraph: Damage during use outside the policy's permitted purpose isn't covered.
+    - listitem:
+      - button "Excluded losses"
+      - paragraph: Anything specifically excluded in the policy document, regardless of cause.
+  - paragraph: "Disclaimer: Coverage may vary based on policies chosen, insurer’s terms & conditions. Read the policy document carefully to understand the exact coverage of your insurance for four wheeler."
+  - button "Explore All Plans"
+- region "Car Insurance Add-Ons":
+  - heading "Car Insurance Add-Ons" [level=2]
+  - paragraph: Add-ons in insurance policy for car extend the coverage potential of the policy and come at an additional cost. Each add-on has its own benefits.
+  - table:
+    - rowgroup:
+      - row "Add-On What It Does":
+        - columnheader "Add-On"
+        - columnheader "What It Does"
+    - rowgroup:
+      - row "Zero Depreciation Reduces depreciation deductions on eligible parts during a claim":
+        - cell "Zero Depreciation"
+        - cell "Reduces depreciation deductions on eligible parts during a claim"
+      - row "Engine Protection Covers specified engine-related damage, including from water ingress":
+        - cell "Engine Protection"
+        - cell "Covers specified engine-related damage, including from water ingress"
+      - row "Return to Invoice Covers the difference between claim settlement and invoice value, subject to terms":
+        - cell "Return to Invoice"
+        - cell "Covers the difference between claim settlement and invoice value, subject to terms"
+      - row "Roadside Assistance Provides support during breakdowns, such as towing or a jump start":
+        - cell "Roadside Assistance"
+        - cell "Provides support during breakdowns, such as towing or a jump start"
+      - row "Consumables Cover Covers eligible consumable items used during repairs, like nuts, bolts, and engine oil":
+        - cell "Consumables Cover"
+        - cell "Covers eligible consumable items used during repairs, like nuts, bolts, and engine oil"
+      - row "NCB Protection Preserves accumulated No Claim Bonus after eligible claims":
+        - cell "NCB Protection"
+        - cell "Preserves accumulated No Claim Bonus after eligible claims"
+  - paragraph: "Note: These add-ons apply to comprehensive and standalone own-damage plans, not to third-party-only cover."
+  - strong: "Pro Tip:"
+  - text: A best car insurance policy isn't defined by how many add-ons it carries, but by how well those add-ons match actual risk.
+  - heading "How to Choose the Right Add-Ons" [level=3]
+  - paragraph: "Add-on selection should follow the vehicle's profile, not a fixed checklist:"
+  - list:
+    - listitem:
+      - heading "Car age" [level=4]
+      - paragraph:
+        - text: Consider add-ons such as
+        - link "Car Engine Protection Cover":
+          - /url: https://www.coverfox.com/car-insurance/add-ons/engine-protect-cover/
+        - text: based on your car's age, condition, usage and exposure to risks such as waterlogging.
+    - listitem:
+      - heading "Usage" [level=4]
+      - paragraph:
+        - text: Long-distance drivers can have the security of
+        - link "car insurance roadside assistance cover":
+          - /url: https://www.coverfox.com/car-insurance/add-ons/roadside-assistance-cover/
+        - text: ", whereas less-used cars can benefit from pay-as-you-drive policies."
+    - listitem:
+      - heading "Location" [level=4]
+      - paragraph: Flood-prone or high-theft areas justify having engine protection and NCB protection in their car insurance policy.
+    - listitem:
+      - heading "Budget" [level=4]
+      - paragraph: Every add-on raises the premium. Choice should be based on need, not availability.
+  - text: The best time to reevaluate your car insurance policy, adding or removing add-ons, is the next car insurance policy renewal cycle.
+  - button "Compare Car Insurance Plans"
+- region "What Factors Affect Car Insurance Premium?":
+  - heading "What Factors Affect Car Insurance Premium?" [level=2]
+  - paragraph: "If you’ve bought a car, then it is important to understand how premiums work. The following factors affect car insurance premiums:"
+  - list:
+    - listitem:
+      - heading "Car's Insured Declared Value (IDV)" [level=3]
+      - paragraph: IDV is the max amount that your insurer pays in case the car gets stolen or totalled. It is calculated as the current market value of the insured car after depreciation. The higher the IDV, the higher the premiums. However, lowering IDV to reduce the car insurance price may result in a lower claim settlement in case of total loss or theft.
+    - listitem:
+      - heading "Location" [level=3]
+      - paragraph: The location where the car is registered affects premiums due to accident risks, theft stats, and repair costs in that region. Metro cities generally have higher premium rates than smaller towns or rural areas, mainly due to traffic density and claim frequency.
+    - listitem:
+      - heading "Car's Age, Make and Model" [level=3]
+      - paragraph: As the car gets old, its IDV depreciates, decreasing the car insurance price. The make and model of the car affect the price of the vehicle and also determine repair costs, directly affecting the new car insurance price.
+    - listitem:
+      - heading "No Claim Bonus (NCB)" [level=3]
+      - paragraph:
+        - link "NCB car insurance":
+          - /url: https://www.coverfox.com/car-insurance/add-ons/no-claim-bonus/
+        - text: is a discount insurers give on own-damage policy renewals for maintaining claim-free years. This discount can go up to 50%, depending on the insurer. Also, missing a car insurance renewal can lead to loss of NCB.
+  - button "View more"
+- region "How to Choose the Right Car Insurance Policy?":
+  - heading "How to Choose the Right Car Insurance Policy?" [level=2]
+  - paragraph: "Choosing the best insurance for car is not just about comparing prices. You need to consider the following factors as well while buying new car insurance:"
+  - list:
+    - listitem:
+      - heading "Match coverage to need" [level=3]
+      - paragraph: Buy a policy that fits your needs. Before you buy car insurance, consider whether the coverage and add-ons are appropriate for how you use the car. Buying an expensive policy that has all the add-ons when the car is not even in daily use does not make an economically right choice.
+    - listitem:
+      - heading "Check the IDV carefully" [level=3]
+      - paragraph: IDV should neither be too low nor too high. It should reflect the current market value of the car, and the premium should fit your budget.
+    - listitem:
+      - heading "Pick add-ons based on need" [level=3]
+      - paragraph:
+        - text: Choose add-ons like zero depreciation, engine protection,
+        - link "return to invoice car insurance":
+          - /url: https://www.coverfox.com/car-insurance/add-ons/return-to-invoice-cover/
+        - text: ", or roadside assistance based on the vehicle's age and use."
+    - listitem:
+      - heading "Check the cashless garage network" [level=3]
+      - paragraph: Online car insurance comparisons show which insurers have cashless garages near you, so repairs don't need upfront payment.
+    - listitem:
+      - heading "Compare car insurance quotes on Coverfox" [level=3]
+      - paragraph: You can compare car insurance quotes on Coverfox and compare plans online to find a policy that suits your needs. Compare your options before you choose a policy.
+  - heading "Ask CoverAI" [level=3]
+  - paragraph: Upload your policy to CoverAI and ask it to do a thorough check of your policy. You will understand your policy better, and CoverAI will help you choose a suitable car insurance policy as per your needs.
+  - link "Try COVER AI":
+    - /url: https://ai.coverfox.com/
+  - strong: "Pro Tip:"
+  - text: It is important to timely have car policy renewals, to maintain NCB benefits, and have continued coverage.
+- region "Buy, renew or claim car insurance":
+  - tablist "Buy, renew or claim":
+    - tab "How to Buy" [selected]
+    - tab "How to Renew"
+    - tab "How to Claim"
+  - tabpanel "How to Buy":
+    - heading "How to Buy Car Insurance Online?" [level=2]
+    - paragraph: "If you are buying insurance for a new car or an existing one, it is a simple and streamlined process on Coverfox. Just follow these steps:"
+    - paragraph:
+      - strong: "Pro Tip:"
+      - text: Use CoverAI for car insurance quotes comparison and select what best suits you!
+    - link "Try COVER AI":
+      - /url: https://ai.coverfox.com/
+    - list:
+      - listitem: Enter your car's registration number and basic details, or click on “Bought a New Car?” if this is a new car insurance online purchase.
+      - listitem: Provide your existing policy details if you're renewing or switching insurers.
+      - listitem: Compare car insurance online and premiums from multiple insurers.
+      - listitem: Select your coverage type, third-party, standalone own damage, or comprehensive, and add the add-ons you need.
+      - listitem: Make the payment through a secure payment gateway.
+      - listitem: Receive your policy document by email upon verification.
+    - button "Buy Car Insurance Online"
+- region "FAQs About Car Insurance Online":
+  - heading "FAQs About Car Insurance Online" [level=2]
+  - list:
+    - listitem:
+      - heading "Which car insurance is best?" [level=3]:
+        - button "Which car insurance is best?"
+      - region "Which car insurance is best?":
+        - paragraph: The best car insurance depends on your requirements and your budget. There is no single policy that can be deemed the best car insurance policy; a third-party car insurance will help you ensure legal mandates are met, whereas a comprehensive policy protects your vehicle while being legally compliant.
+    - listitem:
+      - heading "What is the difference between third-party and comprehensive car insurance?" [level=3]:
+        - button "What is the difference between third-party and comprehensive car insurance?"
+      - region "What is the difference between third-party and comprehensive car insurance?":
+        - paragraph: Third-party cover pays only for damage or injury caused to others. Comprehensive cover adds protection for your own vehicle from accidents, theft, fire, and other listed events.
+    - listitem:
+      - heading "How much does car insurance cost in India?" [level=3]:
+        - button "How much does car insurance cost in India?"
+      - region "How much does car insurance cost in India?":
+        - paragraph: Car insurance in India starts from ₹2094** per year for third-party cover, while the premium for OD insurance varies based on factors such as the car's age, make and model, registration location, coverage, IDV, add-ons, NCB and applicable discounts. On Coverfox, you can save up to 85%* by comparing car insurance quotes online.
+    - listitem:
+      - heading "How is a car insurance premium calculated?" [level=3]:
+        - button "How is a car insurance premium calculated?"
+      - region "How is a car insurance premium calculated?":
+        - paragraph: Premium depends on IDV, the car's age, make and model, location, policy type, add-ons selected, NCB, and deductibles chosen.
+  - button "View more"
+- region "Car Insurance for Top Manufacturer in India":
+  - heading "Car Insurance for Top Manufacturer in India" [level=2]
+  - list:
+    - listitem:
+      - link "Mahindra Car Insurance":
+        - /url: https://www.coverfox.com/car-insurance/mahindra-and-mahindra/
+    - listitem:
+      - link "Maruti Suzuki Car Insurance":
+        - /url: https://www.coverfox.com/car-insurance/maruti-suzuki/
+    - listitem:
+      - link "Hyundai Car Insurance":
+        - /url: https://www.coverfox.com/car-insurance/hyundai/
+    - listitem:
+      - link "Tata Car Insurance":
+        - /url: https://www.coverfox.com/car-insurance/tata/
+    - listitem:
+      - link "Kia Car Insurance":
+        - /url: https://www.coverfox.com/car-insurance/kia/
+    - listitem:
+      - link "Honda Car Insurance":
+        - /url: https://www.coverfox.com/car-insurance/honda/
+    - listitem:
+      - link "Audi Car Insurance":
+        - /url: https://www.coverfox.com/car-insurance/audi/
+    - listitem:
+      - link "Skoda Car Insurance":
+        - /url: https://www.coverfox.com/car-insurance/skoda/
+    - listitem:
+      - link "Mercedes Benz Car Insurance":
+        - /url: https://www.coverfox.com/car-insurance/mercedes-benz/
+    - listitem:
+      - link "BMW Car Insurance":
+        - /url: https://www.coverfox.com/car-insurance/bmw/
+    - listitem:
+      - link "Fiat Car Insurance":
+        - /url: https://www.coverfox.com/car-insurance/fiat/
+    - listitem:
+      - link "Nissan Car Insurance":
+        - /url: https://www.coverfox.com/car-insurance/nissan/
+  - button "View all 42 brands"
+- region "Car Insurance for Top Models in India":
+  - heading "Car Insurance for Top Models in India" [level=2]
+  - list:
+    - listitem:
+      - link "Mahindra Jeeto Insurance":
+        - /url: https://www.coverfox.com/car-insurance/mahindra-and-mahindra/jeeto/
+    - listitem:
+      - link "Hyundai Creta Car Insurance":
+        - /url: https://www.coverfox.com/car-insurance/hyundai/creta/
+    - listitem:
+      - link "Maruti Suzuki Alto K10 Car Insurance":
+        - /url: https://www.coverfox.com/car-insurance/maruti-suzuki/alto-k10/
+    - listitem:
+      - link "Mahindra Bolero Insurance":
+        - /url: https://www.coverfox.com/car-insurance/mahindra-and-mahindra/bolero/
+    - listitem:
+      - link "Maruti Suzuki Swift Car Insurance":
+        - /url: https://www.coverfox.com/car-insurance/maruti-suzuki/swift/
+    - listitem:
+      - link "Tata Nexon Car Insurance":
+        - /url: https://www.coverfox.com/car-insurance/tata/nexon/
+    - listitem:
+      - link "Maruti Suzuki Eeco Insurance":
+        - /url: https://www.coverfox.com/car-insurance/maruti-suzuki/eeco/
+    - listitem:
+      - link "Maruti Suzuki Ertiga Car Insurance":
+        - /url: https://www.coverfox.com/car-insurance/maruti-suzuki/ertiga/
+    - listitem:
+      - link "Maruti Suzuki Wagon R Car Insurance":
+        - /url: https://www.coverfox.com/car-insurance/maruti-suzuki/wagon-r/
+    - listitem:
+      - link "Maruti Suzuki Vitara Brezza Car Insurance":
+        - /url: https://www.coverfox.com/car-insurance/maruti-suzuki/vitara-brezza/
+    - listitem:
+      - link "Tata Yodha Pickup Insurance":
+        - /url: https://www.coverfox.com/car-insurance/tata/yodha-pickup/
+    - listitem:
+      - link "MG Windsor EV Insurance":
+        - /url: https://www.coverfox.com/car-insurance/mg/windsor-ev/
+  - button "View all 30 models"
+- region "Popular Car Insurance Articles":
+  - heading "Popular Car Insurance Articles" [level=2]
+  - list "Popular car insurance articles":
+    - listitem:
+      - 'link "How to Renew Car Registration After 15 Years in India: Online & Offline Process? Read article"':
+        - /url: https://www.coverfox.com/car-insurance/articles/car-registration-renewal-after-15-years/
+    - listitem:
+      - link "How to Check Car Owner Details by Number Plate in India Read article":
+        - /url: https://www.coverfox.com/car-insurance/articles/how-to-check-car-owner-details-by-number-plate/
+    - listitem:
+      - link "How to Get a Duplicate Car Insurance Policy Online? Read article":
+        - /url: https://www.coverfox.com/car-insurance/articles/duplicate-car-insurance-policy-online/
+    - listitem:
+      - 'link "Car Depreciation Rate in India: IDV, Slabs & Insurance Impact Read article"':
+        - /url: https://www.coverfox.com/car-insurance/articles/car-depreciation-rate-in-India/
+    - listitem:
+      - link "Does Your Car Insurance Policy Offer Consumables Cover? Read article":
+        - /url: https://www.coverfox.com/car-insurance/articles/does-your-car-insurance-policy-offer-consumables-cover/
+    - listitem:
+      - 'link "Process to Transfer Your Car Insurance Policy: A Step-by-Step Guide Read article"':
+        - /url: https://www.coverfox.com/car-insurance/articles/how-to-transfer-your-car-insurance-policy/
+    - listitem:
+      - link "Explore More Car Insurance Articles View all articles":
+        - /url: https://www.coverfox.com/car-insurance/articles/
+  - button "Previous articles" [disabled]
+  - button "Go to page 1"
+  - button "Go to page 2"
+  - button "Go to page 3"
+  - button "More articles"
+- text: "Customer Reviews Average Customer Rating:"
+- button "Write a Review"
+- text: 
+- article: Jash Shah Fast and affordable car insurance price Was looking for car insurance online for my Tata Nexon and went with Coverfox. Got good rate and the process was pretty easy, didn’t take much time 16 Sep
+- text: 
+- article: Kinjal Gupta Cheapest Car Insurance Quotes I got the best car insurance quotes for Hyundai Creta on Coverfox after spending a lot of time comparing different insurance sites. The support team helped me get a good rate. Thanks to Jyoti for the assistance! 08 Sep
+- text: 
+- article: Prasanna Kumar Saved time & money Getting car insurance through coverfox has saved me both time & money 09 Jan 2025
+- text: 
+- article: Diwakar Quick comparison and Purchase I compared a few car insurance plans online and got the policy instantly. The whole process was so quick and easy. 09 Jan 2025
+- text: 
+- article: Shreya Helpful executive Customer support executive assisted me in finding a better car insurance plan for my Maruti Swift was very helpful. 31 Dec 2024
+- text: 
+- article: Sarath Saxena Excellent service I just renewed my car insurance from the comfort of my home. Excellent service, and the team worked well together. 31 Dec 2024
+- text: 
+- article: Gowri Dey Best customer care Thank you, Coverfox for being such a great help with helping me find the best car insurance. I bought a plan that matched exactly what my budget was, and the webpage was very easy to go through. I had questions about many of the coverages and they helped me walk through each of those details impeccably! 30 Jul 2022
+- text: 
+- article: Anand Prakesh Great service Loved it all along 15 Jun 2020
+- text: 
+- article: Ranjit Good service Amazing service by coverfox team 13 Jun 2020
+- text: 
+- article: Neha Arora Quick and Easy It took me 5 minutes to renew my insurance online. Thankyou Coverfox for a great website 26 May 2020
+- list:
+  - listitem:  Prev
+  - listitem: "1"
+  - listitem: Next 
+- text: "Popular Searches:"
+- link "कार इन्शुरन्स":
+  - /url: /car-insurance/hindi/
+- link "Motor Insurance":
+  - /url: /motor-insurance/
+- link "Electric Car Insurance":
+  - /url: /car-insurance/electric-car-insurance/
+- link "Used Car Insurance":
+  - /url: /car-insurance/used/
+- link "Car Insurance Calculator":
+  - /url: /car-insurance/car-insurance-premium-calculator/
+- link "Claim Settlement Ratio":
+  - /url: /car-insurance/claim-settlement-ratio/
+- text: "Written By: Coverfox - Updated: September, 2026. Disclaimers * Savings are based on the maximum discount provided on own damage premium as offered by our car insurer partners. ** Price for a basic third-party car insurance for a car under 1000 CC for 1 year policy, set by IRDAI (Excluding GST). ×"
+- contentinfo:
+  - list:
+    - listitem:
+      - text: Secure
+      - link "DMCA.com Protection Status":
+        - /url: //www.dmca.com/Protection/Status.aspx?ID=9acaadbe-78db-46ef-babe-3b0bba57bf80
+    - listitem:
+      - text: Licensed By
+      - link "Insurance Regulatory and Development Authority":
+        - /url: https://www.coverfox.com/irda-license/
+    - listitem: Payment Options
+  - text: +
+  - link "General Insurance":
+    - /url: https://www.coverfox.com/general-insurance/
+  - list:
+    - listitem:
+      - link "Car Insurance":
+        - /url: https://www.coverfox.com/car-insurance/
+    - listitem:
+      - link "Bike Insurance":
+        - /url: https://www.coverfox.com/two-wheeler-insurance/
+    - listitem:
+      - link "Motor Insurance":
+        - /url: https://www.coverfox.com/motor-insurance/
+    - listitem:
+      - link "Car Insurance Premium Calculator":
+        - /url: https://www.coverfox.com/car-insurance/car-insurance-premium-calculator/
+  - link "Health Insurance":
+    - /url: https://www.coverfox.com/health-insurance/
+  - list:
+    - listitem:
+      - link "Family Health Insurance":
+        - /url: https://www.coverfox.com/health-insurance/family-health-insurance-plan/
+    - listitem:
+      - link "Senior Citizens Insurance":
+        - /url: https://www.coverfox.com/health-insurance/senior-citizens-health-insurance/
+    - listitem:
+      - link "Group Insurance":
+        - /url: https://www.coverfox.com/health-insurance/group-health-insurance-policy/
+    - listitem:
+      - link "Corona Rakshak Policy":
+        - /url: https://www.coverfox.com/health-insurance/corona-rakshak-policy/
+    - listitem:
+      - link "Corona Kavach Policy":
+        - /url: https://www.coverfox.com/health-insurance/corona-kavach-policy/
+    - listitem:
+      - link "Super Topup Plan":
+        - /url: https://www.coverfox.com/health-plan/super-topup
+  - link "LIFE INSURANCE":
+    - /url: https://www.coverfox.com/life-insurance/
+  - list:
+    - listitem:
+      - link "Term Insurance":
+        - /url: https://www.coverfox.com/term-insurance/
+    - listitem:
+      - link "ULIP":
+        - /url: https://www.coverfox.com/life-insurance/ulip-plans/
+    - listitem:
+      - link "e-Term Plan":
+        - /url: https://www.coverfox.com/term-insurance/#eterm-plan
+    - listitem:
+      - link "1 Cr Term Insurance":
+        - /url: https://www.coverfox.com/term-insurance/articles/1-crore-term-insurance/
+  - text: Insurance in Hindi
+  - list:
+    - listitem:
+      - link "कार इन्शुरन्स":
+        - /url: https://www.coverfox.com/car-insurance/hindi/
+    - listitem:
+      - link "टू व्हीलर इंश्योरेंस":
+        - /url: https://www.coverfox.com/two-wheeler-insurance/hindi/
+    - listitem:
+      - link "टर्म इंश्योरेंस":
+        - /url: https://www.coverfox.com/term-insurance/hindi/
+    - listitem:
+      - link "हेल्थ इंश्योरेंस":
+        - /url: https://www.coverfox.com/health-insurance/hindi/
+    - listitem:
+      - link "मेडिक्लेम पॉलिसी":
+        - /url: https://www.coverfox.com/health-insurance/hindi/mediclaim-policy/
+  - text: Other Links
+  - list:
+    - listitem:
+      - link "Learn About Insurance":
+        - /url: https://www.coverfox.com/learn/
+    - listitem:
+      - link "Network Hospitals":
+        - /url: https://www.coverfox.com/health-insurance/network-hospitals/
+    - listitem:
+      - link "Cashless Garages":
+        - /url: https://www.coverfox.com/car-insurance/cashless-garages/
+    - listitem:
+      - link "Get Android App":
+        - /url: https://play.google.com/store/apps/details?id=com.coverfox.app
+    - listitem:
+      - link "Get iOS App":
+        - /url: https://apps.apple.com/in/app/coverfox-insurance/id1616646614
+  - list:
+    - listitem:
+      - link "Learn":
+        - /url: /learn/
+    - listitem:
+      - link "About Us":
+        - /url: /about/
+    - listitem:
+      - link "Contact Us":
+        - /url: /contact/
+    - listitem:
+      - link "Careers":
+        - /url: /careers/
+    - listitem:
+      - link "Sitemap":
+        - /url: /sitemap/
+    - listitem:
+      - link "FAQs":
+        - /url: /faqs/
+  - link:
+    - /url: https://www.facebook.com/Coverfox.Insurance/
+  - link:
+    - /url: https://twitter.com/coverfox
+  - link:
+    - /url: https://www.linkedin.com/company/coverfox-insurance
+  - link:
+    - /url: https://www.youtube.com/channel/UCdRU43Vg0L5O3JytODpFATQ/feed/
+  - link:
+    - /url: https://www.instagram.com/coverfox_insurance/
+  - link:
+    - /url: https://github.com/Coverfox
+  - paragraph: "Coverfox Insurance Broking Pvt. Ltd. : C Wing, 5098-5110 (Middle Lift), 5th Floor, Oberoi Garden Estate, Chandivali Farm Road, Chandivali, Andheri East, Mumbai, Maharashtra - 400072"
+  - paragraph:
+    - text: Licence No.
+    - link "478":
+      - /url: https://www.coverfox.com/irda-license/
+    - text: ", IRDA Direct Broker Code:"
+    - link "IRDA/ DB 556/ 13":
+      - /url: https://www.coverfox.com/irda-license/
+    - text: ", Valid till: 26/12/2028 , CIN: U66000MH2013PTC243810"
+  - list:
+    - listitem:
+      - link "Shipping & Delivery Policy":
+        - /url: /shipping-and-delivering/
+    - listitem:
+      - link "Privacy Policy":
+        - /url: /privacy-policy/
+    - listitem:
+      - link "Legal Policies":
+        - /url: /legal-policies/
+    - listitem:
+      - link "Cancellation & Refund":
+        - /url: /cancellation-and-refund-policy/
+    - listitem:
+      - link "Terms & Conditions":
+        - /url: /terms-and-conditions/
+  - text: Copyright © 2026 Coverfox.com. All Rights Reserved
+- img
+```
+
+# Test source
+
+```ts
+  1  | import { test, Page,expect } from "@playwright/test";
+  2  | import FormPage from "../pages/FormPage";
+  3  | 
+  4  | test('Form Test', async ({ page , context }) => {
+  5  |   await page.goto('https://www.coverfox.com/car-insurance/?fs=FASTLANE_LANDING&ft=fl');
+  6  |   await page
+  7  |         .locator('.flow-links__item')
+  8  |         .filter({ hasText: "Don't know your car number?" })
+  9  |         .getByText('Click here', { exact: true })
+  10 |         .click();
+  11 | 
+  12 |     // Modal appears - same page
+  13 |     await expect(
+  14 |         page.getByText("What is your car's brand?", { exact: true })
+> 15 |     ).toBeVisible();
+     |       ^ Error: expect(locator).toBeVisible() failed
+  16 | 
+  17 |     // Select Mahindra
+  18 |     await page.getByText('Mahindra', { exact: true }).click();
+  19 |   
+  20 | 
+  21 |   
+  22 | 
+  23 | });
+  24 | 
+```

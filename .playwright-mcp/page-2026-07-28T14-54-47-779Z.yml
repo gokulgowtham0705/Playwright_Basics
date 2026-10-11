@@ -1,0 +1,88 @@
+- generic [ref=f6e2]:
+  - banner [ref=f6e3]:
+    - link [ref=f6e4] [cursor=pointer]:
+      - /url: https://demoqa.com
+  - generic [ref=f6e8]:
+    - generic [ref=f6e11]:
+      - generic [ref=f6e12]: Elements
+      - generic [ref=f6e24]:
+        - generic [ref=f6e25] [cursor=pointer]: Forms
+        - list [ref=f6e38]:
+          - listitem [ref=f6e39] [cursor=pointer]:
+            - link "Practice Form" [ref=f6e40]:
+              - /url: /automation-practice-form
+      - generic [ref=f6e43]: Alerts, Frame & Windows
+      - generic [ref=f6e55]: Widgets
+      - generic [ref=f6e68]: Interactions
+      - generic [ref=f6e80]: Book Store Application
+    - generic [ref=f6e93]:
+      - heading "Practice Form" [level=1] [ref=f6e94]
+      - heading "Student Registration Form" [level=5] [ref=f6e95]
+      - generic [ref=f6e96]:
+        - generic [ref=f6e97]:
+          - generic [ref=f6e98]: Name
+          - textbox "First Name" [ref=f6e101]
+          - textbox "Last Name" [ref=f6e103]
+        - generic [ref=f6e104]:
+          - generic [ref=f6e105]: Email
+          - textbox "name@example.com" [ref=f6e108]
+        - generic [ref=f6e109]:
+          - generic [ref=f6e110]: Gender
+          - generic [ref=f6e111]:
+            - generic [ref=f6e112]:
+              - radio "Male" [ref=f6e113]
+              - generic [ref=f6e114]: Male
+            - generic [ref=f6e115]:
+              - radio "Female" [ref=f6e116]
+              - generic [ref=f6e117]: Female
+            - generic [ref=f6e118]:
+              - radio "Other" [ref=f6e119]
+              - generic [ref=f6e120]: Other
+        - generic [ref=f6e121]:
+          - generic [ref=f6e122]: Mobile(10 Digits)
+          - textbox "Mobile Number" [ref=f6e125]
+        - generic [ref=f6e126]:
+          - generic [ref=f6e127]: Date of Birth
+          - textbox [ref=f6e132]: 28 Jul 2026
+        - generic [ref=f6e133]:
+          - generic [ref=f6e134]: Subjects
+          - generic [ref=f6e137]:
+            - log [ref=f6e139]
+            - generic [ref=f6e141]:
+              - generic [ref=f6e205]:
+                - generic [ref=f6e206]: Maths
+                - button "Remove Maths" [ref=f6e207] [cursor=pointer]
+              - combobox [ref=f6e143]
+        - generic [ref=f6e146]:
+          - generic [ref=f6e147]: Hobbies
+          - generic [ref=f6e149]:
+            - generic [ref=f6e150]:
+              - checkbox "Sports" [ref=f6e151]
+              - generic [ref=f6e152]: Sports
+            - generic [ref=f6e153]:
+              - checkbox "Reading" [ref=f6e154]
+              - generic [ref=f6e155]: Reading
+            - generic [ref=f6e156]:
+              - checkbox "Music" [ref=f6e157]
+              - generic [ref=f6e158]: Music
+        - generic [ref=f6e159]:
+          - generic [ref=f6e160]: Picture
+          - button "Choose File" [ref=f6e163] [cursor=pointer]
+        - generic [ref=f6e164]:
+          - generic [ref=f6e165]: Current Address
+          - textbox "Current Address" [ref=f6e168]
+        - generic [ref=f6e169]:
+          - generic [ref=f6e170]: State and City
+          - generic [ref=f6e173]:
+            - log [ref=f6e175]
+            - generic [ref=f6e177]:
+              - generic [ref=f6e219]: NCR
+              - combobox [ref=f6e180]
+          - generic [ref=f6e220]:
+            - log [ref=f6e222]: option Gurgaon, selected.
+            - generic [ref=f6e224]:
+              - generic [ref=f6e238]: Gurgaon
+              - combobox [active] [ref=f6e227]
+        - button "Submit" [ref=f6e189] [cursor=pointer]
+  - contentinfo [ref=f6e196]:
+    - generic [ref=f6e197]: © 2013-2026 TOOLSQA.COM | ALL RIGHTS RESERVED.

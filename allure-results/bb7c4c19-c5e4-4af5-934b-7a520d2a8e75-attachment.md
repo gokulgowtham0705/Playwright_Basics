@@ -1,0 +1,2838 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: QoutesLoad.spec.ts >> Form Test
+- Location: tests\QoutesLoad.spec.ts:4:5
+
+# Error details
+
+```
+Error: locator.fill: Error: strict mode violation: locator('.w--multi_select_handle') resolved to 3 elements:
+    1) <div class="w--multi_select_handle ">…</div> aka locator('div').filter({ hasText: /^Registration place$/ }).first()
+    2) <div class="w--multi_select_handle  bh-flow-disabled">…</div> aka locator('div').filter({ hasText: /^Select registration year$/ }).first()
+    3) <div class="w--multi_select_handle ">…</div> aka getByText('VariantDelta x')
+
+Call log:
+  - waiting for locator('.w--multi_select_handle')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - link [ref=e6] [cursor=pointer]:
+          - /url: /
+          - img "Coverfox.com" [ref=e7]
+        - list [ref=e8]:
+          - listitem [ref=e9]:
+            - link "Contact us" [ref=e10] [cursor=pointer]:
+              - /url: /contact/
+          - listitem [ref=e11] [cursor=pointer]:
+            - link " Login" [ref=e12]:
+              - /url: /user-login/
+              - generic [ref=e13]: 
+              - text: Login
+        - list [ref=e14]:
+          - listitem [ref=e15] [cursor=pointer]:
+            - text: Retail Insurance
+            - list:
+              - listitem:
+                - generic: Car
+                - list:
+                  - listitem:
+                    - link "Car Insurance":
+                      - /url: /car-insurance/
+                  - listitem:
+                    - link "Electric Car Insurance":
+                      - /url: /car-insurance/electric-car-insurance/
+                  - listitem:
+                    - link "Used Car Insurance":
+                      - /url: /car-insurance/used/
+                  - listitem:
+                    - link "Third Party Car Insurance":
+                      - /url: /car-insurance/third-party-car-insurance/
+                  - listitem:
+                    - link "Comprehensive Car Insurance":
+                      - /url: /car-insurance/comprehensive-car-insurance/
+                  - listitem:
+                    - link "Cashless Garages":
+                      - /url: /car-insurance/cashless-garages/
+                  - listitem:
+                    - link "Car Insurance Calculator":
+                      - /url: /car-insurance/car-insurance-premium-calculator/
+                  - listitem:
+                    - link "Short Term Car Insurance":
+                      - /url: /car-insurance/short-term-car-insurance/
+                  - listitem:
+                    - link "Car Insurance Companies":
+                      - /url: /car-insurance/companies/
+              - listitem:
+                - generic: Bike
+                - list:
+                  - listitem:
+                    - link "Bike Insurance":
+                      - /url: /two-wheeler-insurance/
+                  - listitem:
+                    - link "Electric Bike Insurance":
+                      - /url: /two-wheeler-insurance/electric-bike-insurance/
+                  - listitem:
+                    - link "Third Party Bike Insurance":
+                      - /url: /two-wheeler-insurance/third-party-two-wheeler-insurance/
+                  - listitem:
+                    - link "Comprehensive Bike Insurance":
+                      - /url: /two-wheeler-insurance/comprehensive/
+                  - listitem:
+                    - link "Multiyear Bike Insurance":
+                      - /url: /two-wheeler-insurance/multiyear-bike-insurance/
+                  - listitem:
+                    - link "Bike Insurance Calculator":
+                      - /url: /two-wheeler-insurance/two-wheeler-insurance-premium-calculator/
+                  - listitem:
+                    - link "Bike Insurance IDV Calculator":
+                      - /url: /two-wheeler-insurance/idv-calculator-in-bike-insurance/
+                  - listitem:
+                    - link "Bike Insurance Companies":
+                      - /url: /two-wheeler-insurance/companies/
+              - listitem:
+                - generic: Health
+                - list:
+                  - listitem:
+                    - link "Health Insurance":
+                      - /url: /health-insurance/
+                  - listitem:
+                    - link "Mediclaim Policy":
+                      - /url: /health-insurance/mediclaim-policy/
+                  - listitem:
+                    - link "Individual Health Insurance Plans":
+                      - /url: /health-insurance/individual-health-insurance/
+                  - listitem:
+                    - link "Critical Illness Insurance":
+                      - /url: /health-insurance/critical-illness-insurance/
+                  - listitem:
+                    - link "Senior Citizen Health Insurance":
+                      - /url: /health-insurance/senior-citizens-health-insurance/
+                  - listitem:
+                    - link "Health Insurance Companies":
+                      - /url: /health-insurance/companies/
+                  - listitem:
+                    - link "Network Hospitals":
+                      - /url: /health-insurance/network-hospitals/
+              - listitem:
+                - generic: Term
+                - list:
+                  - listitem:
+                    - link "Term Insurance":
+                      - /url: /term-insurance/
+                  - listitem:
+                    - link "1 Crore Term Insurance":
+                      - /url: /term-insurance/articles/1-crore-term-insurance/
+                  - listitem:
+                    - link "Compare Term Insurance":
+                      - /url: /term-insurance/term-insurance-comparison/
+                  - listitem:
+                    - link "Buy Term Insurance":
+                      - /url: /term-insurance/buy-term-insurance/
+                  - listitem:
+                    - link "Term Insurance Calculator":
+                      - /url: /term-insurance/term-insurance-calculator/
+                  - listitem:
+                    - link "Term Insurance Companies":
+                      - /url: /term-insurance/term-insurance-companies/
+                  - listitem:
+                    - link "Term Insurance Renewals":
+                      - /url: /life-insurance-renewals/
+                  - listitem:
+                    - link "Life Insurance":
+                      - /url: /life-insurance/
+                  - listitem:
+                    - link "Life Insurance Plans":
+                      - /url: /life-insurance-plans/
+                  - listitem:
+                    - link "Life Insurance Calculator":
+                      - /url: /life-insurance/life-insurance-calculator/
+          - listitem [ref=e16] [cursor=pointer]:
+            - text: Business Insurance
+            - list:
+              - listitem:
+                - generic: Property & Transit Insurance
+                - list:
+                  - listitem:
+                    - link "Workmen Compensation Insurance":
+                      - /url: https://www.coverfox.com/business-insurance/workmens-compensation-policy/
+                  - listitem:
+                    - link "Fire Insurance":
+                      - /url: https://www.coverfox.com/business-insurance/fire-insurance/
+                  - listitem:
+                    - link "Shop Owner Insurance":
+                      - /url: https://www.coverfox.com/business-insurance/shop-insurance-policy/
+                  - listitem:
+                    - link "Marine Insurance":
+                      - /url: https://www.coverfox.com/business-insurance/marine-insurance/
+              - listitem:
+                - generic: Engineering Insurance
+                - list:
+                  - listitem:
+                    - link "Contractor's Plant & Machinery Insurance":
+                      - /url: https://www.coverfox.com/business-insurance/contractors-plant-machinary-insurance/
+                  - listitem:
+                    - link "Contractor's All Risk Insurance":
+                      - /url: https://www.coverfox.com/business-insurance/contractors-all-risk-policy/
+                  - listitem:
+                    - link "Erection All Risk Insurance":
+                      - /url: https://www.coverfox.com/business-insurance/erection-all-risk-insurance/
+              - listitem:
+                - generic: Business Liability Insurance
+                - list:
+                  - listitem:
+                    - link "Cyber Insurance":
+                      - /url: https://www.coverfox.com/business-insurance/cyber-insurance/
+                  - listitem:
+                    - link "Commercial General Liability Insurance":
+                      - /url: https://www.coverfox.com/business-insurance/commercial-general-liability-insurance/
+                  - listitem:
+                    - link "Professional Indemnity for Companies":
+                      - /url: https://www.coverfox.com/business-insurance/professional-indemnity-insurance/
+                  - listitem:
+                    - link "Directors & Officers Liability Insurance":
+                      - /url: https://www.coverfox.com/business-insurance/directors-and-officers-liability-insurance/
+              - listitem:
+                - generic: Employee Benefits
+                - list:
+                  - listitem:
+                    - link "Group Credit Life Insurance":
+                      - /url: https://www.coverfox.com/business-insurance/group-credit-life-insurance/
+                  - listitem:
+                    - link "Group Personal Accident Insurance":
+                      - /url: https://www.coverfox.com/business-insurance/group-personal-accident-insurance/
+                  - listitem:
+                    - link "Group Term Life Insurance":
+                      - /url: https://www.coverfox.com/business-insurance/group-term-life-insurance/
+                  - listitem:
+                    - link "Group Travel Insurance":
+                      - /url: https://www.coverfox.com/business-insurance/group-travel-insurance/
+                  - listitem:
+                    - link "Group Medical Coverage":
+                      - /url: https://www.coverfox.com/business-insurance/group-health-insurance-policy/
+              - listitem:
+                - generic: Digital Payment Protection Plans
+                - list:
+                  - listitem:
+                    - link "UPI Protect":
+                      - /url: https://www.coverfox.com/business-insurance/upi-fraud-insurance/
+                  - listitem:
+                    - link "Card Protect":
+                      - /url: https://www.coverfox.com/business-insurance/card-protection-plan/
+          - listitem [ref=e17] [cursor=pointer]:
+            - text: Resources
+            - list:
+              - listitem:
+                - link "About us":
+                  - /url: /about/
+              - listitem:
+                - link "Contact us":
+                  - /url: /contact/
+              - listitem:
+                - link "Blog":
+                  - /url: /articles/
+          - listitem [ref=e18] [cursor=pointer]:
+            - link "Claims" [ref=e19]:
+              - /url: /submit-claim-request/
+      - navigation [ref=e20]:
+        - generic [ref=e21] [cursor=pointer]: 
+        - list [ref=e23]:
+          - listitem [ref=e24]: Retail Insurance
+          - listitem [ref=e25]
+          - listitem [ref=e26] [cursor=pointer]:
+            - generic [ref=e27]: Car
+            - list:
+              - listitem:
+                - link "Car Insurance":
+                  - /url: /car-insurance/
+              - listitem:
+                - link "Electric Car Insurance":
+                  - /url: /car-insurance/electric-car-insurance/
+              - listitem:
+                - link "Used Car Insurance":
+                  - /url: /car-insurance/used/
+              - listitem:
+                - link "Third Party Car Insurance":
+                  - /url: /car-insurance/third-party-car-insurance/
+              - listitem:
+                - link "Comprehensive Car Insurance":
+                  - /url: /car-insurance/comprehensive-car-insurance/
+              - listitem:
+                - link "Cashless Garages":
+                  - /url: /car-insurance/cashless-garages/
+              - listitem:
+                - link "Car Insurance Calculator":
+                  - /url: /car-insurance/car-insurance-premium-calculator/
+              - listitem:
+                - link "Short Term Car Insurance":
+                  - /url: /car-insurance/short-term-car-insurance/
+              - listitem:
+                - link "Car Insurance Companies":
+                  - /url: /car-insurance/companies/
+          - listitem [ref=e28] [cursor=pointer]:
+            - generic [ref=e29]: Bike
+            - list:
+              - listitem:
+                - link "Bike Insurance":
+                  - /url: /two-wheeler-insurance/
+              - listitem:
+                - link "Electric Bike Insurance":
+                  - /url: /two-wheeler-insurance/electric-bike-insurance/
+              - listitem:
+                - link "Third Party Bike Insurance":
+                  - /url: /two-wheeler-insurance/third-party-two-wheeler-insurance/
+              - listitem:
+                - link "Comprehensive Bike Insurance":
+                  - /url: /two-wheeler-insurance/comprehensive/
+              - listitem:
+                - link "Multiyear Bike Insurance":
+                  - /url: /two-wheeler-insurance/multiyear-bike-insurance/
+              - listitem:
+                - link "Bike Insurance Calculator":
+                  - /url: /two-wheeler-insurance/two-wheeler-insurance-premium-calculator/
+              - listitem:
+                - link "Bike Insurance IDV Calculator":
+                  - /url: /two-wheeler-insurance/idv-calculator-in-bike-insurance/
+              - listitem:
+                - link "Bike Insurance Companies":
+                  - /url: /two-wheeler-insurance/companies/
+          - listitem [ref=e30] [cursor=pointer]:
+            - generic [ref=e31]: Health
+            - list:
+              - listitem:
+                - link "Health Insurance":
+                  - /url: /health-insurance/
+              - listitem:
+                - link "Mediclaim Policy":
+                  - /url: /health-insurance/mediclaim-policy/
+              - listitem:
+                - link "Individual Health Insurance Plans":
+                  - /url: /health-insurance/individual-health-insurance/
+              - listitem:
+                - link "Critical Illness Insurance":
+                  - /url: /health-insurance/critical-illness-insurance/
+              - listitem:
+                - link "Senior Citizen Health Insurance":
+                  - /url: /health-insurance/senior-citizens-health-insurance/
+              - listitem:
+                - link "Health Insurance Companies":
+                  - /url: /health-insurance/companies/
+              - listitem:
+                - link "Network Hospitals":
+                  - /url: /health-insurance/network-hospitals/
+          - listitem [ref=e32] [cursor=pointer]:
+            - generic [ref=e33]: Term
+            - list:
+              - listitem:
+                - link "Term Insurance":
+                  - /url: /term-insurance/
+              - listitem:
+                - link "1 Crore Term Insurance":
+                  - /url: /term-insurance/articles/1-crore-term-insurance/
+              - listitem:
+                - link "Compare Term Insurance":
+                  - /url: /term-insurance/term-insurance-comparison/
+              - listitem:
+                - link "Buy Term Insurance":
+                  - /url: /term-insurance/buy-term-insurance/
+              - listitem:
+                - link "Term Insurance Calculator":
+                  - /url: /term-insurance/term-insurance-calculator/
+              - listitem:
+                - link "Term Insurance Companies":
+                  - /url: /term-insurance/term-insurance-companies/
+              - listitem:
+                - link "Term Insurance Renewals":
+                  - /url: /life-insurance-renewals/
+              - listitem:
+                - link "Life Insurance":
+                  - /url: /life-insurance/
+              - listitem:
+                - link "Life Insurance Plans":
+                  - /url: /life-insurance-plans/
+              - listitem:
+                - link "Life Insurance Calculator":
+                  - /url: /life-insurance/life-insurance-calculator/
+          - listitem [ref=e34]: Business Insurance
+          - listitem [ref=e35]
+          - listitem [ref=e36] [cursor=pointer]:
+            - generic [ref=e37]: Property & Transit Insurance
+            - list:
+              - listitem:
+                - link "Workmen Compensation Insurance":
+                  - /url: https://www.coverfox.com/business-insurance/workmens-compensation-policy/
+              - listitem:
+                - link "Fire Insurance":
+                  - /url: https://www.coverfox.com/business-insurance/fire-insurance/
+              - listitem:
+                - link "Shop Owner Insurance":
+                  - /url: https://www.coverfox.com/business-insurance/shop-insurance-policy/
+              - listitem:
+                - link "Marine Insurance":
+                  - /url: https://www.coverfox.com/business-insurance/marine-insurance/
+          - listitem [ref=e38] [cursor=pointer]:
+            - generic [ref=e39]: Engineering Insurance
+            - list:
+              - listitem:
+                - link "Contractor's Plant & Machinery Insurance":
+                  - /url: https://www.coverfox.com/business-insurance/contractors-plant-machinary-insurance/
+              - listitem:
+                - link "Contractor's All Risk Insurance":
+                  - /url: https://www.coverfox.com/business-insurance/contractors-all-risk-policy/
+              - listitem:
+                - link "Erection All Risk Insurance":
+                  - /url: https://www.coverfox.com/business-insurance/erection-all-risk-insurance/
+          - listitem [ref=e40] [cursor=pointer]:
+            - generic [ref=e41]: Business Liability Insurance
+            - list:
+              - listitem:
+                - link "Cyber Insurance":
+                  - /url: https://www.coverfox.com/business-insurance/cyber-insurance/
+              - listitem:
+                - link "Commercial General Liability Insurance":
+                  - /url: https://www.coverfox.com/business-insurance/commercial-general-liability-insurance/
+              - listitem:
+                - link "Professional Indemnity for Companies":
+                  - /url: https://www.coverfox.com/business-insurance/professional-indemnity-insurance/
+              - listitem:
+                - link "Directors & Officers Liability Insurance":
+                  - /url: https://www.coverfox.com/business-insurance/directors-and-officers-liability-insurance/
+          - listitem [ref=e42] [cursor=pointer]:
+            - generic [ref=e43]: Employee Benefits
+            - list:
+              - listitem:
+                - link "Group Credit Life Insurance":
+                  - /url: https://www.coverfox.com/business-insurance/group-credit-life-insurance/
+              - listitem:
+                - link "Group Personal Accident Insurance":
+                  - /url: https://www.coverfox.com/business-insurance/group-personal-accident-insurance/
+              - listitem:
+                - link "Group Term Life Insurance":
+                  - /url: https://www.coverfox.com/business-insurance/group-term-life-insurance/
+              - listitem:
+                - link "Group Travel Insurance":
+                  - /url: https://www.coverfox.com/business-insurance/group-travel-insurance/
+              - listitem:
+                - link "Group Medical Coverage":
+                  - /url: https://www.coverfox.com/business-insurance/group-health-insurance-policy/
+          - listitem [ref=e44] [cursor=pointer]:
+            - generic [ref=e45]: Digital Payment Protection Plans
+            - list:
+              - listitem:
+                - link "UPI Protect":
+                  - /url: https://www.coverfox.com/business-insurance/upi-fraud-insurance/
+              - listitem:
+                - link "Card Protect":
+                  - /url: https://www.coverfox.com/business-insurance/card-protection-plan/
+          - listitem [ref=e46]: Resources
+          - listitem [ref=e47]
+          - listitem [ref=e48]:
+            - link "About us" [ref=e49] [cursor=pointer]:
+              - /url: /about/
+          - listitem [ref=e50]:
+            - link "Contact us" [ref=e51] [cursor=pointer]:
+              - /url: /contact/
+          - listitem [ref=e52]:
+            - link "Blog" [ref=e53] [cursor=pointer]:
+              - /url: /articles/
+          - listitem [ref=e54]
+          - listitem [ref=e55]:
+            - link "Claims" [ref=e56] [cursor=pointer]:
+              - /url: /submit-claim-request/
+  - generic [ref=e59]:
+    - generic [ref=e60]: Car Insurance Prices Starting at ₹2,094/Year**
+    - generic [ref=e61]:
+      - generic [ref=e62]:
+        - generic [ref=e63]: Get Upto 85%* Discount On Car Insurance.
+        - generic [ref=e65]:
+          - generic [ref=e69]:
+            - generic [ref=e70] [cursor=pointer]: 
+            - generic [ref=e71]:
+              - generic [ref=e72]:
+                - text: 
+                - generic [ref=e73] [cursor=pointer]: Maruti
+              - generic [ref=e74]:
+                - text: 
+                - generic [ref=e75] [cursor=pointer]: Fronx
+              - generic [ref=e76]: Petrol
+              - generic [ref=e78]: "& Delta"
+              - generic [ref=e80]:
+                - text: 
+                - generic [ref=e81] [cursor=pointer]: Registration
+            - generic [ref=e82]:
+              - generic:
+                - generic [ref=e84]:
+                  - generic [ref=e85]: Where is your car registered?
+                  - generic [ref=e87] [cursor=pointer]:
+                    - generic [ref=e88]: 
+                    - generic [ref=e89]:
+                      - generic [ref=e90]:
+                        - text: 
+                        - textbox "e.g MH 02 or Mumbai" [active] [ref=e91]
+                      - generic [ref=e92]:
+                        - generic [ref=e93]: AN-01 Port Blair
+                        - generic [ref=e94]: AN-02 Car Nicobar
+                        - generic [ref=e95]: AP-01 Nirmal
+                        - generic [ref=e96]: AP-02 Anantapur
+                        - generic [ref=e97]: AP-03 Tirupathi
+                        - generic [ref=e98]: AP-04 Kadapa
+                        - generic [ref=e99]: AP-05 Kakinada
+                        - generic [ref=e100]: AP-06 Kakinada
+                        - generic [ref=e101]: AP-07 Guntur
+                        - generic [ref=e102]: AP-08 Guntur
+                        - generic [ref=e103]: AP-09 Hyderabad
+                        - generic [ref=e104]: AP-10 Secunderabad Hyderabad North
+                        - generic [ref=e105]: AP-11 Malakpet Hyderabad East
+                        - generic [ref=e106]: AP-12 Kisanbagh Hyderabad South
+                        - generic [ref=e107]: AP-13 Tolichowki Hyderabad West
+                        - generic [ref=e108]: AP-14 Karimnagar
+                        - generic [ref=e109]: AP-15 Karimnagar
+                        - generic [ref=e110]: AP-16 Vijayawada
+                        - generic [ref=e111]: AP-17 Vijayawada
+                        - generic [ref=e112]: AP-18 Vijayawada
+                        - generic [ref=e113]: AP-19 Vijayawada
+                        - generic [ref=e114]: AP-20 Khammam
+                        - generic [ref=e115]: AP-21 Kurnool
+                        - generic [ref=e116]: AP-22 Mahaboobnagar
+                        - generic [ref=e117]: AP-23 Sangareddy
+                        - generic [ref=e118]: AP-24 Nalgonda
+                        - generic [ref=e119]: AP-25 Nizamabad
+                        - generic [ref=e120]: AP-26 Nellore
+                        - generic [ref=e121]: AP-27 Ongole
+                        - generic [ref=e122]: AP-28 Rangareddy
+                        - generic [ref=e123]: AP-29 Rangareddy
+                        - generic [ref=e124]: AP-30 Srikakulam
+                        - generic [ref=e125]: AP-31 Visakhapatnam
+                        - generic [ref=e126]: AP-32 Visakhapatnam
+                        - generic [ref=e127]: AP-33 Gajuwaka
+                        - generic [ref=e128]: AP-34 Visakhapatnam
+                        - generic [ref=e129]: AP-35 Vizianagaram
+                        - generic [ref=e130]: AP-36 Warangal
+                        - generic [ref=e131]: AP-37 Eluru
+                        - generic [ref=e132]: AP-38 Eluru
+                        - generic [ref=e133]: AP-39 Prakasam
+                        - generic [ref=e134]: AP-40 Visakhapatnam city
+                        - generic [ref=e135]: AR-01 Itanagar
+                        - generic [ref=e136]: AR-02 Itanagar
+                        - generic [ref=e137]: AR-03 Tawang
+                        - generic [ref=e138]: AR-04 Bomdila
+                        - generic [ref=e139]: AR-05 Seppa
+                        - generic [ref=e140]: AR-06 Ziro
+                        - generic [ref=e141]: AR-07 Daporiji
+                        - generic [ref=e142]: AR-08 Along
+                        - generic [ref=e143]: AR-09 Pasighat
+                        - generic [ref=e144]: AR-10 Anini
+                        - generic [ref=e145]: AR-11 Tezu
+                        - generic [ref=e146]: AR-12 Changalang
+                        - generic [ref=e147]: AR-13 Khonsa
+                        - generic [ref=e148]: AR-14 Yingkiong
+                        - generic [ref=e149]: AR-15 Kurung Kumey
+                        - generic [ref=e150]: AR-16 Roing
+                        - generic [ref=e151]: AR-17 Hawai
+                        - generic [ref=e152]: AR-18 Longding
+                        - generic [ref=e153]: AR-19 Palin
+                        - generic [ref=e154]: AR-20 Namsai
+                        - generic [ref=e155]: AR-22 Lower Siang
+                        - generic [ref=e156]: AR-23 Kamle
+                        - generic [ref=e157]: AR-26 ShiYomi
+                        - generic [ref=e158]: AS-01 Guwahati
+                        - generic [ref=e159]: AS-02 Nagaon
+                        - generic [ref=e160]: AS-03 Jorhat
+                        - generic [ref=e161]: AS-04 Sibsagar
+                        - generic [ref=e162]: AS-05 Golaghat
+                        - generic [ref=e163]: AS-06 Dibrugarh
+                        - generic [ref=e164]: AS-07 Lakhimpur
+                        - generic [ref=e165]: AS-08 North Cachar Hills
+                        - generic [ref=e166]: AS-09 Karbi Anglong
+                        - generic [ref=e167]: AS-10 Karimganj
+                        - generic [ref=e168]: AS-11 Cachar
+                        - generic [ref=e169]: AS-12 Sonitpur
+                        - generic [ref=e170]: AS-13 Darrang
+                        - generic [ref=e171]: AS-14 Nalbari
+                        - generic [ref=e172]: AS-15 Barpeta
+                        - generic [ref=e173]: AS-16 Kokrajhar
+                        - generic [ref=e174]: AS-17 Dhubri
+                        - generic [ref=e175]: AS-18 Goalpara
+                        - generic [ref=e176]: AS-19 Bongaigaon
+                        - generic [ref=e177]: AS-20 Assam
+                        - generic [ref=e178]: AS-21 Marigaon
+                        - generic [ref=e179]: AS-22 Dhemaji
+                        - generic [ref=e180]: AS-23 Tinsukia
+                        - generic [ref=e181]: AS-24 Hailakandi
+                        - generic [ref=e182]: AS-25 Guwahati
+                        - generic [ref=e183]: AS-26 Chirang
+                        - generic [ref=e184]: AS-27 Udalguri
+                        - generic [ref=e185]: AS-28 Baksa
+                        - generic [ref=e186]: AS-29 Majuli
+                        - generic [ref=e187]: AS-30 Assam
+                        - generic [ref=e188]: AS-31 Assam
+                        - generic [ref=e189]: AS-32 Biswanath Chariali
+                        - generic [ref=e190]: AS-33 Charaideo
+                        - generic [ref=e191]: AS-34 SOUTH SALAMA
+                        - generic [ref=e192]: BR-01 Patna
+                        - generic [ref=e193]: BR-02 Gaya
+                        - generic [ref=e194]: BR-03 Bhojpur
+                        - generic [ref=e195]: BR-04 Chapra
+                        - generic [ref=e196]: BR-05 Motihari
+                        - generic [ref=e197]: BR-06 Muzaffarpur
+                        - generic [ref=e198]: BR-07 Darbhanga
+                        - generic [ref=e199]: BR-08 Munger
+                        - generic [ref=e200]: BR-09 Begusarai
+                        - generic [ref=e201]: BR-10 Bhagalpur
+                        - generic [ref=e202]: BR-11 Purnea
+                        - generic [ref=e203]: BR-12 Dumka
+                        - generic [ref=e204]: BR-13 Hazaribagh
+                        - generic [ref=e205]: BR-14 Ranchi
+                        - generic [ref=e206]: BR-15 Palamu
+                        - generic [ref=e207]: BR-16 Jamshedpur
+                        - generic [ref=e208]: BR-17 Dhanbad
+                        - generic [ref=e209]: BR-18 Chaibassa
+                        - generic [ref=e210]: BR-19 Saharsa
+                        - generic [ref=e211]: BR-20 Bokaro
+                        - generic [ref=e212]: BR-21 Nalanda
+                        - generic [ref=e213]: BR-22 Bettiah
+                        - generic [ref=e214]: BR-23 Giridih
+                        - generic [ref=e215]: BR-24 Dehri
+                        - generic [ref=e216]: BR-25 Jahanabad
+                        - generic [ref=e217]: BR-26 Aurangabad
+                        - generic [ref=e218]: BR-27 Nawada
+                        - generic [ref=e219]: BR-28 Gopalganj
+                        - generic [ref=e220]: BR-29 Siwan
+                        - generic [ref=e221]: BR-30 Sitamrahi
+                        - generic [ref=e222]: BR-31 Vaishali
+                        - generic [ref=e223]: BR-32 Madhubani
+                        - generic [ref=e224]: BR-33 Samastipur
+                        - generic [ref=e225]: BR-34 Khagaria
+                        - generic [ref=e226]: BR-35 Sahebganj
+                        - generic [ref=e227]: BR-36 Godda
+                        - generic [ref=e228]: BR-37 Kishanganj
+                        - generic [ref=e229]: BR-38 Araria
+                        - generic [ref=e230]: BR-39 Katihar
+                        - generic [ref=e231]: BR-40 Deoghar
+                        - generic [ref=e232]: BR-41 Gumla
+                        - generic [ref=e233]: BR-42 Lohardaga
+                        - generic [ref=e234]: BR-43 Madhepura
+                        - generic [ref=e235]: BR-44 Buxar
+                        - generic [ref=e236]: BR-45 Bhabua
+                        - generic [ref=e237]: BR-46 Jamui
+                        - generic [ref=e238]: BR-47 Koderma
+                        - generic [ref=e239]: BR-48 Chatra
+                        - generic [ref=e240]: BR-50 Supaul
+                        - generic [ref=e241]: BR-51 Banka
+                        - generic [ref=e242]: BR-52 Lakhisarai
+                        - generic [ref=e243]: BR-53 Lakhisarai
+                        - generic [ref=e244]: BR-55 Sheohar
+                        - generic [ref=e245]: BR-56 Arwal
+                        - generic [ref=e246]: BR-57 Rohtas
+                        - generic [ref=e247]: CG-01 Chattisgarh
+                        - generic [ref=e248]: CG-02 Chattisgarh
+                        - generic [ref=e249]: CG-03 Chattisgarh
+                        - generic [ref=e250]: CG-04 Raipur
+                        - generic [ref=e251]: CG-05 Dhamtari
+                        - generic [ref=e252]: CG-06 Mahasamund
+                        - generic [ref=e253]: CG-07 Durg
+                        - generic [ref=e254]: CG-08 Rajnandgaon
+                        - generic [ref=e255]: CG-09 Kawardha
+                        - generic [ref=e256]: CG-10 Bilaspur
+                        - generic [ref=e257]: CG-11 Janjgir-Champa
+                        - generic [ref=e258]: CG-12 Korba
+                        - generic [ref=e259]: CG-13 Raigarh
+                        - generic [ref=e260]: CG-14 Jashpur
+                        - generic [ref=e261]: CG-15 Ambikapur
+                        - generic [ref=e262]: CG-16 Baikunthpur
+                        - generic [ref=e263]: CG-17 Jagdalpur
+                        - generic [ref=e264]: CG-18 Dantewada
+                        - generic [ref=e265]: CG-19 Kanker
+                        - generic [ref=e266]: CG-20 Bijapur
+                        - generic [ref=e267]: CG-21 Narayanpur
+                        - generic [ref=e268]: CG-22 Baloda Bazaar
+                        - generic [ref=e269]: CG-23 Gariaband
+                        - generic [ref=e270]: CG-24 Balod
+                        - generic [ref=e271]: CG-25 Bemetara
+                        - generic [ref=e272]: CG-26 Sukma
+                        - generic [ref=e273]: CG-27 Kondagaon
+                        - generic [ref=e274]: CG-28 Mungeli
+                        - generic [ref=e275]: CG-29 Surajpur
+                        - generic [ref=e276]: CG-30 Balrampur
+                        - generic [ref=e277]: CG-31 Gaurela Pendra Marwahi
+                        - generic [ref=e278]: CH-01 Chandigarh
+                        - generic [ref=e279]: CH-02 Chandigarh
+                        - generic [ref=e280]: CH-03 Chandigarh
+                        - generic [ref=e281]: CH-04 Chandigarh
+                        - generic [ref=e282]: CH-05 Bhedpuri
+                        - generic [ref=e283]: CH-12 Chandigarh
+                        - generic [ref=e284]: CH-23 Chandigarh
+                        - generic [ref=e285]: CH-24 Rto Chandigarh
+                        - generic [ref=e286]: CH-45 Chandigarh
+                        - generic [ref=e287]: CH-83 Chandigarh
+                        - generic [ref=e288]: CH-90 Chandigarh
+                        - generic [ref=e289]: DD-01 Diu
+                        - generic [ref=e290]: DD-02 Diu
+                        - generic [ref=e291]: DD-03 Daman
+                        - generic [ref=e292]: DD-09 Dadra & Nagar Haveli
+                        - generic [ref=e293]: DL-1 Delhi North Hill Road
+                        - generic [ref=e294]: DL-10 West Delhi
+                        - generic [ref=e295]: DL-11 North West Delhi
+                        - generic [ref=e296]: DL-12 South West Delhi Vasant Vihar
+                        - generic [ref=e297]: DL-13 East Delhi Shahdara
+                        - generic [ref=e298]: DL-14 Sonipat
+                        - generic [ref=e299]: DL-15 Gurgaon
+                        - generic [ref=e300]: DL-16 Faridabad
+                        - generic [ref=e301]: DL-17 Noida
+                        - generic [ref=e302]: DL-18 Ghaziabad
+                        - generic [ref=e303]: DL-2 New Delhi
+                        - generic [ref=e304]: DL-3 South Delhi
+                        - generic [ref=e305]: DL-30 Noida
+                        - generic [ref=e306]: DL-4 Delhi West Raja Garden
+                        - generic [ref=e307]: DL-5 Delhi North Loni Road
+                        - generic [ref=e308]: DL-51 Rajpur Road
+                        - generic [ref=e309]: DL-53 BURARI DELHI
+                        - generic [ref=e310]: DL-6 Delhi Central Sarai Kale Khan
+                        - generic [ref=e311]: DL-7 Delhi East
+                        - generic [ref=e312]: DL-8 North West Delhi
+                        - generic [ref=e313]: DL-9 South West Delhi
+                        - generic [ref=e314]: DN-08 Nagar Haveli
+                        - generic [ref=e315]: DN-09 Silvassa Dadar and Nagar Haveli
+                        - generic [ref=e316]: GA-01 North Goa
+                        - generic [ref=e317]: GA-02 South Goa
+                        - generic [ref=e318]: GA-03 Mapusa
+                        - generic [ref=e319]: GA-04 Bicholim
+                        - generic [ref=e320]: GA-05 Ponda
+                        - generic [ref=e321]: GA-06 Vasco
+                        - generic [ref=e322]: GA-07 Panaji
+                        - generic [ref=e323]: GA-08 Margao
+                        - generic [ref=e324]: GA-09 QUEPEM
+                        - generic [ref=e325]: GA-10 Canacona
+                        - generic [ref=e326]: GA-11 Pernem
+                        - generic [ref=e327]: GA-12 Dharbandora
+                        - generic [ref=e328]: GA-13 Cotigao
+                        - generic [ref=e329]: GJ-01 Ahmedabad
+                        - generic [ref=e330]: GJ-02 Mehsana
+                        - generic [ref=e331]: GJ-03 Rajkot
+                        - generic [ref=e332]: GJ-04 Bhavnagar
+                        - generic [ref=e333]: GJ-05 Surat
+                        - generic [ref=e334]: GJ-06 Vadodara
+                        - generic [ref=e335]: GJ-07 Kheda
+                        - generic [ref=e336]: GJ-08 Banaskantha
+                        - generic [ref=e337]: GJ-09 Sabarkantha
+                        - generic [ref=e338]: GJ-10 Jamnagar
+                        - generic [ref=e339]: GJ-11 Junagadh
+                        - generic [ref=e340]: GJ-12 Kutch
+                        - generic [ref=e341]: GJ-13 Surendranagar
+                        - generic [ref=e342]: GJ-14 Amreli
+                        - generic [ref=e343]: GJ-15 Valsad
+                        - generic [ref=e344]: GJ-16 Bharuch
+                        - generic [ref=e345]: GJ-17 Godhra
+                        - generic [ref=e346]: GJ-18 Gandhinagar
+                        - generic [ref=e347]: GJ-19 Bardoli Surat
+                        - generic [ref=e348]: GJ-20 Dahod
+                        - generic [ref=e349]: GJ-21 Navsari
+                        - generic [ref=e350]: GJ-22 Narmada
+                        - generic [ref=e351]: GJ-23 Anand
+                        - generic [ref=e352]: GJ-24 Patan
+                        - generic [ref=e353]: GJ-25 Porbandar
+                        - generic [ref=e354]: GJ-26 Vyara Tapi
+                        - generic [ref=e355]: GJ-27 Ahmedabad East
+                        - generic [ref=e356]: GJ-28 Surat
+                        - generic [ref=e357]: GJ-29 Vadodra
+                        - generic [ref=e358]: GJ-30 Dang
+                        - generic [ref=e359]: GJ-31 Modasa Aravalli
+                        - generic [ref=e360]: GJ-32 Botad
+                        - generic [ref=e361]: GJ-33 Aravalli
+                        - generic [ref=e362]: GJ-34 Dwarka
+                        - generic [ref=e363]: GJ-35 Mahisagar
+                        - generic [ref=e364]: GJ-36 Morbi
+                        - generic [ref=e365]: GJ-37 Chhota Udaipur
+                        - generic [ref=e366]: GJ-38 Bavla
+                        - generic [ref=e367]: GJ-39 Anjar city
+                        - generic [ref=e368]: HP-01 Shimla
+                        - generic [ref=e369]: HP-02 Shimla
+                        - generic [ref=e370]: HP-03 Shimla
+                        - generic [ref=e371]: HP-04 Dharamsala
+                        - generic [ref=e372]: HP-05 Mandi
+                        - generic [ref=e373]: HP-06 Rampur Busha
+                        - generic [ref=e374]: HP-07 RLA Shimla
+                        - generic [ref=e375]: HP-08 Chaupal
+                        - generic [ref=e376]: HP-09 Theog
+                        - generic [ref=e377]: HP-10 Rohru
+                        - generic [ref=e378]: HP-11 Arki
+                        - generic [ref=e379]: HP-12 Nalagarh
+                        - generic [ref=e380]: HP-13 Kandaghat
+                        - generic [ref=e381]: HP-14 Solan
+                        - generic [ref=e382]: HP-15 Parwanoo
+                        - generic [ref=e383]: HP-16 Rajgarh
+                        - generic [ref=e384]: HP-17 Paonta Sahib
+                        - generic [ref=e385]: HP-18 Nahan
+                        - generic [ref=e386]: HP-19 Amb
+                        - generic [ref=e387]: HP-20 Una
+                        - generic [ref=e388]: HP-21 Barsar
+                        - generic [ref=e389]: HP-22 Hamirpur
+                        - generic [ref=e390]: HP-23 Ghumarwin
+                        - generic [ref=e391]: HP-24 Bilaspur
+                        - generic [ref=e392]: HP-25 Kalpa
+                        - generic [ref=e393]: HP-26 Nichar
+                        - generic [ref=e394]: HP-27 RLA Pooh
+                        - generic [ref=e395]: HP-28 Sarkaghat
+                        - generic [ref=e396]: HP-29 Jogendranagar
+                        - generic [ref=e397]: HP-30 Karsog
+                        - generic [ref=e398]: HP-31 Sundernagar
+                        - generic [ref=e399]: HP-32 Gohar
+                        - generic [ref=e400]: HP-33 Mandi
+                        - generic [ref=e401]: HP-34 Kullu
+                        - generic [ref=e402]: HP-35 Ani
+                        - generic [ref=e403]: HP-36 Dehra
+                        - generic [ref=e404]: HP-37 Palampur
+                        - generic [ref=e405]: HP-38 Noorpur
+                        - generic [ref=e406]: HP-39 Dharamsala
+                        - generic [ref=e407]: HP-40 Kangra
+                        - generic [ref=e408]: HP-41 Kaza
+                        - generic [ref=e409]: HP-42 Keylong
+                        - generic [ref=e410]: HP-43 Udaipur
+                        - generic [ref=e411]: HP-44 Churah
+                        - generic [ref=e412]: HP-45 Pangi
+                        - generic [ref=e413]: HP-46 Bharmour
+                        - generic [ref=e414]: HP-47 Dalhosie
+                        - generic [ref=e415]: HP-48 Chamba
+                        - generic [ref=e416]: HP-49 Banjar
+                        - generic [ref=e417]: HP-50 Shimla
+                        - generic [ref=e418]: HP-51 Shimla
+                        - generic [ref=e419]: HP-52 Shimla
+                        - generic [ref=e420]: HP-53 Baijnath
+                        - generic [ref=e421]: HP-54 Jawali
+                        - generic [ref=e422]: HP-55 Nadaun
+                        - generic [ref=e423]: HP-56 Jaisinghpur
+                        - generic [ref=e424]: HP-57 Chowari
+                        - generic [ref=e425]: HP-58 Manali
+                        - generic [ref=e426]: HP-59 Solan
+                        - generic [ref=e427]: HP-60 Hamirpur
+                        - generic [ref=e428]: HP-61 Kullu
+                        - generic [ref=e429]: HP-62 DodraKwar
+                        - generic [ref=e430]: HP-63 Shimla
+                        - generic [ref=e431]: HP-64 Solan
+                        - generic [ref=e432]: HP-65 Mandi
+                        - generic [ref=e433]: HP-66 Kullu
+                        - generic [ref=e434]: HP-67 Hamirpur
+                        - generic [ref=e435]: HP-68 Kangra
+                        - generic [ref=e436]: HP-69 Bilaspur
+                        - generic [ref=e437]: HP-70 Bilaspur
+                        - generic [ref=e438]: HP-71 Nahan
+                        - generic [ref=e439]: HP-72 Una
+                        - generic [ref=e440]: HP-73 Chamba
+                        - generic [ref=e441]: HP-74 Bhoranj
+                        - generic [ref=e442]: HP-75 Shimla
+                        - generic [ref=e443]: HP-76 RLA Paddhar
+                        - generic [ref=e444]: HP-77 Dodra Kawar
+                        - generic [ref=e445]: HP-78 Bangana
+                        - generic [ref=e446]: HP-79 Sangrah Sirmaur
+                        - generic [ref=e447]: HP-80 Haroli
+                        - generic [ref=e448]: HP-81 Salooni
+                        - generic [ref=e449]: HP-82 Mandi (Rural)
+                        - generic [ref=e450]: HP-83 Jawalaji
+                        - generic [ref=e451]: HP-84 Sujanpur Tihra
+                        - generic [ref=e452]: HP-85 Shillai
+                        - generic [ref=e453]: HP-86 Dharampur
+                        - generic [ref=e454]: HP-87 Janjehli Mandi
+                        - generic [ref=e455]: HP-88 Fatehpur
+                        - generic [ref=e456]: HP-89 Jhandutta
+                        - generic [ref=e457]: HP-90 Shahpur
+                        - generic [ref=e458]: HP-91 Swarghat
+                        - generic [ref=e459]: HP-92 Rampur
+                        - generic [ref=e460]: HP-93 Baddi
+                        - generic [ref=e461]: HP-94 KANGRA
+                        - generic [ref=e462]: HP-95 Kumarsain
+                        - generic [ref=e463]: HP-96 Dheera
+                        - generic [ref=e464]: HP-97 INDORA
+                        - generic [ref=e465]: HP-98 Kasauli
+                        - generic [ref=e466]: HP-99 KOTKHAI
+                        - generic [ref=e467]: HR-01 Ambala
+                        - generic [ref=e468]: HR-02 Jagadhri
+                        - generic [ref=e469]: HR-03 Panchkula
+                        - generic [ref=e470]: HR-04 Naraingarh
+                        - generic [ref=e471]: HR-05 Karnal
+                        - generic [ref=e472]: HR-06 Panipat
+                        - generic [ref=e473]: HR-07 Kurukshetra
+                        - generic [ref=e474]: HR-08 Kaithal
+                        - generic [ref=e475]: HR-09 Guhla
+                        - generic [ref=e476]: HR-10 Sonepat
+                        - generic [ref=e477]: HR-11 Gohana
+                        - generic [ref=e478]: HR-12 Rohtak
+                        - generic [ref=e479]: HR-13 Bhadurgarh
+                        - generic [ref=e480]: HR-14 Jhajjar
+                        - generic [ref=e481]: HR-15 Meham
+                        - generic [ref=e482]: HR-16 Bhiwani
+                        - generic [ref=e483]: HR-17 Siwani
+                        - generic [ref=e484]: HR-18 Loharu
+                        - generic [ref=e485]: HR-19 Charkhi Dadri
+                        - generic [ref=e486]: HR-20 Hisar
+                        - generic [ref=e487]: HR-21 Hansi
+                        - generic [ref=e488]: HR-22 Fatehabad
+                        - generic [ref=e489]: HR-23 Tohana
+                        - generic [ref=e490]: HR-24 Sirsa
+                        - generic [ref=e491]: HR-25 Dabwali
+                        - generic [ref=e492]: HR-26 Gurgaon
+                        - generic [ref=e493]: HR-27 Nuh
+                        - generic [ref=e494]: HR-28 Ferozepur Zhirka
+                        - generic [ref=e495]: HR-29 Ballabgarh
+                        - generic [ref=e496]: HR-30 Palwal
+                        - generic [ref=e497]: HR-31 Jind
+                        - generic [ref=e498]: HR-32 Narwana
+                        - generic [ref=e499]: HR-33 Safidon
+                        - generic [ref=e500]: HR-34 Mohindergarh
+                        - generic [ref=e501]: HR-35 Narnaul
+                        - generic [ref=e502]: HR-36 Rewari
+                        - generic [ref=e503]: HR-37 Ambala
+                        - generic [ref=e504]: HR-38 Faridabad
+                        - generic [ref=e505]: HR-39 Hisar
+                        - generic [ref=e506]: HR-40 Assandh
+                        - generic [ref=e507]: HR-41 Pehowa
+                        - generic [ref=e508]: HR-42 Ganaur
+                        - generic [ref=e509]: HR-43 Kosli
+                        - generic [ref=e510]: HR-44 Ellanabad
+                        - generic [ref=e511]: HR-45 Karnal
+                        - generic [ref=e512]: HR-46 Rohtak
+                        - generic [ref=e513]: HR-47 Rewari
+                        - generic [ref=e514]: HR-48 Tosham
+                        - generic [ref=e515]: HR-49 Kalka
+                        - generic [ref=e516]: HR-50 Hodal
+                        - generic [ref=e517]: HR-51 Faridabad
+                        - generic [ref=e518]: HR-52 Hathin
+                        - generic [ref=e519]: HR-53 Adampur
+                        - generic [ref=e520]: HR-54 Barara
+                        - generic [ref=e521]: HR-55 Gurgaon
+                        - generic [ref=e522]: HR-56 Jind
+                        - generic [ref=e523]: HR-57 Sirsa
+                        - generic [ref=e524]: HR-58 Jagadhari
+                        - generic [ref=e525]: HR-59 Ratia
+                        - generic [ref=e526]: HR-60 Samalkha
+                        - generic [ref=e527]: HR-61 Bhiwani
+                        - generic [ref=e528]: HR-62 Fatehabad
+                        - generic [ref=e529]: HR-63 Jhajjar
+                        - generic [ref=e530]: HR-64 Kaithal
+                        - generic [ref=e531]: HR-65 Kurukshetra
+                        - generic [ref=e532]: HR-66 Narnaul
+                        - generic [ref=e533]: HR-67 Panipat
+                        - generic [ref=e534]: HR-68 Panchkula
+                        - generic [ref=e535]: HR-69 Sonepat
+                        - generic [ref=e536]: HR-70 Chandigarh
+                        - generic [ref=e537]: HR-71 Bilaspur
+                        - generic [ref=e538]: HR-72 Gurgaon
+                        - generic [ref=e539]: HR-73 Palwal
+                        - generic [ref=e540]: HR-74 Mewat
+                        - generic [ref=e541]: HR-75 Indri
+                        - generic [ref=e542]: HR-76 Pataudi
+                        - generic [ref=e543]: HR-77 Beri
+                        - generic [ref=e544]: HR-78 Shahabad
+                        - generic [ref=e545]: HR-79 Kharkhoda
+                        - generic [ref=e546]: HR-80 Barwala
+                        - generic [ref=e547]: HR-81 Bawal
+                        - generic [ref=e548]: HR-82 Kanina
+                        - generic [ref=e549]: HR-83 Kalayat
+                        - generic [ref=e550]: HR-84 Charkhi Dadri
+                        - generic [ref=e551]: HR-85 Ambala
+                        - generic [ref=e552]: HR-86 Sonipat
+                        - generic [ref=e553]: HR-87 Faridabad
+                        - generic [ref=e554]: HR-88 Kundli
+                        - generic [ref=e555]: HR-89 Badli
+                        - generic [ref=e556]: HR-90 Uchana
+                        - generic [ref=e557]: HR-91 Gharaunda
+                        - generic [ref=e558]: HR-92 Radaur
+                        - generic [ref=e559]: HR-93 Sohna
+                        - generic [ref=e560]: HR-94 Kalanwali
+                        - generic [ref=e561]: HR-95 Sampla
+                        - generic [ref=e562]: HR-96 Tauru
+                        - generic [ref=e563]: HR-97 Ladwa
+                        - generic [ref=e564]: HR-98 Badshahpur
+                        - generic [ref=e565]: HR-99 Temporary Numbers For New Vehicles
+                        - generic [ref=e566]: JH-01 Ranchi
+                        - generic [ref=e567]: JH-02 Hazaribagh
+                        - generic [ref=e568]: JH-03 Daltonganj
+                        - generic [ref=e569]: JH-04 Dumka
+                        - generic [ref=e570]: JH-05 Jamshedpur
+                        - generic [ref=e571]: JH-06 Chaibasa
+                        - generic [ref=e572]: JH-07 Gumla
+                        - generic [ref=e573]: JH-08 Lohardaga
+                        - generic [ref=e574]: JH-09 Bokaro
+                        - generic [ref=e575]: JH-10 Dhanbad
+                        - generic [ref=e576]: JH-11 Giridih
+                        - generic [ref=e577]: JH-12 Koderma
+                        - generic [ref=e578]: JH-13 Chatra
+                        - generic [ref=e579]: JH-14 Garhwa
+                        - generic [ref=e580]: JH-15 Deoghar
+                        - generic [ref=e581]: JH-16 Pakur
+                        - generic [ref=e582]: JH-17 Godda
+                        - generic [ref=e583]: JH-18 Sahibganj
+                        - generic [ref=e584]: JH-19 Latehar
+                        - generic [ref=e585]: JH-20 Simdega
+                        - generic [ref=e586]: JH-21 Jamtara
+                        - generic [ref=e587]: JH-22 Saraikela-Kharsawan
+                        - generic [ref=e588]: JH-23 Khunti
+                        - generic [ref=e589]: JH-24 Ramgarh
+                        - generic [ref=e590]: JK-01 Srinagar
+                        - generic [ref=e591]: JK-02 Jammu
+                        - generic [ref=e592]: JK-03 Anantnag
+                        - generic [ref=e593]: JK-04 Budgam
+                        - generic [ref=e594]: JK-05 Baramulla
+                        - generic [ref=e595]: JK-06 Doda
+                        - generic [ref=e596]: JK-07 Kargil
+                        - generic [ref=e597]: JK-08 Kathua
+                        - generic [ref=e598]: JK-09 Kupwara
+                        - generic [ref=e599]: JK-10 Leh
+                        - generic [ref=e600]: JK-11 Rajouri
+                        - generic [ref=e601]: JK-12 Poonch
+                        - generic [ref=e602]: JK-13 Pulwama
+                        - generic [ref=e603]: JK-14 Udhampur
+                        - generic [ref=e604]: JK-15 Bandipora
+                        - generic [ref=e605]: JK-16 Ganderbal
+                        - generic [ref=e606]: JK-17 Kishtawar
+                        - generic [ref=e607]: JK-18 Kulgam
+                        - generic [ref=e608]: JK-19 Ramban
+                        - generic [ref=e609]: JK-20 Reasi
+                        - generic [ref=e610]: JK-21 Samba
+                        - generic [ref=e611]: JK-22 Shopian
+                        - generic [ref=e612]: KA-01 Bangalore Kormangala
+                        - generic [ref=e613]: KA-02 Bangalore Rajajinagar
+                        - generic [ref=e614]: KA-03 Bangalore Indiranagar
+                        - generic [ref=e615]: KA-04 Bangalore Yashwanthpur
+                        - generic [ref=e616]: KA-05 Bangalore Jayanagar
+                        - generic [ref=e617]: KA-06 Tumkur
+                        - generic [ref=e618]: KA-07 Kolar
+                        - generic [ref=e619]: KA-08 Kolar Gold Fields
+                        - generic [ref=e620]: KA-09 Mysore
+                        - generic [ref=e621]: KA-10 Chamarajanagar
+                        - generic [ref=e622]: KA-11 Mandya
+                        - generic [ref=e623]: KA-12 Madikeri
+                        - generic [ref=e624]: KA-13 Hassan
+                        - generic [ref=e625]: KA-14 Shimoga
+                        - generic [ref=e626]: KA-15 Sagar
+                        - generic [ref=e627]: KA-16 Chitradurga
+                        - generic [ref=e628]: KA-17 Davangere
+                        - generic [ref=e629]: KA-18 Chickmagalur
+                        - generic [ref=e630]: KA-19 Mangalore
+                        - generic [ref=e631]: KA-20 Udupi
+                        - generic [ref=e632]: KA-21 Puttur
+                        - generic [ref=e633]: KA-22 Belgaum
+                        - generic [ref=e634]: KA-23 Chikkodi
+                        - generic [ref=e635]: KA-24 Bailhongal
+                        - generic [ref=e636]: KA-25 Dharwad
+                        - generic [ref=e637]: KA-26 Gadag
+                        - generic [ref=e638]: KA-27 Haveri
+                        - generic [ref=e639]: KA-28 Bijapur
+                        - generic [ref=e640]: KA-29 Bagalkot
+                        - generic [ref=e641]: KA-30 Karwar
+                        - generic [ref=e642]: KA-31 Sirsi
+                        - generic [ref=e643]: KA-32 Gulbarga
+                        - generic [ref=e644]: KA-33 Yadgir
+                        - generic [ref=e645]: KA-34 Bellary
+                        - generic [ref=e646]: KA-35 Hospet
+                        - generic [ref=e647]: KA-36 Raichur
+                        - generic [ref=e648]: KA-37 Koppal
+                        - generic [ref=e649]: KA-38 Bidar
+                        - generic [ref=e650]: KA-39 Bhalki
+                        - generic [ref=e651]: KA-40 Chikkaballapur
+                        - generic [ref=e652]: KA-41 Bangalore Kengeri
+                        - generic [ref=e653]: KA-42 Ramanagar
+                        - generic [ref=e654]: KA-43 Devanahalli Bangalore
+                        - generic [ref=e655]: KA-44 Tiptur
+                        - generic [ref=e656]: KA-45 Hunsur
+                        - generic [ref=e657]: KA-46 Sakaleshapur
+                        - generic [ref=e658]: KA-47 Honnavar
+                        - generic [ref=e659]: KA-48 Jamkhandi
+                        - generic [ref=e660]: KA-49 Gokak
+                        - generic [ref=e661]: KA-50 Bangalore Yalahanka
+                        - generic [ref=e662]: KA-51 Bangalore Electronic City
+                        - generic [ref=e663]: KA-52 Nelamangala Bangalore
+                        - generic [ref=e664]: KA-53 Bangalore Krishnarajpuram
+                        - generic [ref=e665]: KA-54 Nagamangala
+                        - generic [ref=e666]: KA-55 Mysore
+                        - generic [ref=e667]: KA-56 Basavakalyan
+                        - generic [ref=e668]: KA-57 Shantinagar Bangalore
+                        - generic [ref=e669]: KA-58 Banashankari
+                        - generic [ref=e670]: KA-59 Chamrajpet Bangalore
+                        - generic [ref=e671]: KA-60 RT Nagar Bangalore
+                        - generic [ref=e672]: KA-61 Marathahalli Bangalore
+                        - generic [ref=e673]: KA-62 Surathkal Mangalore
+                        - generic [ref=e674]: KA-63 Hubballi
+                        - generic [ref=e675]: KA-64 Madhugiri
+                        - generic [ref=e676]: KA-65 Dandeli
+                        - generic [ref=e677]: KA-66 Tarikere
+                        - generic [ref=e678]: KA-67 CHINTHAMANI
+                        - generic [ref=e679]: KA-68 Chintamani
+                        - generic [ref=e680]: KA-69 Ranebennuru
+                        - generic [ref=e681]: KA-70 Bantwal
+                        - generic [ref=e682]: KA-71 Athani
+                        - generic [ref=e683]: KL-01 Thiruvananthapuram
+                        - generic [ref=e684]: KL-02 Kollam
+                        - generic [ref=e685]: KL-03 Pathanamthitta
+                        - generic [ref=e686]: KL-04 Alappuzha
+                        - generic [ref=e687]: KL-05 Kottayam
+                        - generic [ref=e688]: KL-06 Idukki
+                        - generic [ref=e689]: KL-07 Ernakulam
+                        - generic [ref=e690]: KL-08 Thrissur
+                        - generic [ref=e691]: KL-09 Palakkad
+                        - generic [ref=e692]: KL-10 Malappuram
+                        - generic [ref=e693]: KL-11 Kozhikode
+                        - generic [ref=e694]: KL-12 Wayanad
+                        - generic [ref=e695]: KL-13 Kannur
+                        - generic [ref=e696]: KL-14 Kasaragod
+                        - generic [ref=e697]: KL-15 Thiruvananthapuram
+                        - generic [ref=e698]: KL-16 Attingal
+                        - generic [ref=e699]: KL-17 Muvattupuzha
+                        - generic [ref=e700]: KL-18 Vatakara
+                        - generic [ref=e701]: KL-19 Parassala
+                        - generic [ref=e702]: KL-20 Neyyattinkara
+                        - generic [ref=e703]: KL-21 Nedumangad
+                        - generic [ref=e704]: KL-22 Kazhakuttam
+                        - generic [ref=e705]: KL-23 Karunagappally
+                        - generic [ref=e706]: KL-24 Kottarakara
+                        - generic [ref=e707]: KL-25 Punalur
+                        - generic [ref=e708]: KL-26 Adoor
+                        - generic [ref=e709]: KL-27 Thiruvalla
+                        - generic [ref=e710]: KL-28 Mallappally
+                        - generic [ref=e711]: KL-29 Kayamkulam
+                        - generic [ref=e712]: KL-30 Chengannur
+                        - generic [ref=e713]: KL-31 Mavelikara
+                        - generic [ref=e714]: KL-32 Cherthala
+                        - generic [ref=e715]: KL-33 Changanassery
+                        - generic [ref=e716]: KL-34 Kanjirappally
+                        - generic [ref=e717]: KL-35 Palai
+                        - generic [ref=e718]: KL-36 Vaikom
+                        - generic [ref=e719]: KL-37 Vandiperiyar
+                        - generic [ref=e720]: KL-38 Thodupuzha
+                        - generic [ref=e721]: KL-39 Thripunithura
+                        - generic [ref=e722]: KL-40 Perumbavoor
+                        - generic [ref=e723]: KL-41 Aluva
+                        - generic [ref=e724]: KL-42 North Paravur
+                        - generic [ref=e725]: KL-43 Mattancherry
+                        - generic [ref=e726]: KL-44 Kothamangalam
+                        - generic [ref=e727]: KL-45 Irinjalakuda
+                        - generic [ref=e728]: KL-46 Guruvayur
+                        - generic [ref=e729]: KL-47 Kodungalloor
+                        - generic [ref=e730]: KL-48 Wadakkancherry
+                        - generic [ref=e731]: KL-49 Alathur
+                        - generic [ref=e732]: KL-50 Mannarkkad
+                        - generic [ref=e733]: KL-51 Ottappalam
+                        - generic [ref=e734]: KL-52 Pattambi
+                        - generic [ref=e735]: KL-53 Perinthalmanna
+                        - generic [ref=e736]: KL-54 Ponnani
+                        - generic [ref=e737]: KL-55 Tirur
+                        - generic [ref=e738]: KL-56 Koyilandy
+                        - generic [ref=e739]: KL-57 Koduvally
+                        - generic [ref=e740]: KL-58 Thalassery
+                        - generic [ref=e741]: KL-59 Taliparamba
+                        - generic [ref=e742]: KL-60 Kanhangad
+                        - generic [ref=e743]: KL-61 Kunnathur
+                        - generic [ref=e744]: KL-62 Ranni
+                        - generic [ref=e745]: KL-63 Angamaly
+                        - generic [ref=e746]: KL-64 Chalakkudy
+                        - generic [ref=e747]: KL-65 Thirurangadi
+                        - generic [ref=e748]: KL-66 Kuttanadu
+                        - generic [ref=e749]: KL-67 Uzhavoor
+                        - generic [ref=e750]: KL-68 Devikulam
+                        - generic [ref=e751]: KL-69 Udumbanchola
+                        - generic [ref=e752]: KL-70 Chittur
+                        - generic [ref=e753]: KL-71 Nilambur
+                        - generic [ref=e754]: KL-72 Mananthavady
+                        - generic [ref=e755]: KL-73 Sulthan Bathery
+                        - generic [ref=e756]: KL-74 Kattakada
+                        - generic [ref=e757]: KL-75 Varkala
+                        - generic [ref=e758]: KL-76 Nanmanda
+                        - generic [ref=e759]: KL-77 Pathanapuram
+                        - generic [ref=e760]: KL-78 Konni
+                        - generic [ref=e761]: KL-79 Vellarikundu
+                        - generic [ref=e762]: KL-80 Pathanapuram
+                        - generic [ref=e763]: KL-81 Feroke
+                        - generic [ref=e764]: KL-82 Iritty
+                        - generic [ref=e765]: KL-83 Payyannur
+                        - generic [ref=e766]: KL-84 Vellarikundu
+                        - generic [ref=e767]: KL-85 Manjeshwar
+                        - generic [ref=e768]: KL-86 Payyannur
+                        - generic [ref=e769]: KL-87 Kondotty
+                        - generic [ref=e770]: KL-99 Trivandrum
+                        - generic [ref=e771]: LA-01 Leh
+                        - generic [ref=e772]: LA-02 Kargil
+                        - generic [ref=e773]: LD-01 Kavaratti
+                        - generic [ref=e774]: LD-02 Agatti
+                        - generic [ref=e775]: LD-03 Amini
+                        - generic [ref=e776]: LD-04 Androth
+                        - generic [ref=e777]: LD-05 Kadmat
+                        - generic [ref=e778]: LD-06 Kiltan
+                        - generic [ref=e779]: LD-07 Chetlat
+                        - generic [ref=e780]: LD-08 Kalpeni
+                        - generic [ref=e781]: LD-09 Minicoy
+                        - generic [ref=e782]: MH-01 Mumbai Tardeo
+                        - generic [ref=e783]: MH-02 Mumbai Andheri
+                        - generic [ref=e784]: MH-03 Mumbai Worli
+                        - generic [ref=e785]: MH-04 Thane
+                        - generic [ref=e786]: MH-05 Kalyan
+                        - generic [ref=e787]: MH-06 Pen
+                        - generic [ref=e788]: MH-07 Sindhudurg
+                        - generic [ref=e789]: MH-08 Ratnagiri
+                        - generic [ref=e790]: MH-09 Kolhapur
+                        - generic [ref=e791]: MH-10 Sangli
+                        - generic [ref=e792]: MH-11 Satara
+                        - generic [ref=e793]: MH-12 Pune
+                        - generic [ref=e794]: MH-13 Solapur
+                        - generic [ref=e795]: MH-14 Pimpri-Chinchwad
+                        - generic [ref=e796]: MH-15 Nashik
+                        - generic [ref=e797]: MH-16 Ahmadnagar
+                        - generic [ref=e798]: MH-17 Srirampur
+                        - generic [ref=e799]: MH-18 Dhule
+                        - generic [ref=e800]: MH-19 Jalgaon
+                        - generic [ref=e801]: MH-20 Aurangabad
+                        - generic [ref=e802]: MH-21 Jalna
+                        - generic [ref=e803]: MH-22 Parbhani
+                        - generic [ref=e804]: MH-23 Beed
+                        - generic [ref=e805]: MH-24 Latur
+                        - generic [ref=e806]: MH-25 Osmanabad
+                        - generic [ref=e807]: MH-26 Nanded
+                        - generic [ref=e808]: MH-27 Amravati
+                        - generic [ref=e809]: MH-28 Buldana
+                        - generic [ref=e810]: MH-29 Yavatmal
+                        - generic [ref=e811]: MH-30 Akola
+                        - generic [ref=e812]: MH-31 Nagpur
+                        - generic [ref=e813]: MH-32 Wardha
+                        - generic [ref=e814]: MH-33 Gadchiroli
+                        - generic [ref=e815]: MH-34 Chandrapur
+                        - generic [ref=e816]: MH-35 Gondia
+                        - generic [ref=e817]: MH-36 Bhandara
+                        - generic [ref=e818]: MH-37 Washim
+                        - generic [ref=e819]: MH-38 Hingoli
+                        - generic [ref=e820]: MH-39 Nandurbar
+                        - generic [ref=e821]: MH-40 Wadi Nagpur
+                        - generic [ref=e822]: MH-41 Malegaon
+                        - generic [ref=e823]: MH-42 Baramati
+                        - generic [ref=e824]: MH-43 Navi Mumbai
+                        - generic [ref=e825]: MH-44 Ambejogai
+                        - generic [ref=e826]: MH-45 Akluj
+                        - generic [ref=e827]: MH-46 Panvel
+                        - generic [ref=e828]: MH-47 Borivali Mumbai
+                        - generic [ref=e829]: MH-48 Virar Vasai
+                        - generic [ref=e830]: MH-49 Nagpur Bhandara
+                        - generic [ref=e831]: MH-50 Karad Satara
+                        - generic [ref=e832]: MH-51 Nashik
+                        - generic [ref=e833]: MH-52 Parbhani
+                        - generic [ref=e834]: MH-53 Pune South
+                        - generic [ref=e835]: MH-54 Pune North
+                        - generic [ref=e836]: MH-55 Mumbai Central
+                        - generic [ref=e837]: MH-56 Thane Rural
+                        - generic [ref=e838]: MH-57 Parbhani
+                        - generic [ref=e839]: MH-58 Mira-Bhayandar
+                        - generic [ref=e840]: MH-59 Aurangabad
+                        - generic [ref=e841]: MH-60 Palghar
+                        - generic [ref=e842]: MH-61 Pune
+                        - generic [ref=e843]: MH-62 Nanded
+                        - generic [ref=e844]: ML-01 Shillong
+                        - generic [ref=e845]: ML-02 Shillong
+                        - generic [ref=e846]: ML-03 Shillong
+                        - generic [ref=e847]: ML-04 Jaintia Hills
+                        - generic [ref=e848]: ML-05 East Khasi Hills
+                        - generic [ref=e849]: ML-06 West Khasi Hills
+                        - generic [ref=e850]: ML-07 East Garo Hills
+                        - generic [ref=e851]: ML-08 West Garo Hills
+                        - generic [ref=e852]: ML-09 South Garo Hills
+                        - generic [ref=e853]: ML-10 Ri-Bhoi
+                        - generic [ref=e854]: ML-11 Khliehriat
+                        - generic [ref=e855]: ML-12 Mawkyrwat South East Kashi Hils
+                        - generic [ref=e856]: ML-13 Resubelpara
+                        - generic [ref=e857]: ML-14 Ampati
+                        - generic [ref=e858]: ML-15 MAIRANG
+                        - generic [ref=e859]: ML-56 Shillong
+                        - generic [ref=e860]: MN-01 Imphal
+                        - generic [ref=e861]: MN-02 Churachandpur
+                        - generic [ref=e862]: MN-03 Kangpokpi
+                        - generic [ref=e863]: MN-04 Thoubal
+                        - generic [ref=e864]: MN-05 Bishnupur
+                        - generic [ref=e865]: MN-06 Imphal East
+                        - generic [ref=e866]: MN-07 Ukhrul
+                        - generic [ref=e867]: MN-08 SENAPATI
+                        - generic [ref=e868]: MN-09 Imphal West
+                        - generic [ref=e869]: MN-12 Tengnoupal
+                        - generic [ref=e870]: MP-01 Bhopal
+                        - generic [ref=e871]: MP-02 Bhopal
+                        - generic [ref=e872]: MP-03 Bhopal
+                        - generic [ref=e873]: MP-04 Bhopal
+                        - generic [ref=e874]: MP-05 Hoshangabad
+                        - generic [ref=e875]: MP-06 Morena
+                        - generic [ref=e876]: MP-07 Gwalior
+                        - generic [ref=e877]: MP-08 Guna
+                        - generic [ref=e878]: MP-09 Indore
+                        - generic [ref=e879]: MP-10 Khargone
+                        - generic [ref=e880]: MP-11 Dhar
+                        - generic [ref=e881]: MP-12 Khandwa
+                        - generic [ref=e882]: MP-13 Ujjain
+                        - generic [ref=e883]: MP-14 Mandsor
+                        - generic [ref=e884]: MP-15 Sagar
+                        - generic [ref=e885]: MP-16 Chhatarpur
+                        - generic [ref=e886]: MP-17 Rewa
+                        - generic [ref=e887]: MP-18 Shahdol
+                        - generic [ref=e888]: MP-19 Satna
+                        - generic [ref=e889]: MP-20 Jabalpur
+                        - generic [ref=e890]: MP-21 Katni
+                        - generic [ref=e891]: MP-22 Seoni
+                        - generic [ref=e892]: MP-23 Raipur
+                        - generic [ref=e893]: MP-24 Durg
+                        - generic [ref=e894]: MP-25 Jagdalpur
+                        - generic [ref=e895]: MP-26 Bilaspur
+                        - generic [ref=e896]: MP-27 Ambikapur
+                        - generic [ref=e897]: MP-28 Chhindwara
+                        - generic [ref=e898]: MP-29 Rajnandgaon
+                        - generic [ref=e899]: MP-30 Bhind
+                        - generic [ref=e900]: MP-31 Sheopur
+                        - generic [ref=e901]: MP-32 Datia
+                        - generic [ref=e902]: MP-33 Shivpuri
+                        - generic [ref=e903]: MP-34 Damoh
+                        - generic [ref=e904]: MP-35 Panna
+                        - generic [ref=e905]: MP-36 Tikamgarh
+                        - generic [ref=e906]: MP-37 Sehore
+                        - generic [ref=e907]: MP-38 Raisen
+                        - generic [ref=e908]: MP-39 Rajgarh
+                        - generic [ref=e909]: MP-40 Vidisha
+                        - generic [ref=e910]: MP-41 Dewas
+                        - generic [ref=e911]: MP-42 Shajapur
+                        - generic [ref=e912]: MP-43 Ratlam
+                        - generic [ref=e913]: MP-44 Neemuch
+                        - generic [ref=e914]: MP-45 Jhabua
+                        - generic [ref=e915]: MP-46 Badwani
+                        - generic [ref=e916]: MP-47 Harda
+                        - generic [ref=e917]: MP-48 Betul
+                        - generic [ref=e918]: MP-49 Narsinghpur
+                        - generic [ref=e919]: MP-50 Balaghat
+                        - generic [ref=e920]: MP-51 Mandla
+                        - generic [ref=e921]: MP-52 Dindori
+                        - generic [ref=e922]: MP-53 Sidhi
+                        - generic [ref=e923]: MP-54 Umariya
+                        - generic [ref=e924]: MP-55 Bagli
+                        - generic [ref=e925]: MP-56 Indore
+                        - generic [ref=e926]: MP-57 Jabalpur
+                        - generic [ref=e927]: MP-58 Khandwa
+                        - generic [ref=e928]: MP-65 Anuppur
+                        - generic [ref=e929]: MP-66 Singrauli
+                        - generic [ref=e930]: MP-67 Ashoknagar
+                        - generic [ref=e931]: MP-68 Burhanpur
+                        - generic [ref=e932]: MP-69 Panna
+                        - generic [ref=e933]: MP-70 Agar-Malwa
+                        - generic [ref=e934]: MP-71 Niwari
+                        - generic [ref=e935]: MP-72 Nagda
+                        - generic [ref=e936]: MP-73 Maihar
+                        - generic [ref=e937]: MP-74 Chachaura
+                        - generic [ref=e938]: MZ-01 Aizawl
+                        - generic [ref=e939]: MZ-02 Lunglei
+                        - generic [ref=e940]: MZ-03 Chimtuipui
+                        - generic [ref=e941]: MZ-04 Champhai
+                        - generic [ref=e942]: MZ-05 Kolasib
+                        - generic [ref=e943]: MZ-06 Serchhip
+                        - generic [ref=e944]: MZ-07 Lawngtlai
+                        - generic [ref=e945]: MZ-08 Mamit
+                        - generic [ref=e946]: MZ-09 AIZAWL RURAL
+                        - generic [ref=e947]: NL-01 Kohima
+                        - generic [ref=e948]: NL-02 Mokokchung
+                        - generic [ref=e949]: NL-03 Tuensang
+                        - generic [ref=e950]: NL-04 Mon
+                        - generic [ref=e951]: NL-05 Wokha
+                        - generic [ref=e952]: NL-06 Zunheboto
+                        - generic [ref=e953]: NL-07 Dimapur
+                        - generic [ref=e954]: NL-08 Phek
+                        - generic [ref=e955]: NL-10 Kohima
+                        - generic [ref=e956]: OD-01 Balasore
+                        - generic [ref=e957]: OD-02 Bhubaneswar
+                        - generic [ref=e958]: OD-03 Bolangir
+                        - generic [ref=e959]: OD-04 Chandikhole
+                        - generic [ref=e960]: OD-05 Cuttack
+                        - generic [ref=e961]: OD-06 Dhenkanal
+                        - generic [ref=e962]: OD-07 Ganjam
+                        - generic [ref=e963]: OD-08 Kalahandi
+                        - generic [ref=e964]: OD-09 Keonjhar
+                        - generic [ref=e965]: OD-10 Koraput
+                        - generic [ref=e966]: OD-11 Mayurbhanj
+                        - generic [ref=e967]: OD-12 Phulbani
+                        - generic [ref=e968]: OD-13 Puri
+                        - generic [ref=e969]: OD-14 Rourkela
+                        - generic [ref=e970]: OD-15 Sambalpur
+                        - generic [ref=e971]: OD-16 Sundergarh
+                        - generic [ref=e972]: OD-17 Baragarh
+                        - generic [ref=e973]: OD-18 Rayagada
+                        - generic [ref=e974]: OD-19 Angul
+                        - generic [ref=e975]: OD-20 Gajapati
+                        - generic [ref=e976]: OD-21 Jagatsinghpur
+                        - generic [ref=e977]: OD-22 Bhadrak
+                        - generic [ref=e978]: OD-23 Jharsuguda
+                        - generic [ref=e979]: OD-24 Nabarangpur
+                        - generic [ref=e980]: OD-25 Nayagarh
+                        - generic [ref=e981]: OD-26 Nuapada
+                        - generic [ref=e982]: OD-27 Boudh
+                        - generic [ref=e983]: OD-28 Debagarh
+                        - generic [ref=e984]: OD-29 Kendarapara
+                        - generic [ref=e985]: OD-30 Malkangiri
+                        - generic [ref=e986]: OD-31 Sonepur
+                        - generic [ref=e987]: OD-32 Bhanjanagar
+                        - generic [ref=e988]: OD-33 Bhubaneshwar
+                        - generic [ref=e989]: OD-34 Jajpur
+                        - generic [ref=e990]: OD-35 Talcher
+                        - generic [ref=e991]: OR-01 Balasore
+                        - generic [ref=e992]: OR-02 Bhubaneswar
+                        - generic [ref=e993]: OR-03 Bolangir
+                        - generic [ref=e994]: OR-04 Chandikhole
+                        - generic [ref=e995]: OR-05 Cuttack
+                        - generic [ref=e996]: OR-06 Dhenkanal
+                        - generic [ref=e997]: OR-07 Ganjam
+                        - generic [ref=e998]: OR-08 Kalahandi
+                        - generic [ref=e999]: OR-09 Keonjhar
+                        - generic [ref=e1000]: OR-10 Koraput
+                        - generic [ref=e1001]: OR-11 Mayurbhanj
+                        - generic [ref=e1002]: OR-12 Phulbani
+                        - generic [ref=e1003]: OR-13 Puri
+                        - generic [ref=e1004]: OR-14 Rourkela
+                        - generic [ref=e1005]: OR-15 Sambalpur
+                        - generic [ref=e1006]: OR-16 Sundergarh
+                        - generic [ref=e1007]: OR-17 Baragarh
+                        - generic [ref=e1008]: OR-18 Rayagada
+                        - generic [ref=e1009]: OR-19 Angul
+                        - generic [ref=e1010]: OR-20 Gajapati
+                        - generic [ref=e1011]: OR-21 Jagatsinghpur
+                        - generic [ref=e1012]: OR-22 Bhadrak
+                        - generic [ref=e1013]: OR-23 Jharsuguda
+                        - generic [ref=e1014]: OR-24 Nabarangpur
+                        - generic [ref=e1015]: OR-25 Nayagarh
+                        - generic [ref=e1016]: OR-26 Nuapada
+                        - generic [ref=e1017]: OR-27 Boudh
+                        - generic [ref=e1018]: OR-28 Debagarh
+                        - generic [ref=e1019]: OR-29 Kendarapara
+                        - generic [ref=e1020]: OR-30 Malkangiri
+                        - generic [ref=e1021]: OR-31 Sonepur
+                        - generic [ref=e1022]: OR-32 Bhanjanagar
+                        - generic [ref=e1023]: OR-33 BHUBANESWAR
+                        - generic [ref=e1024]: OR-34 Jajpur
+                        - generic [ref=e1025]: OR-35 Talcher
+                        - generic [ref=e1026]: PB-01 Chandigarh
+                        - generic [ref=e1027]: PB-02 Amritsar
+                        - generic [ref=e1028]: PB-03 Bathinda
+                        - generic [ref=e1029]: PB-04 Faridkot
+                        - generic [ref=e1030]: PB-05 Ferozepur
+                        - generic [ref=e1031]: PB-06 Gurdaspur
+                        - generic [ref=e1032]: PB-07 Hoshiarpur
+                        - generic [ref=e1033]: PB-08 Jalandhar
+                        - generic [ref=e1034]: PB-09 Kapurthala
+                        - generic [ref=e1035]: PB-10 Ludhiana
+                        - generic [ref=e1036]: PB-11 Patiala
+                        - generic [ref=e1037]: PB-12 Ropar
+                        - generic [ref=e1038]: PB-13 Sangrur
+                        - generic [ref=e1039]: PB-14 Ajnala
+                        - generic [ref=e1040]: PB-15 Abohar
+                        - generic [ref=e1041]: PB-16 Anandpur Sahib
+                        - generic [ref=e1042]: PB-17 Baba Bakala
+                        - generic [ref=e1043]: PB-18 Batala
+                        - generic [ref=e1044]: PB-19 Barnala
+                        - generic [ref=e1045]: PB-20 Balachaur
+                        - generic [ref=e1046]: PB-21 Dasuya
+                        - generic [ref=e1047]: PB-22 Fazilka
+                        - generic [ref=e1048]: PB-23 Fatehgarh
+                        - generic [ref=e1049]: PB-24 Garhshankar
+                        - generic [ref=e1050]: PB-25 Jagraon
+                        - generic [ref=e1051]: PB-26 Khanna
+                        - generic [ref=e1052]: PB-27 Kharar
+                        - generic [ref=e1053]: PB-28 Malerkotla
+                        - generic [ref=e1054]: PB-29 Moga
+                        - generic [ref=e1055]: PB-30 Muktsar
+                        - generic [ref=e1056]: PB-31 Mansa
+                        - generic [ref=e1057]: PB-32 Nawanshahr
+                        - generic [ref=e1058]: PB-33 Nakodar
+                        - generic [ref=e1059]: PB-34 Nabha
+                        - generic [ref=e1060]: PB-35 Pathankot
+                        - generic [ref=e1061]: PB-36 Phagwara
+                        - generic [ref=e1062]: PB-37 Philaur
+                        - generic [ref=e1063]: PB-38 Patti
+                        - generic [ref=e1064]: PB-39 Rajpura
+                        - generic [ref=e1065]: PB-40 Rampura
+                        - generic [ref=e1066]: PB-41 Sultanpur
+                        - generic [ref=e1067]: PB-42 Samana
+                        - generic [ref=e1068]: PB-43 Samrala
+                        - generic [ref=e1069]: PB-44 Sunam
+                        - generic [ref=e1070]: PB-45 Talwandi
+                        - generic [ref=e1071]: PB-46 Tarn Taran
+                        - generic [ref=e1072]: PB-47 Zira
+                        - generic [ref=e1073]: PB-48 Amloh
+                        - generic [ref=e1074]: PB-49 Khamono
+                        - generic [ref=e1075]: PB-50 Budhlada
+                        - generic [ref=e1076]: PB-51 Jhunir Sardulgarh
+                        - generic [ref=e1077]: PB-52 Bassi Pathana
+                        - generic [ref=e1078]: PB-53 Malout
+                        - generic [ref=e1079]: PB-54 Mukerian
+                        - generic [ref=e1080]: PB-55 Payal
+                        - generic [ref=e1081]: PB-56 Raikot
+                        - generic [ref=e1082]: PB-57 Bhulath
+                        - generic [ref=e1083]: PB-58 Dera Babu Nanak
+                        - generic [ref=e1084]: PB-59 Dhuri
+                        - generic [ref=e1085]: PB-60 Gidderbaha
+                        - generic [ref=e1086]: PB-61 Jalalabad
+                        - generic [ref=e1087]: PB-62 Jaitu
+                        - generic [ref=e1088]: PB-63 Khadoor
+                        - generic [ref=e1089]: PB-64 Moonak
+                        - generic [ref=e1090]: PB-65 Mohali
+                        - generic [ref=e1091]: PB-66 Nihal Sing Wala
+                        - generic [ref=e1092]: PB-67 Shahkot
+                        - generic [ref=e1093]: PB-68 Dhar
+                        - generic [ref=e1094]: PB-69 Bagha
+                        - generic [ref=e1095]: PB-70 Dera Bassi
+                        - generic [ref=e1096]: PB-71 Chamkaur
+                        - generic [ref=e1097]: PB-72 Patran
+                        - generic [ref=e1098]: PB-73 Tappa Mandi
+                        - generic [ref=e1099]: PB-74 Nangal
+                        - generic [ref=e1100]: PB-75 Lehragaga
+                        - generic [ref=e1101]: PB-76 Ahmedgarh
+                        - generic [ref=e1102]: PB-77 Guru Har Sahai
+                        - generic [ref=e1103]: PB-78 Banga
+                        - generic [ref=e1104]: PB-79 Kotkapura
+                        - generic [ref=e1105]: PB-80 Dabwali
+                        - generic [ref=e1106]: PB-81 Majitha
+                        - generic [ref=e1107]: PB-82 AHMADGARH
+                        - generic [ref=e1108]: PB-83 Dudhan Sadhan
+                        - generic [ref=e1109]: PB-84 Bhawanigarh
+                        - generic [ref=e1110]: PB-85 Kalanaur
+                        - generic [ref=e1111]: PB-86 Dirba
+                        - generic [ref=e1112]: PB-87 Morinda
+                        - generic [ref=e1113]: PB-88 Bhikhiwind
+                        - generic [ref=e1114]: PB-89 Amritsar
+                        - generic [ref=e1115]: PB-90 JALANDHAR
+                        - generic [ref=e1116]: PB-91 Ludhiana
+                        - generic [ref=e1117]: PB-92 Malerkotla
+                        - generic [ref=e1118]: PB-99 DINANAGAR
+                        - generic [ref=e1119]: PY-01 Puducherry
+                        - generic [ref=e1120]: PY-02 Karaikal
+                        - generic [ref=e1121]: PY-03 Mahe
+                        - generic [ref=e1122]: PY-04 Yanam
+                        - generic [ref=e1123]: PY-05 Oulgaret
+                        - generic [ref=e1124]: PY-11 Bahour
+                        - generic [ref=e1125]: RJ-01 Ajmer
+                        - generic [ref=e1126]: RJ-02 Alwar
+                        - generic [ref=e1127]: RJ-03 Banswara
+                        - generic [ref=e1128]: RJ-04 Barmer
+                        - generic [ref=e1129]: RJ-05 Bharatpur
+                        - generic [ref=e1130]: RJ-06 Bhilwara
+                        - generic [ref=e1131]: RJ-07 Bikaner
+                        - generic [ref=e1132]: RJ-08 Bundi
+                        - generic [ref=e1133]: RJ-09 Chittaurgarh
+                        - generic [ref=e1134]: RJ-10 Churu
+                        - generic [ref=e1135]: RJ-11 Dholpur
+                        - generic [ref=e1136]: RJ-12 Dhungarpur
+                        - generic [ref=e1137]: RJ-13 Sri Ganganagar
+                        - generic [ref=e1138]: RJ-14 Jaipur
+                        - generic [ref=e1139]: RJ-15 Jaisalmer
+                        - generic [ref=e1140]: RJ-16 Jalore
+                        - generic [ref=e1141]: RJ-17 Jhalawar
+                        - generic [ref=e1142]: RJ-18 Jhunjhunu
+                        - generic [ref=e1143]: RJ-19 Jodhpur
+                        - generic [ref=e1144]: RJ-20 Kota
+                        - generic [ref=e1145]: RJ-21 Nagour
+                        - generic [ref=e1146]: RJ-22 Pali
+                        - generic [ref=e1147]: RJ-23 Sikar
+                        - generic [ref=e1148]: RJ-24 Sirohi
+                        - generic [ref=e1149]: RJ-25 Sawaimadhopur
+                        - generic [ref=e1150]: RJ-26 Tonk
+                        - generic [ref=e1151]: RJ-27 Udaipur
+                        - generic [ref=e1152]: RJ-28 Baran
+                        - generic [ref=e1153]: RJ-29 Dausa
+                        - generic [ref=e1154]: RJ-30 Rajsamad
+                        - generic [ref=e1155]: RJ-31 Hanumangarh
+                        - generic [ref=e1156]: RJ-32 Kotputli
+                        - generic [ref=e1157]: RJ-33 Ramganj
+                        - generic [ref=e1158]: RJ-34 Karauli
+                        - generic [ref=e1159]: RJ-35 Pratapgarh
+                        - generic [ref=e1160]: RJ-36 Beawar
+                        - generic [ref=e1161]: RJ-37 Didwana
+                        - generic [ref=e1162]: RJ-38 Rawatbhata
+                        - generic [ref=e1163]: RJ-39 Balotra
+                        - generic [ref=e1164]: RJ-40 Bhiwadi
+                        - generic [ref=e1165]: RJ-41 Chomu, Jaipur
+                        - generic [ref=e1166]: RJ-42 Kishangarh, Ajmer
+                        - generic [ref=e1167]: RJ-43 Phalodi
+                        - generic [ref=e1168]: RJ-44 Sujangarh
+                        - generic [ref=e1169]: RJ-45 Jaipur
+                        - generic [ref=e1170]: RJ-46 Bhinmal (Jalore)
+                        - generic [ref=e1171]: RJ-47 Dudu, Jaipur
+                        - generic [ref=e1172]: RJ-48 Kekri
+                        - generic [ref=e1173]: RJ-49 Nohar
+                        - generic [ref=e1174]: RJ-50 Nokha
+                        - generic [ref=e1175]: RJ-51 Shahpura
+                        - generic [ref=e1176]: RJ-52 Shahpura, Jaipur
+                        - generic [ref=e1177]: RJ-53 Shahpura
+                        - generic [ref=e1178]: RJ-54 Piparcity
+                        - generic [ref=e1179]: RJ-55 Jaisalmer
+                        - generic [ref=e1180]: RJ-56 Ganganagar
+                        - generic [ref=e1181]: RJ-57 Sumerpur
+                        - generic [ref=e1182]: RJ-58 SALUMBER
+                        - generic [ref=e1183]: RJ-59 Shahpura
+                        - generic [ref=e1184]: RJ-60 Jaipur
+                        - generic [ref=e1185]: SK-01 Gangtok
+                        - generic [ref=e1186]: SK-02 Gangtok
+                        - generic [ref=e1187]: SK-03 Gangtok
+                        - generic [ref=e1188]: SK-04 Gangtok
+                        - generic [ref=e1189]: SK-05 Gangtok
+                        - generic [ref=e1190]: SK-06 Sikkim
+                        - generic [ref=e1191]: SK-07 Sikkim
+                        - generic [ref=e1192]: SK-08 Singtam
+                        - generic [ref=e1193]: TG-01 ADILABAD
+                        - generic [ref=e1194]: TG-02 KARIMNAGAR
+                        - generic [ref=e1195]: TG-03 WARANGAL
+                        - generic [ref=e1196]: TG-04 KHAMMAM
+                        - generic [ref=e1197]: TG-05 NALGONDA
+                        - generic [ref=e1198]: TG-06 MAHABUBNAGAR
+                        - generic [ref=e1199]: TG-07 RANGAREDDY
+                        - generic [ref=e1200]: TG-08 MEDCHAL
+                        - generic [ref=e1201]: TG-09 HYDERABAD KHAIRTABAD
+                        - generic [ref=e1202]: TG-10 HYDERABAD NORTH
+                        - generic [ref=e1203]: TG-11 HYDERABAD MALAKPET
+                        - generic [ref=e1204]: TG-12 HYDERABAD BAHADURPURA
+                        - generic [ref=e1205]: TG-13 HYDERABAD MEHIDIPATNAM
+                        - generic [ref=e1206]: TG-14 Hyderabad
+                        - generic [ref=e1207]: TG-15 SANGAREDDY
+                        - generic [ref=e1208]: TG-16 NIZAMABAD
+                        - generic [ref=e1209]: TG-17 KAMAREDDY
+                        - generic [ref=e1210]: TG-18 NIRMAL
+                        - generic [ref=e1211]: TG-19 MANCHERIAL
+                        - generic [ref=e1212]: TG-20 Nirmal
+                        - generic [ref=e1213]: TG-21 JAGTIAL
+                        - generic [ref=e1214]: TG-22 PEDDAPALLI
+                        - generic [ref=e1215]: TG-23 Jagtial
+                        - generic [ref=e1216]: TG-24 Warangal
+                        - generic [ref=e1217]: TG-25 Warangal
+                        - generic [ref=e1218]: TG-26 MAHABUBABAD
+                        - generic [ref=e1219]: TG-27 JANGAON
+                        - generic [ref=e1220]: TG-28 Bhadradri
+                        - generic [ref=e1221]: TG-29 SURYAPET
+                        - generic [ref=e1222]: TG-30 Yadadri Bhuvanagiri
+                        - generic [ref=e1223]: TG-31 Nagarkurnool
+                        - generic [ref=e1224]: TG-32 WANAPARTHY
+                        - generic [ref=e1225]: TG-33 Nagarkurnool
+                        - generic [ref=e1226]: TG-34 VIKARABAD
+                        - generic [ref=e1227]: TG-35 MEDAK
+                        - generic [ref=e1228]: TG-36 SIDDIPET
+                        - generic [ref=e1229]: TG-37 Mulugu
+                        - generic [ref=e1230]: TG-38 NARAYANPET
+                        - generic [ref=e1231]: TN-01 Chennai Ayanavaram
+                        - generic [ref=e1232]: TN-02 Chennai Annanagar
+                        - generic [ref=e1233]: TN-03 Chennai Tondiarpet
+                        - generic [ref=e1234]: TN-04 Chennai Kolathur
+                        - generic [ref=e1235]: TN-05 Chennai
+                        - generic [ref=e1236]: TN-06 Chennai Mandaveli
+                        - generic [ref=e1237]: TN-07 Chennai Thiruvanmiyur
+                        - generic [ref=e1238]: TN-09 Chennai KK Nagar
+                        - generic [ref=e1239]: TN-10 Chennai Virugambakkam
+                        - generic [ref=e1240]: TN-11 Chennai Tambaram
+                        - generic [ref=e1241]: TN-12 Chennai Poonamallee
+                        - generic [ref=e1242]: TN-13 Chennai Ambattur
+                        - generic [ref=e1243]: TN-14 Chennai Sholinganallur
+                        - generic [ref=e1244]: TN-15 Kallakuruchi
+                        - generic [ref=e1245]: TN-16 Tindivanam
+                        - generic [ref=e1246]: TN-18 Chennai Red Hills
+                        - generic [ref=e1247]: TN-19 Chengalpattu
+                        - generic [ref=e1248]: TN-20 Tiruvallur
+                        - generic [ref=e1249]: TN-21 Sriperumbudur
+                        - generic [ref=e1250]: TN-22 Meenambakkam Chennai
+                        - generic [ref=e1251]: TN-23 Vellore
+                        - generic [ref=e1252]: TN-24 Krishnagiri
+                        - generic [ref=e1253]: TN-25 Thiruvannamalai
+                        - generic [ref=e1254]: TN-27 Salem
+                        - generic [ref=e1255]: TN-28 Namakkal
+                        - generic [ref=e1256]: TN-29 Dharmapuri
+                        - generic [ref=e1257]: TN-30 Salem Town
+                        - generic [ref=e1258]: TN-31 Cuddalore
+                        - generic [ref=e1259]: TN-32 Villupuram
+                        - generic [ref=e1260]: TN-33 Erode
+                        - generic [ref=e1261]: TN-34 Thiruchengode
+                        - generic [ref=e1262]: TN-36 Gobichettipalayam
+                        - generic [ref=e1263]: TN-37 Sulur Coimbatore
+                        - generic [ref=e1264]: TN-38 Coimbatore
+                        - generic [ref=e1265]: TN-39 Tiruppur
+                        - generic [ref=e1266]: TN-40 Mettupalayam
+                        - generic [ref=e1267]: TN-41 Pollachi
+                        - generic [ref=e1268]: TN-42 Tirrupur S
+                        - generic [ref=e1269]: TN-43 Gudalur
+                        - generic [ref=e1270]: TN-45 Tiruchirapalli
+                        - generic [ref=e1271]: TN-46 Perambalur
+                        - generic [ref=e1272]: TN-47 Karur
+                        - generic [ref=e1273]: TN-48 Sri Rangam
+                        - generic [ref=e1274]: TN-49 Tanjavur
+                        - generic [ref=e1275]: TN-50 Tiruvarur
+                        - generic [ref=e1276]: TN-51 Nagapattinam
+                        - generic [ref=e1277]: TN-52 SANKAGIRI
+                        - generic [ref=e1278]: TN-54 Salem
+                        - generic [ref=e1279]: TN-55 Pudukottai
+                        - generic [ref=e1280]: TN-56 Perundurai
+                        - generic [ref=e1281]: TN-57 Dindigul
+                        - generic [ref=e1282]: TN-58 Madurai SO
+                        - generic [ref=e1283]: TN-59 Madurai
+                        - generic [ref=e1284]: TN-60 Periyakulam
+                        - generic [ref=e1285]: TN-61 Ariyalur
+                        - generic [ref=e1286]: TN-63 Sivagagngai
+                        - generic [ref=e1287]: TN-64 Madurai
+                        - generic [ref=e1288]: TN-65 Ramanathpura
+                        - generic [ref=e1289]: TN-66 Coimbatore
+                        - generic [ref=e1290]: TN-67 Virudhnagar
+                        - generic [ref=e1291]: TN-68 Kumbakonam
+                        - generic [ref=e1292]: TN-69 Tuticorin
+                        - generic [ref=e1293]: TN-70 Hosur
+                        - generic [ref=e1294]: TN-72 Tirunelveli
+                        - generic [ref=e1295]: TN-73 Ranipet
+                        - generic [ref=e1296]: TN-74 Nagercoil
+                        - generic [ref=e1297]: TN-75 Marthandam
+                        - generic [ref=e1298]: TN-76 Tenkasi
+                        - generic [ref=e1299]: TN-77 Attur
+                        - generic [ref=e1300]: TN-78 Udumalpet
+                        - generic [ref=e1301]: TN-79 Sankarankoil
+                        - generic [ref=e1302]: TN-81 Thiruverumbur
+                        - generic [ref=e1303]: TN-82 Mayiladuthurai
+                        - generic [ref=e1304]: TN-83 Vellore
+                        - generic [ref=e1305]: TN-84 Sivakasi
+                        - generic [ref=e1306]: TN-85 Chennai Southwest
+                        - generic [ref=e1307]: TN-86 Erode West
+                        - generic [ref=e1308]: TN-87 Sriperumbudur
+                        - generic [ref=e1309]: TN-88 Paramathi Velur
+                        - generic [ref=e1310]: TN-90 Salem South
+                        - generic [ref=e1311]: TN-91 Chidambaram
+                        - generic [ref=e1312]: TN-92 Thiruchendur
+                        - generic [ref=e1313]: TN-93 Mettur
+                        - generic [ref=e1314]: TN-94 Palani
+                        - generic [ref=e1315]: TN-95 Sivakasi
+                        - generic [ref=e1316]: TN-96 Kovilpatti
+                        - generic [ref=e1317]: TN-97 Arani
+                        - generic [ref=e1318]: TN-99 Coimbatore City West
+                        - generic [ref=e1319]: TR-01 Agartala
+                        - generic [ref=e1320]: TR-02 Kailshahar
+                        - generic [ref=e1321]: TR-03 Udaipur
+                        - generic [ref=e1322]: TR-04 Ambassa
+                        - generic [ref=e1323]: TR-05 Dharmanagar
+                        - generic [ref=e1324]: TR-06 Khowai
+                        - generic [ref=e1325]: TR-07 Sepahijala
+                        - generic [ref=e1326]: TR-08 Santirbazar
+                        - generic [ref=e1327]: TS-01 Adilabad
+                        - generic [ref=e1328]: TS-02 Karimnagar
+                        - generic [ref=e1329]: TS-03 Warangal
+                        - generic [ref=e1330]: TS-04 Khammam
+                        - generic [ref=e1331]: TS-05 Nalgonda
+                        - generic [ref=e1332]: TS-06 Mahbubnagar
+                        - generic [ref=e1333]: TS-07 Rangareddy
+                        - generic [ref=e1334]: TS-08 Uppal Kalan-Medchal
+                        - generic [ref=e1335]: TS-09 Hyderabad Central
+                        - generic [ref=e1336]: TS-10 Secunderabad Hyderabad North
+                        - generic [ref=e1337]: TS-108 RANGAREDDY
+                        - generic [ref=e1338]: TS-11 Malakpet Hyderabad East
+                        - generic [ref=e1339]: TS-12 Kisanbagh Hyderabad South
+                        - generic [ref=e1340]: TS-13 Tolichowki Hyderabad West
+                        - generic [ref=e1341]: TS-14 Hyderabad
+                        - generic [ref=e1342]: TS-15 Medak
+                        - generic [ref=e1343]: TS-16 Nizamabad
+                        - generic [ref=e1344]: TS-17 Kamareddy
+                        - generic [ref=e1345]: TS-18 Nirmal
+                        - generic [ref=e1346]: TS-19 Mancherial
+                        - generic [ref=e1347]: TS-20 Asifabad Komaram Bheem
+                        - generic [ref=e1348]: TS-21 Jagtial
+                        - generic [ref=e1349]: TS-22 Peddapalli
+                        - generic [ref=e1350]: TS-23 Sircilla
+                        - generic [ref=e1351]: TS-24 Warangal
+                        - generic [ref=e1352]: TS-25 Jayashankar
+                        - generic [ref=e1353]: TS-26 Mahabubabad
+                        - generic [ref=e1354]: TS-27 Jangaon
+                        - generic [ref=e1355]: TS-28 Bhadradri
+                        - generic [ref=e1356]: TS-29 Suryapet
+                        - generic [ref=e1357]: TS-30 Yadadri
+                        - generic [ref=e1358]: TS-31 Nagarkurnool
+                        - generic [ref=e1359]: TS-32 Wanaparthy
+                        - generic [ref=e1360]: TS-33 Gadwal
+                        - generic [ref=e1361]: TS-34 Vikarabad
+                        - generic [ref=e1362]: TS-35 Medak
+                        - generic [ref=e1363]: TS-36 Siddipet
+                        - generic [ref=e1364]: TS-37 Mulugu
+                        - generic [ref=e1365]: TS-38 Narayanpet
+                        - generic [ref=e1366]: UA-01 Almora
+                        - generic [ref=e1367]: UA-02 Bageshwar
+                        - generic [ref=e1368]: UA-03 Champawat
+                        - generic [ref=e1369]: UA-04 Nanital
+                        - generic [ref=e1370]: UA-05 Pithoragarh
+                        - generic [ref=e1371]: UA-06 Udham Singh Nagar
+                        - generic [ref=e1372]: UA-07 Dehradun
+                        - generic [ref=e1373]: UA-08 Haridwar
+                        - generic [ref=e1374]: UA-09 Tehri
+                        - generic [ref=e1375]: UA-10 Uttarkashi
+                        - generic [ref=e1376]: UA-11 Chamoli
+                        - generic [ref=e1377]: UA-12 Pauri
+                        - generic [ref=e1378]: UA-13 Rudraprayag
+                        - generic [ref=e1379]: UA-18 Udham Singh Nagar
+                        - generic [ref=e1380]: UK-01 Almora
+                        - generic [ref=e1381]: UK-02 Bageshwar
+                        - generic [ref=e1382]: UK-03 Champawat
+                        - generic [ref=e1383]: UK-04 Nanital
+                        - generic [ref=e1384]: UK-05 Pithoragarh
+                        - generic [ref=e1385]: UK-06 Udham Singh Nagar
+                        - generic [ref=e1386]: UK-07 Dehradun
+                        - generic [ref=e1387]: UK-08 Haridwar
+                        - generic [ref=e1388]: UK-09 Tehri
+                        - generic [ref=e1389]: UK-10 Uttarkashi
+                        - generic [ref=e1390]: UK-11 Chamoli
+                        - generic [ref=e1391]: UK-12 Pauri
+                        - generic [ref=e1392]: UK-13 Rudraprayag
+                        - generic [ref=e1393]: UK-14 Rishikesh
+                        - generic [ref=e1394]: UK-15 Kotdwara
+                        - generic [ref=e1395]: UK-16 Vikasnagar
+                        - generic [ref=e1396]: UK-17 Roorkee
+                        - generic [ref=e1397]: UK-18 Kashipur
+                        - generic [ref=e1398]: UK-19 Ramnagar
+                        - generic [ref=e1399]: UK-20 Ranikhet
+                        - generic [ref=e1400]: UP-01 Almora
+                        - generic [ref=e1401]: UP-02 Haldwani
+                        - generic [ref=e1402]: UP-03 Pitharogarh
+                        - generic [ref=e1403]: UP-04 Udham Singh Nagar
+                        - generic [ref=e1404]: UP-05 Chamoli
+                        - generic [ref=e1405]: UP-06 Pauri
+                        - generic [ref=e1406]: UP-07 Dehradun
+                        - generic [ref=e1407]: UP-08 Tehri
+                        - generic [ref=e1408]: UP-09 Uttarkashi
+                        - generic [ref=e1409]: UP-10 Haridwar
+                        - generic [ref=e1410]: UP-11 Saharanpur
+                        - generic [ref=e1411]: UP-12 Muzaffarnagar
+                        - generic [ref=e1412]: UP-13 Bulandshahr
+                        - generic [ref=e1413]: UP-14 Ghaziabad
+                        - generic [ref=e1414]: UP-15 Meerut
+                        - generic [ref=e1415]: UP-16 Noida
+                        - generic [ref=e1416]: UP-17 Baghpat
+                        - generic [ref=e1417]: UP-18 Greater Noida
+                        - generic [ref=e1418]: UP-19 Shamli
+                        - generic [ref=e1419]: UP-20 Bijnor
+                        - generic [ref=e1420]: UP-21 Muradabad
+                        - generic [ref=e1421]: UP-22 Rampur
+                        - generic [ref=e1422]: UP-23 Jyotiba Phule Nagar
+                        - generic [ref=e1423]: UP-24 Badaun
+                        - generic [ref=e1424]: UP-25 Bareilly
+                        - generic [ref=e1425]: UP-26 Pilibhit
+                        - generic [ref=e1426]: UP-27 Shahjahanpur
+                        - generic [ref=e1427]: UP-28 Ayodhya
+                        - generic [ref=e1428]: UP-29 Tanakpur
+                        - generic [ref=e1429]: UP-30 Hardoi
+                        - generic [ref=e1430]: UP-31 Kheri
+                        - generic [ref=e1431]: UP-32 Lucknow
+                        - generic [ref=e1432]: UP-33 Rai Bareli
+                        - generic [ref=e1433]: UP-34 Sitapur
+                        - generic [ref=e1434]: UP-35 Unnao
+                        - generic [ref=e1435]: UP-36 Lucknow
+                        - generic [ref=e1436]: UP-37 Hapur
+                        - generic [ref=e1437]: UP-38 Sambhal
+                        - generic [ref=e1438]: UP-39 FIROZABAD
+                        - generic [ref=e1439]: UP-40 Bahraich
+                        - generic [ref=e1440]: UP-41 Barabanki
+                        - generic [ref=e1441]: UP-42 Faizabad
+                        - generic [ref=e1442]: UP-43 Gonda
+                        - generic [ref=e1443]: UP-44 Sultanpur
+                        - generic [ref=e1444]: UP-45 Ambedkar Nagar
+                        - generic [ref=e1445]: UP-46 Shrawasti
+                        - generic [ref=e1446]: UP-47 Balrampur
+                        - generic [ref=e1447]: UP-50 Azamgarh
+                        - generic [ref=e1448]: UP-51 Basti
+                        - generic [ref=e1449]: UP-52 Deoria
+                        - generic [ref=e1450]: UP-53 Gorakhpur
+                        - generic [ref=e1451]: UP-54 Mau
+                        - generic [ref=e1452]: UP-55 Siddharth Nagar
+                        - generic [ref=e1453]: UP-56 Mahrajganj
+                        - generic [ref=e1454]: UP-57 Padrauna
+                        - generic [ref=e1455]: UP-58 Sant Kabir Nagar
+                        - generic [ref=e1456]: UP-60 Ballia
+                        - generic [ref=e1457]: UP-61 Ghazipur
+                        - generic [ref=e1458]: UP-62 Jaunpur
+                        - generic [ref=e1459]: UP-63 Mirzapur
+                        - generic [ref=e1460]: UP-64 Sonbhadra
+                        - generic [ref=e1461]: UP-65 Varanasi
+                        - generic [ref=e1462]: UP-66 Bhadohi
+                        - generic [ref=e1463]: UP-67 Chandauli
+                        - generic [ref=e1464]: UP-70 Allahabad
+                        - generic [ref=e1465]: UP-71 Fatehpur
+                        - generic [ref=e1466]: UP-72 Pratapgarh
+                        - generic [ref=e1467]: UP-73 Kaushambi
+                        - generic [ref=e1468]: UP-74 Kannauj
+                        - generic [ref=e1469]: UP-75 Etawah
+                        - generic [ref=e1470]: UP-76 Farrukhabad
+                        - generic [ref=e1471]: UP-77 Kanpur
+                        - generic [ref=e1472]: UP-78 Kanpur
+                        - generic [ref=e1473]: UP-79 Auraiya
+                        - generic [ref=e1474]: UP-80 Agra
+                        - generic [ref=e1475]: UP-81 Aligarh
+                        - generic [ref=e1476]: UP-82 Etah
+                        - generic [ref=e1477]: UP-83 Firozabad
+                        - generic [ref=e1478]: UP-84 Mainpuri
+                        - generic [ref=e1479]: UP-85 Mathura
+                        - generic [ref=e1480]: UP-86 Mahamaya Nagar
+                        - generic [ref=e1481]: UP-87 Kanshiram Nagar
+                        - generic [ref=e1482]: UP-90 Banda
+                        - generic [ref=e1483]: UP-91 Hamirpur
+                        - generic [ref=e1484]: UP-92 Jalaun
+                        - generic [ref=e1485]: UP-93 Jhansi
+                        - generic [ref=e1486]: UP-94 Lalitpur
+                        - generic [ref=e1487]: UP-95 Mahoba
+                        - generic [ref=e1488]: UP-96 Chitrakoot dham
+                        - generic [ref=e1489]: WB-01 Kolkata
+                        - generic [ref=e1490]: WB-02 Kolkata
+                        - generic [ref=e1491]: WB-03 Kolkata
+                        - generic [ref=e1492]: WB-04 Kolkata
+                        - generic [ref=e1493]: WB-05 Kolkata
+                        - generic [ref=e1494]: WB-06 Kolkata
+                        - generic [ref=e1495]: WB-07 Kolkata
+                        - generic [ref=e1496]: WB-08 Kolkata
+                        - generic [ref=e1497]: WB-09 Kolkata
+                        - generic [ref=e1498]: WB-10 Kolkata
+                        - generic [ref=e1499]: WB-11 Howrah
+                        - generic [ref=e1500]: WB-12 Howrah
+                        - generic [ref=e1501]: WB-13 Howrah
+                        - generic [ref=e1502]: WB-14 Howrah
+                        - generic [ref=e1503]: WB-15 Hooghly
+                        - generic [ref=e1504]: WB-16 Hooghly
+                        - generic [ref=e1505]: WB-17 Hooghly Srirampur
+                        - generic [ref=e1506]: WB-18 Hooghly
+                        - generic [ref=e1507]: WB-19 Alipore
+                        - generic [ref=e1508]: WB-20 South 24 Paraganas
+                        - generic [ref=e1509]: WB-21 Basirhat
+                        - generic [ref=e1510]: WB-22 Alipore
+                        - generic [ref=e1511]: WB-23 Barrackpore
+                        - generic [ref=e1512]: WB-24 Barrackpore
+                        - generic [ref=e1513]: WB-25 Barasat
+                        - generic [ref=e1514]: WB-26 Barasat
+                        - generic [ref=e1515]: WB-27 Bangaon
+                        - generic [ref=e1516]: WB-28 Bangaon
+                        - generic [ref=e1517]: WB-29 Tamluk
+                        - generic [ref=e1518]: WB-30 Tamluk
+                        - generic [ref=e1519]: WB-31 Contai
+                        - generic [ref=e1520]: WB-32 Contai
+                        - generic [ref=e1521]: WB-33 Midnapur
+                        - generic [ref=e1522]: WB-34 Midnapur
+                        - generic [ref=e1523]: WB-35 Kharagpur
+                        - generic [ref=e1524]: WB-36 Midnapore
+                        - generic [ref=e1525]: WB-37 Asansol
+                        - generic [ref=e1526]: WB-38 Asansol
+                        - generic [ref=e1527]: WB-39 Durgapur
+                        - generic [ref=e1528]: WB-40 Durgapur
+                        - generic [ref=e1529]: WB-41 Burdwan
+                        - generic [ref=e1530]: WB-42 Burdwan
+                        - generic [ref=e1531]: WB-43 Kalna (Transport Vehicles)
+                        - generic [ref=e1532]: WB-44 Asansol
+                        - generic [ref=e1533]: WB-45 Rampurhat
+                        - generic [ref=e1534]: WB-46 Rampurhat
+                        - generic [ref=e1535]: WB-47 Bolpur
+                        - generic [ref=e1536]: WB-48 Bolpur
+                        - generic [ref=e1537]: WB-49 Jhargram
+                        - generic [ref=e1538]: WB-50 Jhargram
+                        - generic [ref=e1539]: WB-51 Nadia
+                        - generic [ref=e1540]: WB-52 Nadia
+                        - generic [ref=e1541]: WB-53 Birbhum
+                        - generic [ref=e1542]: WB-54 Birbhum
+                        - generic [ref=e1543]: WB-55 Purulia
+                        - generic [ref=e1544]: WB-56 Purulia
+                        - generic [ref=e1545]: WB-57 Murshidabad
+                        - generic [ref=e1546]: WB-58 Murshidabad
+                        - generic [ref=e1547]: WB-59 Raiganj
+                        - generic [ref=e1548]: WB-60 Raiganj
+                        - generic [ref=e1549]: WB-61 Balurghat
+                        - generic [ref=e1550]: WB-62 Balurghat
+                        - generic [ref=e1551]: WB-63 Cooch Behar
+                        - generic [ref=e1552]: WB-64 Cooch Behar
+                        - generic [ref=e1553]: WB-65 Malda
+                        - generic [ref=e1554]: WB-66 Malda
+                        - generic [ref=e1555]: WB-67 Bankura
+                        - generic [ref=e1556]: WB-68 Bankura
+                        - generic [ref=e1557]: WB-69 Alipur
+                        - generic [ref=e1558]: WB-70 Alipurduar
+                        - generic [ref=e1559]: WB-71 Jalpaiguri
+                        - generic [ref=e1560]: WB-72 Jalpaiguri
+                        - generic [ref=e1561]: WB-73 Siliguri
+                        - generic [ref=e1562]: WB-74 Siliguri
+                        - generic [ref=e1563]: WB-75 Katwa
+                        - generic [ref=e1564]: WB-76 Darjeeling
+                        - generic [ref=e1565]: WB-77 Darjeeling
+                        - generic [ref=e1566]: WB-78 Kalimpong
+                        - generic [ref=e1567]: WB-79 Kalimpong
+                        - generic [ref=e1568]: WB-81 Raghunathpur
+                        - generic [ref=e1569]: WB-82 Raghunathpur
+                        - generic [ref=e1570]: WB-83 Chanchal
+                        - generic [ref=e1571]: WB-84 Chanchol
+                        - generic [ref=e1572]: WB-85 Mathabhanga
+                        - generic [ref=e1573]: WB-86 Mathabhanga
+                        - generic [ref=e1574]: WB-87 Bishnupur
+                        - generic [ref=e1575]: WB-88 Bishnupur
+                        - generic [ref=e1576]: WB-89 Kalyani
+                        - generic [ref=e1577]: WB-90 Kalyani
+                        - generic [ref=e1578]: WB-91 Islampur
+                        - generic [ref=e1579]: WB-92 Islampur
+                        - generic [ref=e1580]: WB-93 Jangipur
+                        - generic [ref=e1581]: WB-94 Jangirpur
+                        - generic [ref=e1582]: WB-95 BARUIPUR
+                        - generic [ref=e1583]: WB-96 Baruipur
+                        - generic [ref=e1584]: WB-97 Diamond Harbour
+                        - generic [ref=e1585]: WB-98 Diamond Harbour
+                        - generic [ref=e1586]: WB-99 Jaynagar
+                  - generic [ref=e1587]: Which year was it registered?
+                  - generic [ref=e1589] [cursor=pointer]:
+                    - generic:
+                      - text: 
+                      - generic: Select registration year
+                    - generic:
+                      - generic:
+                        - text: 
+                        - textbox "Search..."
+                      - generic:
+                        - generic: "2025"
+                        - generic: "2024"
+                        - generic: "2023"
+                        - generic: "2022"
+                        - generic: "2021"
+                        - generic: "2020"
+                        - generic: "2019"
+                        - generic: "2018"
+                        - generic: "2017"
+                        - generic: "2016"
+                        - generic: "2015"
+                        - generic: "2014"
+                        - generic: "2013"
+                        - generic: "2012"
+                        - generic: "2011"
+                - generic [ref=e1591]:
+                  - generic [ref=e1592]:
+                    - generic [ref=e1593]: Which Fronx variant do you drive?
+                    - generic [ref=e1595] [cursor=pointer]:
+                      - generic [ref=e1596]:
+                        - text: 
+                        - generic [ref=e1597]: Delta
+                      - generic [ref=e1599]:
+                        - generic [ref=e1600]:
+                          - text: 
+                          - textbox "Search..." [ref=e1601]
+                        - generic [ref=e1602]:
+                          - generic [ref=e1603]: Delta
+                          - generic [ref=e1604]: Alpha 1.0L Turbo MT
+                          - generic [ref=e1605]: Alpha Turbo
+                          - generic [ref=e1606]: Alpha Turbo AT
+                          - generic [ref=e1607]: Alpha Turbo DT
+                          - generic [ref=e1608]: Alpha Turbo DT AT
+                          - generic [ref=e1609]: Delta
+                          - generic [ref=e1610]: Delta 1.2L AGS
+                          - generic [ref=e1611]: Delta AMT
+                          - generic [ref=e1612]: Delta Plus
+                          - generic [ref=e1613]: Delta Plus AMT
+                          - generic [ref=e1614]: Delta Plus Turbo
+                          - generic [ref=e1615]: Sigma
+                          - generic [ref=e1616]: Zeta Turbo
+                          - generic [ref=e1617]: Zeta Turbo AT
+                  - button "Continue" [ref=e1618] [cursor=pointer]
+          - generic [ref=e1620]:
+            - generic [ref=e1622]:
+              - generic: Enter Car Number (MH02BX0377 or 21BH1234A)
+              - textbox "Enter Car Number (MH02BX0377 or 21BH1234A)" [ref=e1623]
+            - button "View Quotes" [ref=e1624] [cursor=pointer]
+          - generic [ref=e1625]:
+            - generic [ref=e1626] [cursor=pointer]: Don't know your car number?Click here
+            - generic [ref=e1627] [cursor=pointer]: Bought a new car?Click here
+        - generic [ref=e1628]:
+          - generic [ref=e1629]: Already bought from Coverfox?
+          - generic [ref=e1630] [cursor=pointer]: Renew here in 2 steps
+      - generic [ref=e1632]:
+        - generic [ref=e1633]:
+          - generic [ref=e1634]: Save upto ₹ 50,000/-
+          - generic [ref=e1635]: on your new car. Buy insurance from Coverfox
+        - generic [ref=e1636]:
+          - generic [ref=e1637]: 10000+ Cashless Garages
+          - generic [ref=e1638]: Never worry about payments
+        - generic [ref=e1639]:
+          - generic [ref=e1640]:
+            - generic [ref=e1641]:
+              - text: 4.7/5
+              - generic [ref=e1642]:
+                - img "star" [ref=e1643]
+                - img "star" [ref=e1644]
+                - img "star" [ref=e1645]
+                - img "star" [ref=e1646]
+                - img "half star" [ref=e1647]
+            - generic [ref=e1648]:
+              - text: 4.6/5
+              - generic [ref=e1649]:
+                - img "star" [ref=e1650]
+                - img "star" [ref=e1651]
+                - img "star" [ref=e1652]
+                - img "star" [ref=e1653]
+                - img "half star" [ref=e1654]
+          - generic [ref=e1655]: Highest rated insurance website
+  - generic [ref=e1657]:
+    - generic [ref=e1660]:
+      - generic [ref=e1661]:
+        - link [ref=e1662]:
+          - /url: /
+          - img "Coverfox" [ref=e1663]: 
+        - img "icon" [ref=e1664]
+      - generic [ref=e1665]:
+        - link "Car Insurance":
+          - /url: /car-insurance/
+    - generic [ref=e1666]:
+      - button "Toggle Hindi / English translation" [ref=e1667] [cursor=pointer]: 🌐 हिंदी में पढ़ें
+      - region [ref=e1670]:
+        - heading "What is Car Insurance?" [level=1] [ref=e1671]
+        - paragraph [ref=e1673]: Car insurance provides financial protection against damage to your car and third-party liabilities arising from accidents and other covered events. Depending on the policy you choose, it can cover your own vehicle, third-party liabilities, theft, fire, natural calamities and more (as per policy terms). You can compare car insurance plans from multiple insurers on Coverfox and choose coverage based on your car, budget and needs.
+        - button "Buy Car Insurance Online" [ref=e1675] [cursor=pointer]
+      - region [ref=e1678]:
+        - heading "Why Do You Need Car Insurance?" [level=2] [ref=e1679]
+        - paragraph [ref=e1680]: "In India, driving a car without valid four wheeler insurance is illegal and carries financial risk. Here’s why car insurance is important:"
+        - generic [ref=e1681]:
+          - generic "Reasons to buy car insurance" [ref=e1682]:
+            - generic [ref=e1683]:
+              - heading "Legal Requirement" [level=3] [ref=e1689]
+              - paragraph [ref=e1690]:
+                - text: Third-party car insurance is mandatory under the
+                - link "Motor Vehicles Act, 1988" [ref=e1691] [cursor=pointer]:
+                  - /url: https://www.indiacode.nic.in/bitstream/123456789/9460/1/a1988-59.pdf
+                - text: . Driving without it can lead to fines or other penalties.
+            - generic [ref=e1692]:
+              - heading "Financial Protection" [level=3] [ref=e1697]
+              - paragraph [ref=e1698]: Car accident repair costs are high, and a car insurance policy ensures this cost is covered (as per policy terms).
+            - generic [ref=e1699]:
+              - heading "Third-party Liability Cover" [level=3] [ref=e1705]
+              - paragraph [ref=e1706]: Liability arising from damage caused to another person or their property by your vehicle falls on you. Insurance ensures this liability is taken up with the insurer as per policy limits.
+            - generic [ref=e1707]:
+              - heading "Peace of Mind" [level=3] [ref=e1712]
+              - paragraph [ref=e1713]: If you have car insurance, you can drive on the road stress-free, knowing that you are financially covered from fire, theft, accidents, natural disasters and man-made hazards as per policy terms.
+          - generic [ref=e1714]:
+            - button "Previous" [ref=e1715] [cursor=pointer]
+            - tablist "Slide pages" [ref=e1718]:
+              - button "Go to page 1" [ref=e1719] [cursor=pointer]
+              - button "Go to page 2" [ref=e1720] [cursor=pointer]
+            - button "Next" [ref=e1721] [cursor=pointer]
+      - region [ref=e1726]:
+        - heading "Types of Car Insurance" [level=2] [ref=e1727]
+        - list [ref=e1728]:
+          - listitem [ref=e1729]:
+            - heading "Third-Party Car Insurance" [level=3] [ref=e1735]
+            - generic [ref=e1736]:
+              - paragraph [ref=e1737]:
+                - text: In
+                - link "third-party car insurance" [ref=e1738] [cursor=pointer]:
+                  - /url: https://www.coverfox.com/car-insurance/third-party-car-insurance/
+                - text: ", liability that arises from an accident towards another person or property is covered. Injury, death or property damage caused by the insured four-wheeler owner is compensated by the insurer as per legal limits."
+              - paragraph [ref=e1739]:
+                - text: It is the minimum required cover to drive legally in India. All four-wheeler insurance policies must have it. Although it does not pay for repairs for damages caused to your own vehicle. Claims made under third-party insurance are often settled by the
+                - link "Motor Accident Claims Tribunal (MACT)" [ref=e1740] [cursor=pointer]:
+                  - /url: https://mumact.dcourts.gov.in/
+                - text: through a legal process.
+            - button "Get Quote" [ref=e1742] [cursor=pointer]
+          - listitem [ref=e1743]:
+            - heading "Standalone Own Damage Car Insurance" [level=3] [ref=e1749]
+            - generic [ref=e1750]:
+              - paragraph [ref=e1751]: Own damage cover is for covering damages caused to your own vehicle. These damages may include damage, fire, theft, natural disaster or manmade hazards, depending on the policy. It does not include third-party liability and is bought separately by those who are looking for coverage for their own vehicle.
+              - paragraph [ref=e1752]:
+                - text: You can buy
+                - link "Own Damage Car Insurance" [ref=e1753] [cursor=pointer]:
+                  - /url: https://www.coverfox.com/car-insurance/standalone-own-damage-car-insurance/
+                - text: "only if you already have a third-party insurance policy, to stay legally compliant. One important note: Own damage cover on its own does not meet the legal requirement for third-party liability."
+            - button "Get Quote" [ref=e1755] [cursor=pointer]
+          - listitem [ref=e1756]:
+            - heading "Comprehensive Car Insurance" [level=3] [ref=e1761]
+            - generic [ref=e1762]:
+              - paragraph [ref=e1763]: Comprehensive car insurance is a mix of own damage cover and third-party liability in a single policy. In this, damage done to the insured vehicle from insured events and also damage caused to third-party, both are covered as per policy terms.
+              - paragraph [ref=e1764]:
+                - text: It can be further customised with add-ons like zero depreciation, engine protection, return to invoice, etc.
+                - link "Comprehensive car insurance" [ref=e1765] [cursor=pointer]:
+                  - /url: https://www.coverfox.com/car-insurance/comprehensive-car-insurance/
+                - text: may be suitable for new car owners looking for both third-party liability and own-damage protection.
+            - button "Get Quote" [ref=e1767] [cursor=pointer]
+      - region [ref=e1770]:
+        - heading "What Does Car Insurance Cover?" [level=2] [ref=e1771]
+        - generic [ref=e1772]:
+          - generic [ref=e1773]:
+            - heading "What Is Covered Under Car Insurance?" [level=3] [ref=e1774]
+            - list [ref=e1775]:
+              - listitem [ref=e1776]:
+                - button "Accidental damage" [expanded] [ref=e1777] [cursor=pointer]
+                - paragraph [ref=e1786]: Repair costs from collisions, overturning, or self-inflicted accidents.
+              - listitem [ref=e1787]:
+                - button "Theft" [ref=e1788] [cursor=pointer]
+                - paragraph [ref=e1796]: Total loss of the vehicle due to theft, subject to police reporting and claim conditions.
+              - listitem [ref=e1797]:
+                - button "Fire" [ref=e1798] [cursor=pointer]
+                - paragraph [ref=e1806]: Damage caused by fire, explosion, or self-ignition.
+              - listitem [ref=e1807]:
+                - button "Natural calamities" [ref=e1808] [cursor=pointer]
+                - paragraph [ref=e1816]: Losses from floods, cyclones, earthquakes, landslides, and similar events.
+              - listitem [ref=e1817]:
+                - button "Man-made events" [ref=e1818] [cursor=pointer]
+                - paragraph [ref=e1826]: Damage from riots, strikes, malicious acts, or terrorism, where covered.
+              - listitem [ref=e1827]:
+                - button "Third-party injury or death" [ref=e1828] [cursor=pointer]
+                - paragraph [ref=e1836]: Compensation for injury or death caused to another person.
+              - listitem [ref=e1837]:
+                - button "Third-party property damage" [ref=e1838] [cursor=pointer]
+                - paragraph [ref=e1846]: Compensation for damage caused to another person's property.
+          - generic [ref=e1847]:
+            - heading "What Is Not Covered Under Car Insurance?" [level=3] [ref=e1848]
+            - list [ref=e1849]:
+              - listitem [ref=e1850]:
+                - button "Wear and tear" [expanded] [ref=e1851] [cursor=pointer]
+                - paragraph [ref=e1861]: Regular ageing of tyres, parts, and paint isn't a claimable loss.
+              - listitem [ref=e1862]:
+                - button "Mechanical or electrical breakdown" [ref=e1863] [cursor=pointer]
+                - paragraph [ref=e1872]: Failures unrelated to an insured event, such as a worn-out clutch, are excluded.
+              - listitem [ref=e1873]:
+                - button "Depreciation" [ref=e1874] [cursor=pointer]
+                - paragraph [ref=e1883]:
+                  - text: Claim payouts reduce parts' value by age unless
+                  - link "zero dep car insurance" [ref=e1884] [cursor=pointer]:
+                    - /url: https://www.coverfox.com/car-insurance/add-ons/zero-depreciation/
+                  - text: applies.
+              - listitem [ref=e1885]:
+                - button "Driving without a valid licence" [ref=e1886] [cursor=pointer]
+                - paragraph [ref=e1895]: Claims are rejected if the driver wasn't legally licensed at the time of the incident.
+              - listitem [ref=e1896]:
+                - button "Driving under influence" [ref=e1897] [cursor=pointer]
+                - paragraph [ref=e1906]: Accidents caused while under the influence of alcohol or drugs void the claim.
+              - listitem [ref=e1907]:
+                - button "Unauthorised use" [ref=e1908] [cursor=pointer]
+                - paragraph [ref=e1917]: Damage during use outside the policy's permitted purpose isn't covered.
+              - listitem [ref=e1918]:
+                - button "Excluded losses" [ref=e1919] [cursor=pointer]
+                - paragraph [ref=e1928]: Anything specifically excluded in the policy document, regardless of cause.
+        - paragraph [ref=e1929]: "Disclaimer: Coverage may vary based on policies chosen, insurer’s terms & conditions. Read the policy document carefully to understand the exact coverage of your insurance for four wheeler."
+        - button "Explore All Plans" [ref=e1931] [cursor=pointer]
+      - region [ref=e1934]:
+        - heading "Car Insurance Add-Ons" [level=2] [ref=e1935]
+        - paragraph [ref=e1936]: Add-ons in insurance policy for car extend the coverage potential of the policy and come at an additional cost. Each add-on has its own benefits.
+        - table [ref=e1938]:
+          - rowgroup [ref=e1939]:
+            - row [ref=e1940]:
+              - columnheader "Add-On" [ref=e1941]
+              - columnheader "What It Does" [ref=e1942]
+          - rowgroup [ref=e1943]:
+            - row [ref=e1944]:
+              - cell [ref=e1945]
+              - cell "Reduces depreciation deductions on eligible parts during a claim" [ref=e1954]
+            - row [ref=e1955]:
+              - cell [ref=e1956]
+              - cell "Covers specified engine-related damage, including from water ingress" [ref=e1966]
+            - row [ref=e1967]:
+              - cell [ref=e1968]
+              - cell "Covers the difference between claim settlement and invoice value, subject to terms" [ref=e1979]
+            - row [ref=e1980]:
+              - cell [ref=e1981]
+              - cell "Provides support during breakdowns, such as towing or a jump start" [ref=e1993]
+            - row [ref=e1994]:
+              - cell [ref=e1995]
+              - cell "Covers eligible consumable items used during repairs, like nuts, bolts, and engine oil" [ref=e2008]
+            - row [ref=e2009]:
+              - cell [ref=e2010]:
+                - generic [ref=e2011]:
+                  - img [ref=e2013]:
+                    - generic [ref=e2015]: NCB
+                  - text: NCB Protection
+              - cell "Preserves accumulated No Claim Bonus after eligible claims" [ref=e2018]
+        - paragraph [ref=e2019]: "Note: These add-ons apply to comprehensive and standalone own-damage plans, not to third-party-only cover."
+        - generic [ref=e2024]:
+          - strong [ref=e2025]: "Pro Tip:"
+          - text: A best car insurance policy isn't defined by how many add-ons it carries, but by how well those add-ons match actual risk.
+        - heading "How to Choose the Right Add-Ons" [level=3] [ref=e2026]
+        - paragraph [ref=e2027]: "Add-on selection should follow the vehicle's profile, not a fixed checklist:"
+        - list [ref=e2029]:
+          - listitem [ref=e2030]:
+            - heading "Car age" [level=4] [ref=e2034]
+            - paragraph [ref=e2035]:
+              - text: Consider add-ons such as
+              - link "Car Engine Protection Cover" [ref=e2036] [cursor=pointer]:
+                - /url: https://www.coverfox.com/car-insurance/add-ons/engine-protect-cover/
+              - text: based on your car's age, condition, usage and exposure to risks such as waterlogging.
+          - listitem [ref=e2037]:
+            - heading "Usage" [level=4] [ref=e2042]
+            - paragraph [ref=e2043]:
+              - text: Long-distance drivers can have the security of
+              - link "car insurance roadside assistance cover" [ref=e2044] [cursor=pointer]:
+                - /url: https://www.coverfox.com/car-insurance/add-ons/roadside-assistance-cover/
+              - text: ", whereas less-used cars can benefit from pay-as-you-drive policies."
+          - listitem [ref=e2045]:
+            - heading "Location" [level=4] [ref=e2050]
+            - paragraph [ref=e2051]: Flood-prone or high-theft areas justify having engine protection and NCB protection in their car insurance policy.
+          - listitem [ref=e2052]:
+            - heading "Budget" [level=4] [ref=e2056]
+            - paragraph [ref=e2057]: Every add-on raises the premium. Choice should be based on need, not availability.
+        - generic [ref=e2058]: The best time to reevaluate your car insurance policy, adding or removing add-ons, is the next car insurance policy renewal cycle.
+        - button "Compare Car Insurance Plans" [ref=e2065] [cursor=pointer]
+      - region [ref=e2068]:
+        - heading "What Factors Affect Car Insurance Premium?" [level=2] [ref=e2069]
+        - paragraph [ref=e2070]: "If you’ve bought a car, then it is important to understand how premiums work. The following factors affect car insurance premiums:"
+        - list [ref=e2072]:
+          - listitem [ref=e2073]:
+            - generic [ref=e2078]:
+              - heading "Car's Insured Declared Value (IDV)" [level=3] [ref=e2079]
+              - paragraph [ref=e2080]: IDV is the max amount that your insurer pays in case the car gets stolen or totalled. It is calculated as the current market value of the insured car after depreciation. The higher the IDV, the higher the premiums. However, lowering IDV to reduce the car insurance price may result in a lower claim settlement in case of total loss or theft.
+          - listitem [ref=e2081]:
+            - generic [ref=e2086]:
+              - heading "Location" [level=3] [ref=e2087]
+              - paragraph [ref=e2088]: The location where the car is registered affects premiums due to accident risks, theft stats, and repair costs in that region. Metro cities generally have higher premium rates than smaller towns or rural areas, mainly due to traffic density and claim frequency.
+          - listitem [ref=e2089]:
+            - generic [ref=e2094]:
+              - heading "Car's Age, Make and Model" [level=3] [ref=e2095]
+              - paragraph [ref=e2096]: As the car gets old, its IDV depreciates, decreasing the car insurance price. The make and model of the car affect the price of the vehicle and also determine repair costs, directly affecting the new car insurance price.
+          - listitem [ref=e2097]:
+            - generic [ref=e2102]:
+              - heading "No Claim Bonus (NCB)" [level=3] [ref=e2103]
+              - paragraph [ref=e2104]:
+                - link "NCB car insurance" [ref=e2105] [cursor=pointer]:
+                  - /url: https://www.coverfox.com/car-insurance/add-ons/no-claim-bonus/
+                - text: is a discount insurers give on own-damage policy renewals for maintaining claim-free years. This discount can go up to 50%, depending on the insurer. Also, missing a car insurance renewal can lead to loss of NCB.
+        - button "View more" [ref=e2107] [cursor=pointer]
+      - region [ref=e2113]:
+        - heading "How to Choose the Right Car Insurance Policy?" [level=2] [ref=e2114]
+        - paragraph [ref=e2115]: "Choosing the best insurance for car is not just about comparing prices. You need to consider the following factors as well while buying new car insurance:"
+        - list [ref=e2116]:
+          - listitem [ref=e2117]:
+            - generic [ref=e2120]:
+              - heading "Match coverage to need" [level=3] [ref=e2121]
+              - paragraph [ref=e2122]: Buy a policy that fits your needs. Before you buy car insurance, consider whether the coverage and add-ons are appropriate for how you use the car. Buying an expensive policy that has all the add-ons when the car is not even in daily use does not make an economically right choice.
+          - listitem [ref=e2123]:
+            - generic [ref=e2128]:
+              - heading "Check the IDV carefully" [level=3] [ref=e2129]
+              - paragraph [ref=e2130]: IDV should neither be too low nor too high. It should reflect the current market value of the car, and the premium should fit your budget.
+          - listitem [ref=e2131]:
+            - generic [ref=e2135]:
+              - heading "Pick add-ons based on need" [level=3] [ref=e2136]
+              - paragraph [ref=e2137]:
+                - text: Choose add-ons like zero depreciation, engine protection,
+                - link "return to invoice car insurance" [ref=e2138] [cursor=pointer]:
+                  - /url: https://www.coverfox.com/car-insurance/add-ons/return-to-invoice-cover/
+                - text: ", or roadside assistance based on the vehicle's age and use."
+          - listitem [ref=e2139]:
+            - generic [ref=e2143]:
+              - heading "Check the cashless garage network" [level=3] [ref=e2144]
+              - paragraph [ref=e2145]: Online car insurance comparisons show which insurers have cashless garages near you, so repairs don't need upfront payment.
+          - listitem [ref=e2146]:
+            - generic [ref=e2151]:
+              - heading "Compare car insurance quotes on Coverfox" [level=3] [ref=e2152]
+              - paragraph [ref=e2153]: You can compare car insurance quotes on Coverfox and compare plans online to find a policy that suits your needs. Compare your options before you choose a policy.
+        - generic [ref=e2159]:
+          - heading "Ask CoverAI" [level=3] [ref=e2160]
+          - paragraph [ref=e2161]: Upload your policy to CoverAI and ask it to do a thorough check of your policy. You will understand your policy better, and CoverAI will help you choose a suitable car insurance policy as per your needs.
+          - link "Try COVER AI" [ref=e2162] [cursor=pointer]:
+            - /url: https://ai.coverfox.com/
+        - generic [ref=e2168]:
+          - strong [ref=e2169]: "Pro Tip:"
+          - text: It is important to timely have car policy renewals, to maintain NCB benefits, and have continued coverage.
+      - region "Buy, renew or claim car insurance" [ref=e2172]:
+        - tablist "Buy, renew or claim" [ref=e2174]:
+          - tab "How to Buy" [selected] [ref=e2175] [cursor=pointer]
+          - tab "How to Renew" [ref=e2176] [cursor=pointer]
+          - tab "How to Claim" [ref=e2177] [cursor=pointer]
+        - tabpanel "How to Buy" [ref=e2178]:
+          - generic [ref=e2179]:
+            - heading "How to Buy Car Insurance Online?" [level=2] [ref=e2180]
+            - paragraph [ref=e2181]: "If you are buying insurance for a new car or an existing one, it is a simple and streamlined process on Coverfox. Just follow these steps:"
+            - generic [ref=e2185]:
+              - paragraph [ref=e2186]:
+                - strong [ref=e2187]: "Pro Tip:"
+                - text: Use CoverAI for car insurance quotes comparison and select what best suits you!
+              - link "Try COVER AI" [ref=e2188] [cursor=pointer]:
+                - /url: https://ai.coverfox.com/
+          - list [ref=e2192]:
+            - listitem [ref=e2193]:
+              - generic [ref=e2194]: "1"
+              - generic [ref=e2195]: Enter your car's registration number and basic details, or click on “Bought a New Car?” if this is a new car insurance online purchase.
+            - listitem [ref=e2196]:
+              - generic [ref=e2197]: "2"
+              - generic [ref=e2198]: Provide your existing policy details if you're renewing or switching insurers.
+            - listitem [ref=e2199]:
+              - generic [ref=e2200]: "3"
+              - generic [ref=e2201]: Compare car insurance online and premiums from multiple insurers.
+            - listitem [ref=e2202]:
+              - generic [ref=e2203]: "4"
+              - generic [ref=e2204]: Select your coverage type, third-party, standalone own damage, or comprehensive, and add the add-ons you need.
+            - listitem [ref=e2205]:
+              - generic [ref=e2206]: "5"
+              - generic [ref=e2207]: Make the payment through a secure payment gateway.
+            - listitem [ref=e2208]:
+              - generic [ref=e2209]: "6"
+              - generic [ref=e2210]: Receive your policy document by email upon verification.
+          - button "Buy Car Insurance Online" [ref=e2212] [cursor=pointer]
+      - region [ref=e2217]:
+        - heading "FAQs About Car Insurance Online" [level=2] [ref=e2218]
+        - list [ref=e2220]:
+          - listitem [ref=e2221]:
+            - heading [level=3] [ref=e2222]:
+              - button "Which car insurance is best?" [ref=e2223] [cursor=pointer]
+            - region "Which car insurance is best?":
+              - paragraph [ref=e2228]: The best car insurance depends on your requirements and your budget. There is no single policy that can be deemed the best car insurance policy; a third-party car insurance will help you ensure legal mandates are met, whereas a comprehensive policy protects your vehicle while being legally compliant.
+          - listitem [ref=e2229]:
+            - heading [level=3] [ref=e2230]:
+              - button "What is the difference between third-party and comprehensive car insurance?" [ref=e2231] [cursor=pointer]
+            - region "What is the difference between third-party and comprehensive car insurance?":
+              - paragraph [ref=e2236]: Third-party cover pays only for damage or injury caused to others. Comprehensive cover adds protection for your own vehicle from accidents, theft, fire, and other listed events.
+          - listitem [ref=e2237]:
+            - heading [level=3] [ref=e2238]:
+              - button "How much does car insurance cost in India?" [ref=e2239] [cursor=pointer]
+            - region "How much does car insurance cost in India?":
+              - paragraph [ref=e2244]: Car insurance in India starts from ₹2094** per year for third-party cover, while the premium for OD insurance varies based on factors such as the car's age, make and model, registration location, coverage, IDV, add-ons, NCB and applicable discounts. On Coverfox, you can save up to 85%* by comparing car insurance quotes online.
+          - listitem [ref=e2245]:
+            - heading [level=3] [ref=e2246]:
+              - button "How is a car insurance premium calculated?" [ref=e2247] [cursor=pointer]
+            - region "How is a car insurance premium calculated?":
+              - paragraph [ref=e2252]: Premium depends on IDV, the car's age, make and model, location, policy type, add-ons selected, NCB, and deductibles chosen.
+        - button "View more" [ref=e2254] [cursor=pointer]
+      - region [ref=e2261]:
+        - heading "Car Insurance for Top Manufacturer in India" [level=2] [ref=e2262]
+        - list [ref=e2263]:
+          - listitem [ref=e2264]:
+            - link "Mahindra Car Insurance" [ref=e2265] [cursor=pointer]:
+              - /url: https://www.coverfox.com/car-insurance/mahindra-and-mahindra/
+          - listitem [ref=e2266]:
+            - link "Maruti Suzuki Car Insurance" [ref=e2267] [cursor=pointer]:
+              - /url: https://www.coverfox.com/car-insurance/maruti-suzuki/
+          - listitem [ref=e2268]:
+            - link "Hyundai Car Insurance" [ref=e2269] [cursor=pointer]:
+              - /url: https://www.coverfox.com/car-insurance/hyundai/
+          - listitem [ref=e2270]:
+            - link "Tata Car Insurance" [ref=e2271] [cursor=pointer]:
+              - /url: https://www.coverfox.com/car-insurance/tata/
+          - listitem [ref=e2272]:
+            - link "Kia Car Insurance" [ref=e2273] [cursor=pointer]:
+              - /url: https://www.coverfox.com/car-insurance/kia/
+          - listitem [ref=e2274]:
+            - link "Honda Car Insurance" [ref=e2275] [cursor=pointer]:
+              - /url: https://www.coverfox.com/car-insurance/honda/
+          - listitem [ref=e2276]:
+            - link "Audi Car Insurance" [ref=e2277] [cursor=pointer]:
+              - /url: https://www.coverfox.com/car-insurance/audi/
+          - listitem [ref=e2278]:
+            - link "Skoda Car Insurance" [ref=e2279] [cursor=pointer]:
+              - /url: https://www.coverfox.com/car-insurance/skoda/
+          - listitem [ref=e2280]:
+            - link "Mercedes Benz Car Insurance" [ref=e2281] [cursor=pointer]:
+              - /url: https://www.coverfox.com/car-insurance/mercedes-benz/
+          - listitem [ref=e2282]:
+            - link "BMW Car Insurance" [ref=e2283] [cursor=pointer]:
+              - /url: https://www.coverfox.com/car-insurance/bmw/
+          - listitem [ref=e2284]:
+            - link "Fiat Car Insurance" [ref=e2285] [cursor=pointer]:
+              - /url: https://www.coverfox.com/car-insurance/fiat/
+          - listitem [ref=e2286]:
+            - link "Nissan Car Insurance" [ref=e2287] [cursor=pointer]:
+              - /url: https://www.coverfox.com/car-insurance/nissan/
+        - button "View all 42 brands" [ref=e2289] [cursor=pointer]
+      - region [ref=e2299]:
+        - heading "Car Insurance for Top Models in India" [level=2] [ref=e2300]
+        - list [ref=e2301]:
+          - listitem [ref=e2302]:
+            - link "Mahindra Jeeto Insurance" [ref=e2303] [cursor=pointer]:
+              - /url: https://www.coverfox.com/car-insurance/mahindra-and-mahindra/jeeto/
+          - listitem [ref=e2304]:
+            - link "Hyundai Creta Car Insurance" [ref=e2305] [cursor=pointer]:
+              - /url: https://www.coverfox.com/car-insurance/hyundai/creta/
+          - listitem [ref=e2306]:
+            - link "Maruti Suzuki Alto K10 Car Insurance" [ref=e2307] [cursor=pointer]:
+              - /url: https://www.coverfox.com/car-insurance/maruti-suzuki/alto-k10/
+          - listitem [ref=e2308]:
+            - link "Mahindra Bolero Insurance" [ref=e2309] [cursor=pointer]:
+              - /url: https://www.coverfox.com/car-insurance/mahindra-and-mahindra/bolero/
+          - listitem [ref=e2310]:
+            - link "Maruti Suzuki Swift Car Insurance" [ref=e2311] [cursor=pointer]:
+              - /url: https://www.coverfox.com/car-insurance/maruti-suzuki/swift/
+          - listitem [ref=e2312]:
+            - link "Tata Nexon Car Insurance" [ref=e2313] [cursor=pointer]:
+              - /url: https://www.coverfox.com/car-insurance/tata/nexon/
+          - listitem [ref=e2314]:
+            - link "Maruti Suzuki Eeco Insurance" [ref=e2315] [cursor=pointer]:
+              - /url: https://www.coverfox.com/car-insurance/maruti-suzuki/eeco/
+          - listitem [ref=e2316]:
+            - link "Maruti Suzuki Ertiga Car Insurance" [ref=e2317] [cursor=pointer]:
+              - /url: https://www.coverfox.com/car-insurance/maruti-suzuki/ertiga/
+          - listitem [ref=e2318]:
+            - link "Maruti Suzuki Wagon R Car Insurance" [ref=e2319] [cursor=pointer]:
+              - /url: https://www.coverfox.com/car-insurance/maruti-suzuki/wagon-r/
+          - listitem [ref=e2320]:
+            - link "Maruti Suzuki Vitara Brezza Car Insurance" [ref=e2321] [cursor=pointer]:
+              - /url: https://www.coverfox.com/car-insurance/maruti-suzuki/vitara-brezza/
+          - listitem [ref=e2322]:
+            - link "Tata Yodha Pickup Insurance" [ref=e2323] [cursor=pointer]:
+              - /url: https://www.coverfox.com/car-insurance/tata/yodha-pickup/
+          - listitem [ref=e2324]:
+            - link "MG Windsor EV Insurance" [ref=e2325] [cursor=pointer]:
+              - /url: https://www.coverfox.com/car-insurance/mg/windsor-ev/
+        - button "View all 30 models" [ref=e2327] [cursor=pointer]
+      - region [ref=e2335]:
+        - heading "Popular Car Insurance Articles" [level=2] [ref=e2336]
+        - generic [ref=e2337]:
+          - list "Popular car insurance articles" [ref=e2338]:
+            - listitem [ref=e2339]:
+              - 'link "How to Renew Car Registration After 15 Years in India: Online & Offline Process? Read article" [ref=e2340] [cursor=pointer]':
+                - /url: https://www.coverfox.com/car-insurance/articles/car-registration-renewal-after-15-years/
+                - generic [ref=e2342]: "How to Renew Car Registration After 15 Years in India: Online & Offline Process?"
+                - generic [ref=e2343]: Read article
+            - listitem [ref=e2346]:
+              - link "How to Check Car Owner Details by Number Plate in India Read article" [ref=e2347] [cursor=pointer]:
+                - /url: https://www.coverfox.com/car-insurance/articles/how-to-check-car-owner-details-by-number-plate/
+                - generic [ref=e2349]: How to Check Car Owner Details by Number Plate in India
+                - generic [ref=e2350]: Read article
+            - listitem [ref=e2353]:
+              - link "How to Get a Duplicate Car Insurance Policy Online? Read article" [ref=e2354] [cursor=pointer]:
+                - /url: https://www.coverfox.com/car-insurance/articles/duplicate-car-insurance-policy-online/
+                - generic [ref=e2356]: How to Get a Duplicate Car Insurance Policy Online?
+                - generic [ref=e2357]: Read article
+            - listitem [ref=e2360]:
+              - 'link "Car Depreciation Rate in India: IDV, Slabs & Insurance Impact Read article" [ref=e2361] [cursor=pointer]':
+                - /url: https://www.coverfox.com/car-insurance/articles/car-depreciation-rate-in-India/
+                - generic [ref=e2363]: "Car Depreciation Rate in India: IDV, Slabs & Insurance Impact"
+                - generic [ref=e2364]: Read article
+            - listitem [ref=e2367]:
+              - link "Does Your Car Insurance Policy Offer Consumables Cover? Read article" [ref=e2368] [cursor=pointer]:
+                - /url: https://www.coverfox.com/car-insurance/articles/does-your-car-insurance-policy-offer-consumables-cover/
+                - generic [ref=e2370]: Does Your Car Insurance Policy Offer Consumables Cover?
+                - generic [ref=e2371]: Read article
+            - listitem [ref=e2374]:
+              - 'link "Process to Transfer Your Car Insurance Policy: A Step-by-Step Guide Read article" [ref=e2375] [cursor=pointer]':
+                - /url: https://www.coverfox.com/car-insurance/articles/how-to-transfer-your-car-insurance-policy/
+                - generic [ref=e2377]: "Process to Transfer Your Car Insurance Policy: A Step-by-Step Guide"
+                - generic [ref=e2378]: Read article
+            - listitem [ref=e2381]:
+              - link "Explore More Car Insurance Articles View all articles" [ref=e2382] [cursor=pointer]:
+                - /url: https://www.coverfox.com/car-insurance/articles/
+                - generic [ref=e2384]: Explore More Car Insurance Articles
+                - generic [ref=e2385]: View all articles
+          - generic [ref=e2388]:
+            - button "Previous articles" [disabled]
+            - generic "Slide pages" [ref=e2389]:
+              - button "Go to page 1" [ref=e2390] [cursor=pointer]
+              - button "Go to page 2" [ref=e2391] [cursor=pointer]
+              - button "Go to page 3" [ref=e2392] [cursor=pointer]
+            - button "More articles" [ref=e2393] [cursor=pointer]
+      - generic [ref=e2398]:
+        - generic [ref=e2399]: Customer Reviews
+        - generic [ref=e2400]:
+          - generic [ref=e2401]: "Average Customer Rating:"
+          - button "Write a Review" [ref=e2409] [cursor=pointer]
+        - text:  ★ ★ ★ ★ ★
+        - generic [ref=e2410]:
+          - generic [ref=e2411]:
+            - generic [ref=e2412]: 
+            - article [ref=e2413]:
+              - generic [ref=e2414]: Jash Shah
+              - text: Fast and affordable car insurance price
+              - generic [ref=e2421]: Was looking for car insurance online for my Tata Nexon and went with Coverfox. Got good rate and the process was pretty easy, didn’t take much time
+              - generic [ref=e2422]: 16 Sep
+          - generic [ref=e2423]:
+            - generic [ref=e2424]: 
+            - article [ref=e2425]:
+              - generic [ref=e2426]: Kinjal Gupta
+              - text: Cheapest Car Insurance Quotes
+              - generic [ref=e2433]: I got the best car insurance quotes for Hyundai Creta on Coverfox after spending a lot of time comparing different insurance sites. The support team helped me get a good rate. Thanks to Jyoti for the assistance!
+              - generic [ref=e2434]: 08 Sep
+          - generic [ref=e2435]:
+            - generic [ref=e2436]: 
+            - article [ref=e2437]:
+              - generic [ref=e2438]: Prasanna Kumar
+              - text: Saved time & money
+              - generic [ref=e2445]: Getting car insurance through coverfox has saved me both time & money
+              - generic [ref=e2446]: 09 Jan 2025
+          - generic [ref=e2447]:
+            - generic [ref=e2448]: 
+            - article [ref=e2449]:
+              - generic [ref=e2450]: Diwakar
+              - text: Quick comparison and Purchase
+              - generic [ref=e2457]: I compared a few car insurance plans online and got the policy instantly. The whole process was so quick and easy.
+              - generic [ref=e2458]: 09 Jan 2025
+          - generic [ref=e2459]:
+            - generic [ref=e2460]: 
+            - article [ref=e2461]:
+              - generic [ref=e2462]: Shreya
+              - text: Helpful executive
+              - generic [ref=e2469]: Customer support executive assisted me in finding a better car insurance plan for my Maruti Swift was very helpful.
+              - generic [ref=e2470]: 31 Dec 2024
+          - generic [ref=e2471]:
+            - generic [ref=e2472]: 
+            - article [ref=e2473]:
+              - generic [ref=e2474]: Sarath Saxena
+              - text: Excellent service
+              - generic [ref=e2481]: I just renewed my car insurance from the comfort of my home. Excellent service, and the team worked well together.
+              - generic [ref=e2482]: 31 Dec 2024
+          - generic [ref=e2483]:
+            - generic [ref=e2484]: 
+            - article [ref=e2485]:
+              - generic [ref=e2486]: Gowri Dey
+              - text: Best customer care
+              - generic [ref=e2493]: Thank you, Coverfox for being such a great help with helping me find the best car insurance. I bought a plan that matched exactly what my budget was, and the webpage was very easy to go through. I had questions about many of the coverages and they helped me walk through each of those details impeccably!
+              - generic [ref=e2494]: 30 Jul 2022
+          - generic [ref=e2495]:
+            - generic [ref=e2496]: 
+            - article [ref=e2497]:
+              - generic [ref=e2498]: Anand Prakesh
+              - text: Great service
+              - generic [ref=e2505]: Loved it all along
+              - generic [ref=e2506]: 15 Jun 2020
+          - generic [ref=e2507]:
+            - generic [ref=e2508]: 
+            - article [ref=e2509]:
+              - generic [ref=e2510]: Ranjit
+              - text: Good service
+              - generic [ref=e2517]: Amazing service by coverfox team
+              - generic [ref=e2518]: 13 Jun 2020
+          - generic [ref=e2519]:
+            - generic [ref=e2520]: 
+            - article [ref=e2521]:
+              - generic [ref=e2522]: Neha Arora
+              - text: Quick and Easy
+              - generic [ref=e2529]: It took me 5 minutes to renew my insurance online. Thankyou Coverfox for a great website
+              - generic [ref=e2530]: 26 May 2020
+          - list [ref=e2531]:
+            - listitem [ref=e2532]:
+              - generic [ref=e2533]:  Prev
+            - listitem [ref=e2534]:
+              - generic [ref=e2535]: "1"
+            - listitem [ref=e2536]:
+              - generic [ref=e2537] [cursor=pointer]: Next 
+      - generic [ref=e2540]:
+        - generic [ref=e2541]: "Popular Searches:"
+        - link "कार इन्शुरन्स" [ref=e2542] [cursor=pointer]:
+          - /url: /car-insurance/hindi/
+        - link "Motor Insurance" [ref=e2543] [cursor=pointer]:
+          - /url: /motor-insurance/
+        - link "Electric Car Insurance" [ref=e2544] [cursor=pointer]:
+          - /url: /car-insurance/electric-car-insurance/
+        - link "Used Car Insurance" [ref=e2545] [cursor=pointer]:
+          - /url: /car-insurance/used/
+        - link "Car Insurance Calculator" [ref=e2546] [cursor=pointer]:
+          - /url: /car-insurance/car-insurance-premium-calculator/
+        - link "Claim Settlement Ratio" [ref=e2547] [cursor=pointer]:
+          - /url: /car-insurance/claim-settlement-ratio/
+    - generic [ref=e2548]: "Written By: Coverfox - Updated: September, 2026."
+    - generic [ref=e2555]:
+      - generic [ref=e2556]: Disclaimers
+      - generic [ref=e2557]:
+        - generic [ref=e2558]: "* Savings are based on the maximum discount provided on own damage premium as offered by our car insurer partners."
+        - generic [ref=e2559]: "** Price for a basic third-party car insurance for a car under 1000 CC for 1 year policy, set by IRDAI (Excluding GST)."
+  - generic: ×
+  - contentinfo [ref=e2561]:
+    - generic [ref=e2562]:
+      - generic [ref=e2563]:
+        - list [ref=e2565]:
+          - listitem [ref=e2566]:
+            - text: Secure
+            - generic [ref=e2567]:
+              - link "DMCA.com Protection Status" [ref=e2568] [cursor=pointer]:
+                - /url: //www.dmca.com/Protection/Status.aspx?ID=9acaadbe-78db-46ef-babe-3b0bba57bf80
+              - generic "Godaddy Verified and Secured" [ref=e2570]
+          - listitem [ref=e2571]:
+            - text: Licensed By
+            - link "Insurance Regulatory and Development Authority" [ref=e2573] [cursor=pointer]:
+              - /url: https://www.coverfox.com/irda-license/
+          - listitem [ref=e2575]:
+            - text: Payment Options
+            - generic [ref=e2576]:
+              - generic "VISA" [ref=e2577]
+              - generic "Master Card" [ref=e2578]
+              - generic "American Express" [ref=e2579]
+              - generic "Net Banking" [ref=e2580]
+              - generic "Card on delivery" [ref=e2581]
+              - generic "Bharat QR" [ref=e2582]
+              - generic "Paytm" [ref=e2583]
+        - generic [ref=e2584]:
+          - generic [ref=e2585]:
+            - generic [ref=e2586] [cursor=pointer]: +
+            - generic [ref=e2588]:
+              - generic [ref=e2590]:
+                - link "General Insurance" [ref=e2593] [cursor=pointer]:
+                  - /url: https://www.coverfox.com/general-insurance/
+                - list [ref=e2595]:
+                  - listitem [ref=e2596]:
+                    - link "Car Insurance" [ref=e2597] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/car-insurance/
+                  - listitem [ref=e2598]:
+                    - link "Bike Insurance" [ref=e2599] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/two-wheeler-insurance/
+                  - listitem [ref=e2600]:
+                    - link "Motor Insurance" [ref=e2601] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/motor-insurance/
+                  - listitem [ref=e2602]:
+                    - link "Car Insurance Premium Calculator" [ref=e2603] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/car-insurance/car-insurance-premium-calculator/
+              - generic [ref=e2605]:
+                - link "Health Insurance" [ref=e2608] [cursor=pointer]:
+                  - /url: https://www.coverfox.com/health-insurance/
+                - list [ref=e2610]:
+                  - listitem [ref=e2611]:
+                    - link "Family Health Insurance" [ref=e2612] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/health-insurance/family-health-insurance-plan/
+                  - listitem [ref=e2613]:
+                    - link "Senior Citizens Insurance" [ref=e2614] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/health-insurance/senior-citizens-health-insurance/
+                  - listitem [ref=e2615]:
+                    - link "Group Insurance" [ref=e2616] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/health-insurance/group-health-insurance-policy/
+                  - listitem [ref=e2617]:
+                    - link "Corona Rakshak Policy" [ref=e2618] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/health-insurance/corona-rakshak-policy/
+                  - listitem [ref=e2619]:
+                    - link "Corona Kavach Policy" [ref=e2620] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/health-insurance/corona-kavach-policy/
+                  - listitem [ref=e2621]:
+                    - link "Super Topup Plan" [ref=e2622] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/health-plan/super-topup
+              - generic [ref=e2624]:
+                - link "LIFE INSURANCE" [ref=e2627] [cursor=pointer]:
+                  - /url: https://www.coverfox.com/life-insurance/
+                - list [ref=e2629]:
+                  - listitem [ref=e2630]:
+                    - link "Term Insurance" [ref=e2631] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/term-insurance/
+                  - listitem [ref=e2632]:
+                    - link "ULIP" [ref=e2633] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/life-insurance/ulip-plans/
+                  - listitem [ref=e2634]:
+                    - link "e-Term Plan" [ref=e2635] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/term-insurance/#eterm-plan
+                  - listitem [ref=e2636]:
+                    - link "1 Cr Term Insurance" [ref=e2637] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/term-insurance/articles/1-crore-term-insurance/
+              - generic [ref=e2639]:
+                - generic [ref=e2640]: Insurance in Hindi
+                - list [ref=e2643]:
+                  - listitem [ref=e2644]:
+                    - link "कार इन्शुरन्स" [ref=e2645] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/car-insurance/hindi/
+                  - listitem [ref=e2646]:
+                    - link "टू व्हीलर इंश्योरेंस" [ref=e2647] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/two-wheeler-insurance/hindi/
+                  - listitem [ref=e2648]:
+                    - link "टर्म इंश्योरेंस" [ref=e2649] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/term-insurance/hindi/
+                  - listitem [ref=e2650]:
+                    - link "हेल्थ इंश्योरेंस" [ref=e2651] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/health-insurance/hindi/
+                  - listitem [ref=e2652]:
+                    - link "मेडिक्लेम पॉलिसी" [ref=e2653] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/health-insurance/hindi/mediclaim-policy/
+              - generic [ref=e2655]:
+                - generic [ref=e2656]: Other Links
+                - list [ref=e2659]:
+                  - listitem [ref=e2660]:
+                    - link "Learn About Insurance" [ref=e2661] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/learn/
+                  - listitem [ref=e2662]:
+                    - link "Network Hospitals" [ref=e2663] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/health-insurance/network-hospitals/
+                  - listitem [ref=e2664]:
+                    - link "Cashless Garages" [ref=e2665] [cursor=pointer]:
+                      - /url: https://www.coverfox.com/car-insurance/cashless-garages/
+                  - listitem [ref=e2666]:
+                    - link "Get Android App" [ref=e2667] [cursor=pointer]:
+                      - /url: https://play.google.com/store/apps/details?id=com.coverfox.app
+                  - listitem [ref=e2668]:
+                    - link "Get iOS App" [ref=e2669] [cursor=pointer]:
+                      - /url: https://apps.apple.com/in/app/coverfox-insurance/id1616646614
+          - list [ref=e2675]:
+            - listitem [ref=e2676]:
+              - link "Learn" [ref=e2677] [cursor=pointer]:
+                - /url: /learn/
+            - listitem [ref=e2678]:
+              - link "About Us" [ref=e2679] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=e2680]:
+              - link "Contact Us" [ref=e2681] [cursor=pointer]:
+                - /url: /contact/
+            - listitem [ref=e2682]:
+              - link "Careers" [ref=e2683] [cursor=pointer]:
+                - /url: /careers/
+            - listitem [ref=e2684]:
+              - link "Sitemap" [ref=e2685] [cursor=pointer]:
+                - /url: /sitemap/
+            - listitem [ref=e2686]:
+              - link "FAQs" [ref=e2687] [cursor=pointer]:
+                - /url: /faqs/
+        - generic [ref=e2689]:
+          - link [ref=e2690] [cursor=pointer]:
+            - /url: https://www.facebook.com/Coverfox.Insurance/
+          - link [ref=e2692] [cursor=pointer]:
+            - /url: https://twitter.com/coverfox
+          - link [ref=e2694] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/coverfox-insurance
+          - link [ref=e2696] [cursor=pointer]:
+            - /url: https://www.youtube.com/channel/UCdRU43Vg0L5O3JytODpFATQ/feed/
+          - link [ref=e2698] [cursor=pointer]:
+            - /url: https://www.instagram.com/coverfox_insurance/
+          - link [ref=e2700] [cursor=pointer]:
+            - /url: https://github.com/Coverfox
+      - generic [ref=e2703]:
+        - generic [ref=e2704]:
+          - paragraph [ref=e2705]:
+            - generic [ref=e2706]: "Coverfox Insurance Broking Pvt. Ltd. :"
+            - text: C Wing, 5098-5110 (Middle Lift), 5th Floor, Oberoi Garden Estate, Chandivali Farm Road, Chandivali, Andheri East, Mumbai, Maharashtra - 400072
+          - paragraph [ref=e2707]:
+            - text: Licence No.
+            - link "478" [ref=e2708] [cursor=pointer]:
+              - /url: https://www.coverfox.com/irda-license/
+            - text: ", IRDA Direct Broker Code:"
+            - link "IRDA/ DB 556/ 13" [ref=e2710] [cursor=pointer]:
+              - /url: https://www.coverfox.com/irda-license/
+            - text: ","
+            - generic [ref=e2712]:
+              - text: "Valid till:"
+              - generic [ref=e2713]: 26/12/2028
+              - text: ","
+            - generic [ref=e2714]:
+              - text: "CIN:"
+              - generic [ref=e2715]: U66000MH2013PTC243810
+        - list [ref=e2717]:
+          - listitem [ref=e2718]:
+            - link "Shipping & Delivery Policy" [ref=e2719] [cursor=pointer]:
+              - /url: /shipping-and-delivering/
+          - listitem [ref=e2720]:
+            - link "Privacy Policy" [ref=e2721] [cursor=pointer]:
+              - /url: /privacy-policy/
+          - listitem [ref=e2722]:
+            - link "Legal Policies" [ref=e2723] [cursor=pointer]:
+              - /url: /legal-policies/
+          - listitem [ref=e2724]:
+            - link "Cancellation & Refund" [ref=e2725] [cursor=pointer]:
+              - /url: /cancellation-and-refund-policy/
+          - listitem [ref=e2726]:
+            - link "Terms & Conditions" [ref=e2727] [cursor=pointer]:
+              - /url: /terms-and-conditions/
+        - generic [ref=e2728]: Copyright © 2026 Coverfox.com. All Rights Reserved
+```
+
+# Test source
+
+```ts
+  1  | import { test, Page,expect } from "@playwright/test";
+  2  | import FormPage from "../pages/FormPage";
+  3  | 
+  4  | test('Form Test', async ({ page , context }) => {
+  5  |   await page.goto('https://www.coverfox.com/car-insurance/?fs=FASTLANE_LANDING&ft=fl');
+  6  |   await page
+  7  |         .locator('.flow-links__item')
+  8  |         .filter({ hasText: "Don't know your car number?" })
+  9  |         .getByText('Click here', { exact: true })
+  10 |         .click();
+  11 | 
+  12 |     
+  13 |    
+  14 | 
+  15 |     
+  16 |     await page.getByText('Maruti', { exact: true }).click();
+  17 |     await page.getByText('Fronx', { exact: true }).click(); 
+  18 |     await page.getByText('Petrol', { exact: true }).click();
+  19 |     await page.getByPlaceholder('Search...').fill('Delta');
+  20 | 
+  21 |     await page.getByText('Delta', { exact: true }).click();
+  22 |     
+> 23 |     await page.locator('.w--multi_select_handle').fill('KA-03');
+     |                                                   ^ Error: locator.fill: Error: strict mode violation: locator('.w--multi_select_handle') resolved to 3 elements:
+  24 | 
+  25 | 
+  26 |   
+  27 | 
+  28 | });
+  29 | 
+```

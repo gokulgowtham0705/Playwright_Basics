@@ -32,6 +32,8 @@ has: page.locator('td').filter({ hasText: /^Learning/ })
 
 await targetRow.locator('td:nth-child(2)').click();
 
+await page.waitForTimeout(20000);
+
 await expect(page.getByRole('button', { name: 'Back To Book Store' })).toBeVisible();
 
 await page.screenshot({ path: 'tests/screenshots/book-details.png' });
