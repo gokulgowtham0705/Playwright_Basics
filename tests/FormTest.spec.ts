@@ -1,10 +1,11 @@
-import { test, Page } from "@playwright/test";
+import { test, Page, expect } from "@playwright/test";
 import FormPage from "../pages/FormPage";
 
-test('Form Test', async ({ page , baseURL }) => {
+test('Form Test', async ({ page , baseURL }) => {  //page in test class
   const formPage = new FormPage(page);
   await page.goto(baseURL + '/automation-practice-form');
-  await formPage.enterfirstname('Gokul'); 
+  await formPage.enterfirstname('Gokul');
+  
   await formPage.enterlastname('Gowtham');
   await formPage.enteremail('gokul.gowtham@gmail.com');
   await formPage.clickMalegender();
@@ -14,8 +15,9 @@ test('Form Test', async ({ page , baseURL }) => {
   await formPage.addsubjects('Maths');
   await formPage.selectState('NCR');
   await formPage.selectCity('Delhi');
-  await formPage.uploadPicture('C:\\Users\\GOKUL GOWTHAM\\Downloads\\sampleFile.jpeg');
+  await formPage.uploadPicture('./tests/screenshots/book-details.png');
   await formPage.enterAddress('123 Main St, Anytown, USA');
   
 
 })
+

@@ -1,39 +1,60 @@
-import { expect, Page } from "@playwright/test";
+import { expect, Page , Locator } from "@playwright/test";
 export default class FormPage {
+    readonly firstNamefield: Locator;
+    readonly lastNamefield: Locator;
+    readonly emailfield: Locator;
+    readonly malegendericon: Locator;
+    readonly mobilefield: Locator;  
+    readonly dateofbirthfield: Locator;   
+    readonly hobbiesfield: Locator; 
+    readonly uploadPicturefield: Locator;
     
-    constructor(public page: Page) {}
+    readonly errormessage: Locator;
     
 
-    async enterfirstname(firstname: string) {
-        await this.page.locator('#firstName').fill(firstname);
+    constructor(public page: Page) {  // locators page 
+        this.firstNamefield = page.locator('#firstName');
+        this.lastNamefield = page.locator('#lastName');
+        this.emailfield = page.locator('#userEmail');
+        this.malegendericon = page.locator('#gender-radio-1');
+        this.mobilefield = page.locator('#userNumber');
+        this.dateofbirthfield = page.locator('#dateOfBirthInput');
+        this.hobbiesfield = page.locator('#hobbies-checkbox-1');    
+        this.uploadPicturefield = page.locator('#uploadPicture');
+        this.errormessage = page.locator('#firstName:invalid');
+    }
+    
+
+    async enterfirstname (firstname: string) {
+        await this.firstNamefield.fill(firstname);
     }
 
     async enterlastname(lastname: string) {
-        await this.page.locator('#lastName').fill(lastname);
+        await this.lastNamefield.fill(lastname);
     }
 
     async enteremail(email: string) {
-        await this.page.locator('#userEmail').fill(email);
+        await this.emailfield.fill(email);
     }
 
     async clickMalegender() {
-        await this.page.locator('#gender-radio-1').click();
+        await this.malegendericon.click();
     }
 
     async enterMobile(mobile: string) {
-        await this.page.locator('#userNumber').fill(mobile);
+        await this.mobilefield.fill(mobile);
     }
     
     async enterDateofBirth(date: string) {
-        await this.page.locator('#dateOfBirthInput').fill(date);
+        await this.dateofbirthfield.fill(date);
     }
 
     async selectHobbies(hobby: string) {
-        await this.page.getByLabel(`${hobby}`).click();
+        await this.hobbiesfield .click();
     }
 
     async uploadPicture(filePath: string) {
-        await this.page.locator('#uploadPicture').setInputFiles(filePath);
+        await this.uploadPicturefield.setInputFiles(filePath);
     }
 
     async enterAddress(address: string) {

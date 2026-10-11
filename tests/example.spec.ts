@@ -51,7 +51,7 @@ test('Text Box', async ({ page }) => {
   await page.getByRole('button', { name: 'Submit' }).click();
  
 
-  const nameText = await page.getByRole('paragraph', { name: 'name' }).textContent();
+  const nameText = await page.locator('#name').textContent();
   console.log(`Retrieved name: ${nameText}`);
 
 });
@@ -136,7 +136,7 @@ test('Links', async ({ page, context }) => {
    await page.getByText('Elements').click();
    await page.getByRole('link', { name: 'Links', exact: true }).click();
   
-     const [newPage] = await Promise.all([
+    const [newPage] = await Promise.all([
     context.waitForEvent('page'),
     page.getByRole('link', { name: 'Home' , exact: true }).click(),
   ]);
