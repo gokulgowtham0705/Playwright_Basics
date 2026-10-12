@@ -6,3 +6,4 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+.playwright-mcp/console-2026-07-28T13-43-14-837Z.log
